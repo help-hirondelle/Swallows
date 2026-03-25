@@ -14,16 +14,21 @@ Static multi-page prototype for an informative website about house martins in Sw
   - `legal.html`
   - `faq-resources.html`
 - `assets/css/main.css`: shared design tokens and layout styles.
-- `assets/js/site.js`: shared header/footer and navigation generation.
+- `assets/js/site.js`: shared header/footer, navigation, last-updated stamp, and automatic table of contents.
+- `assets/js/flappy-swallow.js`: homepage-only mini-game logic.
 
 ## Editing rules
 
 - Update global navigation in one place: `assets/js/site.js` (`navItems`).
 - Update color/typography/layout in one place: `assets/css/main.css`.
 - Keep page-specific text inside each file in `pages/`.
+- Keep each page main wrapper as `<main class="container" id="main-content">` (used by skip link and TOC).
 - On each page, set:
   - `window.SITE_BASE` to `"../"` for files in `pages/`.
   - `window.ACTIVE_PAGE` to the current page key (`home`, `about`, `owners`, etc.).
+- Optional page-level settings:
+  - `window.LAST_UPDATED = "Month DD, YYYY"` to override the global date.
+  - `window.TOC_MIN_SECTIONS = 3` to require more sections before TOC appears.
 
 ## Run locally
 

@@ -14,11 +14,12 @@
       window.ACTIVE_PAGE = "home";
     </script>
     <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/flappy-swallow.js" defer></script>
   </head>
   <body>
     <div data-site-header></div>
 
-    <main class="container">
+    <main class="container" id="main-content">
       <section class="hero">
         <div>
           <span class="badge">Basic informative mockup</span>
@@ -92,6 +93,32 @@
           <a href="pages/faq-resources.html">FAQ and resources</a>
           <a href="pages/solutions.html#checklists">Implementation checklists</a>
           <a href="pages/legal.html#official-sources">Official source placeholders</a>
+        </div>
+      </section>
+
+      <section id="flappy-swallow">
+        <h2>Flappy Swallow Mini-Game</h2>
+        <div class="game-shell" data-swallow-game>
+          <p class="game-description">
+            Tap, click, or press <strong>Space</strong>/<strong>Arrow Up</strong> to keep the swallow flying through gaps.
+          </p>
+          <div class="game-hud" aria-live="polite">
+            <span>Score: <strong data-game-score>0</strong></span>
+            <span>Best: <strong data-game-best>0</strong></span>
+            <span class="game-state" data-game-status>Press Start to play.</span>
+          </div>
+          <canvas
+            class="game-canvas"
+            data-game-canvas
+            width="860"
+            height="340"
+            role="img"
+            aria-label="Flappy Swallow game area with moving obstacles"
+          ></canvas>
+          <div class="game-controls">
+            <button type="button" class="game-btn" data-game-start>Start game</button>
+            <button type="button" class="game-btn game-btn-alt" data-game-restart>Restart</button>
+          </div>
         </div>
       </section>
     </main>
