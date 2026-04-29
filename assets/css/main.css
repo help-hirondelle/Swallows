@@ -854,6 +854,7 @@ tr:last-child td {
   }
 
   .site-nav a[aria-current="page"] {
+    border: 3px solid var(--line);
     border-color: #9acaaa;
     border-bottom-color: #9acaaa;
     background: color-mix(in srgb, var(--surface) 84%, var(--mint-100) 16%);
