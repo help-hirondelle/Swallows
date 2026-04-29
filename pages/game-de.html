@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schwalben Spiel | Help Hironelle</title>
+    <meta
+      name="description"
+      content="Flappy Swallow Minispiel: halte die Schwalbe in der Luft und verbessere deinen Bestwert."
+    />
+    <link rel="icon" type="image/png" href="../assets/icons/swallow-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script>
+      window.SITE_BASE = "../";
+      window.ACTIVE_PAGE = "game";
+      window.SITE_LANG = "de";
+    </script>
+    <script src="../assets/js/site.js" defer></script>
+    <script src="../assets/js/flappy-swallow.js" defer></script>
+  </head>
+  <body>
+    <div data-site-header></div>
+
+    <main class="container" id="main-content">
+      <section class="page-hero">
+        <h1>Flappy Swallow</h1>
+        <p>Halte die Schwalbe in der Luft und versuche deinen Bestwert zu schlagen.</p>
+      </section>
+
+      <section id="flappy-swallow">
+        <h2>Mini-Spiel</h2>
+        <div class="game-shell" data-swallow-game>
+          <p class="game-description">
+            Klicken oder druecke <strong>Leertaste</strong>/<strong>Pfeil Hoch</strong>, um in der Luft zu bleiben.
+          </p>
+          <div class="game-hud" aria-live="polite">
+            <span>Punkte: <strong data-game-score>0</strong></span>
+            <span>Bestwert: <strong data-game-best>0</strong></span>
+            <span class="game-state" data-game-status>Druecke Start zum Spielen.</span>
+          </div>
+          <canvas
+            class="game-canvas"
+            data-game-canvas
+            width="860"
+            height="340"
+            role="img"
+            aria-label="Flappy Swallow Spielbereich mit beweglichen Hindernissen"
+          ></canvas>
+          <div class="game-controls">
+            <button type="button" class="game-btn" data-game-start>Start game</button>
+            <button type="button" class="game-btn game-btn-alt" data-game-restart>Restart</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+  </body>
+</html>

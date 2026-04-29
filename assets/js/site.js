@@ -1,18 +1,91 @@
 (function () {
   var base = window.SITE_BASE || "";
   var activePage = window.ACTIVE_PAGE || "information";
-  var lastUpdated = window.LAST_UPDATED || "March 25, 2026";
+  var lastUpdated = window.LAST_UPDATED || new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  var lang = window.SITE_LANG || "en";
+  if (lang !== "fr" && lang !== "de" && lang !== "en") {
+    lang = "en";
+  }
 
   var navItems = [
-    { key: "information", label: "Information", path: "index.html" },
-    { key: "fun-facts", label: "Fun Facts", path: "pages/fun-facts.html" },
-    { key: "trail", label: "Trail", path: "pages/nest-map.html" },
-    { key: "game", label: "Game", path: "pages/game.html" },
-    { key: "about", label: "About", path: "pages/about.html" }
+    { key: "information", path: "index.html" },
+    { key: "fun-facts", path: "pages/fun-facts.html" },
+    { key: "how-to-do-more", path: "pages/how-to-do-more.html" },
+    { key: "trail", path: "pages/nest-map.html" },
+    { key: "game", path: "pages/game.html" },
+    { key: "about", path: "pages/about.html" }
   ];
+
+  var navLabels = {
+    en: {
+      information: "Information",
+      "fun-facts": "Fun Facts",
+      "how-to-do-more": "Do More",
+      trail: "Trail",
+      game: "Game",
+      about: "About"
+    },
+    fr: {
+      information: "Information",
+      "fun-facts": "Faits Amusants",
+      "how-to-do-more": "Agir Plus",
+      trail: "Parcours",
+      game: "Jeu",
+      about: "A propos"
+    },
+    de: {
+      information: "Information",
+      "fun-facts": "Fun Fakten",
+      "how-to-do-more": "Mehr Tun",
+      trail: "Pfad",
+      game: "Spiel",
+      about: "Ueber Uns"
+    }
+  };
 
   function resolvePath(path) {
     return base + path;
+  }
+
+  function localizedPath(path, targetLang) {
+    if (!/\.html$/i.test(path)) {
+      return path;
+    }
+
+    if (targetLang === "en") {
+      return path;
+    }
+
+    return path.replace(/\.html$/i, "-" + targetLang + ".html");
+  }
+
+  function currentBasePath() {
+    for (var i = 0; i < navItems.length; i += 1) {
+      if (navItems[i].key === activePage) {
+        return navItems[i].path;
+      }
+    }
+
+    return "index.html";
+  }
+
+  function renderLanguageSwitchDropdown() {
+    var items = [
+      { key: "fr", label: "French" },
+      { key: "de", label: "German" },
+      { key: "en", label: "English" }
+    ];
+    var basePath = currentBasePath();
+
+    var options = items
+      .map(function (item) {
+        var selected = item.key === lang ? " selected" : "";
+        var targetPath = localizedPath(basePath, item.key);
+        return '<option value="' + resolvePath(targetPath) + '"' + selected + ">" + item.label + "</option>";
+      })
+      .join("");
+
+    return '<select id="site-lang" class="lang-select" aria-label="Language selection">' + options + "</select>";
   }
 
   function closeMenu(menu, button) {
@@ -30,13 +103,14 @@
       .map(function (item) {
         var isCurrent = item.key === activePage;
         var currentAttr = isCurrent ? ' aria-current="page"' : "";
+        var targetPath = localizedPath(item.path, lang);
         return (
           '<li><a href="' +
-          resolvePath(item.path) +
+          resolvePath(targetPath) +
           '"' +
           currentAttr +
           ">" +
-          item.label +
+          (navLabels[lang] && navLabels[lang][item.key] ? navLabels[lang][item.key] : navLabels.en[item.key]) +
           "</a></li>"
         );
       })
@@ -47,11 +121,14 @@
       '<header class="site-header">' +
       '  <div class="container site-header-inner">' +
       '    <a class="brand" href="' +
-      resolvePath("index.html") +
+      resolvePath(localizedPath("index.html", lang)) +
       '"><img class="brand-mark" src="' +
       resolvePath("assets/icons/swallow-icon.png") +
       '" alt="" aria-hidden="true" />' +
-      "<span>Swallow Trail Vaud</span></a>" +
+      "<span>Help Hironelle</span></a>" +
+      '    <div class="lang-switch" aria-label="Language selection">' +
+      renderLanguageSwitchDropdown() +
+      "</div>" +
       '    <button type="button" class="menu-btn" data-menu-btn aria-expanded="false">Menu</button>' +
       '    <nav class="site-nav" data-open="false"><ul>' +
       links +
@@ -61,8 +138,16 @@
 
     var menuButton = host.querySelector("[data-menu-btn]");
     var menu = host.querySelector(".site-nav");
+    var langSelect = host.querySelector("#site-lang");
     if (!menuButton || !menu) {
       return;
+    }
+
+    if (langSelect) {
+      langSelect.addEventListener("change", function () {
+        var destination = langSelect.value || resolvePath("index.html");
+        window.location.href = destination;
+      });
     }
 
     menuButton.addEventListener("click", function () {

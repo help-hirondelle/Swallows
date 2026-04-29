@@ -6,10 +6,12 @@
   --pine-500: #3f8c5e;
   --mint-200: #daf1e1;
   --mint-100: #eff9f2;
-  --paper: #fcfefc;
+  --paper: #fbfdfb;
+  --surface: #ffffff;
+  --surface-soft: #f4f8f5;
   --ink: #16261d;
   --line: #bfdcc8;
-  --card-shadow: 0 8px 30px rgba(19, 49, 34, 0.08);
+  --card-shadow: 0 10px 28px rgba(13, 37, 25, 0.07);
 }
 
 * {
@@ -24,10 +26,7 @@ body {
   margin: 0;
   font-family: "Manrope", "Segoe UI", sans-serif;
   color: var(--ink);
-  background:
-    radial-gradient(circle at 85% -10%, #c9ecd8 0%, transparent 38%),
-    radial-gradient(circle at -10% 24%, #e8f7ee 0%, transparent 36%),
-    var(--paper);
+  background: linear-gradient(180deg, #f2f7f4 0%, #f8fbf9 240px, var(--paper) 100%);
   line-height: 1.55;
 }
 
@@ -73,12 +72,16 @@ button:focus-visible {
   z-index: 20;
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(8px);
-  background: color-mix(in srgb, var(--paper) 92%, white 8%);
+  background: color-mix(in srgb, white 90%, var(--surface-soft) 10%);
+}
+
+.site-header .container {
+  width: min(1300px, 97vw);
 }
 
 .site-header-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
   padding: 0.9rem 0;
@@ -99,6 +102,33 @@ button:focus-visible {
   height: 1.45rem;
   object-fit: contain;
   border-radius: 6px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.8rem;
+  order: 3;
+}
+
+.lang-select {
+  border: 1px solid #a9cdb8;
+  background: #fff;
+  color: #224f38;
+  border-radius: 8px;
+  padding: 0.1rem 0.35rem;
+  font: inherit;
+  font-weight: 700;
+}
+
+.lang-select:focus-visible {
+  outline: 2px solid var(--pine-500);
+  outline-offset: 1px;
+}
+
+.site-nav {
+  order: 2;
+  margin-left: auto;
 }
 
 .menu-btn {
@@ -280,17 +310,12 @@ section h3 {
   position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  min-height: clamp(420px, 66vh, 700px);
+  min-height: clamp(260px, 40vh, 390px);
   overflow: hidden;
   border-bottom: 1px solid var(--line);
-}
-
-.home-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
-  display: block;
+  background-image: url("../icons/Pied-winged_swallow_(Hirundo_leucosoma).jpg");
+  background-size: cover;
+  background-position: center 32%;
 }
 
 .home-banner::before {
@@ -298,42 +323,47 @@ section h3 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(12, 31, 22, 0.18) 0%, rgba(12, 31, 22, 0.24) 38%, rgba(252, 254, 252, 0.94) 100%),
-    linear-gradient(100deg, rgba(8, 26, 18, 0.42) 0%, rgba(8, 26, 18, 0.08) 56%, rgba(8, 26, 18, 0) 80%);
+    linear-gradient(90deg, rgba(11, 34, 23, 0.68) 0%, rgba(11, 34, 23, 0.46) 38%, rgba(11, 34, 23, 0.15) 66%, rgba(11, 34, 23, 0) 100%),
+    linear-gradient(180deg, rgba(11, 34, 23, 0.2) 0%, rgba(11, 34, 23, 0.28) 100%);
 }
 
 .home-banner-content {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: clamp(1.2rem, 3vw, 2.4rem);
+  top: 0;
+  bottom: 0;
   z-index: 1;
+  display: flex;
+  align-items: center;
 }
 
 .home-banner-copy {
-  max-width: 680px;
+  max-width: 720px;
   color: #f6fffa;
 }
 
 .home-banner-copy h1 {
-  margin: 0.45rem 0 0.7rem;
-  line-height: 1.08;
-  font-size: clamp(2rem, 5vw, 4rem);
+  margin: 0.38rem 0 0.62rem;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.1rem, 5.4vw, 4.6rem);
   color: #f6fffa;
 }
 
 .home-banner-copy p {
   margin: 0;
-  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  max-width: 52ch;
+  font-size: clamp(1.02rem, 1.25vw, 1.2rem);
 }
 
 .home-priority {
-  margin-top: 1rem;
-  max-width: 690px;
+  margin-top: 0.65rem;
+  max-width: 650px;
   border-left: 4px solid #f4de90;
-  background: rgba(10, 29, 20, 0.62);
+  background: rgba(10, 29, 20, 0.68);
   backdrop-filter: blur(5px);
-  padding: 0.75rem 0.95rem;
+  padding: 0.56rem 0.78rem;
   color: #f4fffa;
 }
 
@@ -371,7 +401,7 @@ section h3 {
 .page-hero {
   border: 1px solid var(--line);
   border-radius: 16px;
-  background: #ffffffd8;
+  background: color-mix(in srgb, var(--surface) 94%, var(--surface-soft) 6%);
   box-shadow: var(--card-shadow);
 }
 
@@ -424,6 +454,23 @@ main > section[id] {
   margin: 0;
 }
 
+.fact-visual {
+  margin: 0 0 0.75rem;
+  border: 1px dashed #8bb99e;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #eef8f2, #e0f0e7);
+  min-height: 118px;
+  display: grid;
+  place-items: center;
+  color: #2f6947;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.fact-visual span {
+  opacity: 0.9;
+}
+
 .card ul,
 .note ul,
 .callout ul,
@@ -438,17 +485,17 @@ main > section[id] {
 }
 
 .callout {
-  background: linear-gradient(145deg, #f6fcf8, #e7f5ee);
+  background: color-mix(in srgb, var(--surface) 90%, #ecf6ef 10%);
 }
 
 .callout.warning {
-  background: linear-gradient(145deg, #fff9ec, #fdf3da);
+  background: color-mix(in srgb, var(--surface) 88%, #fdf2d8 12%);
   border-color: #ead7a9;
 }
 
 .page-hero {
   margin-top: 2.1rem;
-  background: linear-gradient(145deg, #f7fdf9, #e8f6ef);
+  background: color-mix(in srgb, var(--surface) 90%, #edf7f1 10%);
 }
 
 .page-hero p {
@@ -535,10 +582,68 @@ tr:last-child td {
   background: #fff;
 }
 
+.resource-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.resource-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #ffffffd8;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.resource-image {
+  margin: 0;
+  min-height: 180px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(145deg, #e6f4ec, #d8eadf);
+  display: grid;
+  place-items: center;
+  color: #24583c;
+  font-weight: 700;
+}
+
+.resource-image small {
+  display: block;
+  margin-top: 0.3rem;
+  font-weight: 500;
+  color: #3e7057;
+}
+
+.resource-content {
+  padding: 0.95rem;
+}
+
+.resource-content h3 {
+  margin: 0 0 0.45rem;
+}
+
+.resource-content p {
+  margin: 0 0 0.65rem;
+}
+
+.resource-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.42rem;
+}
+
+.resource-links a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 700;
+}
+
 .game-shell {
   border: 1px solid var(--line);
   border-radius: 16px;
-  background: linear-gradient(145deg, #f7fdf9, #e8f6ef);
+  background: color-mix(in srgb, var(--surface) 90%, #edf7f1 10%);
   box-shadow: var(--card-shadow);
   padding: 1rem;
 }
@@ -696,7 +801,8 @@ tr:last-child td {
   .card-grid.three,
   .kpis,
   .nest-map-layout,
-  .info-layout {
+  .info-layout,
+  .resource-grid {
     grid-template-columns: 1fr;
   }
 
@@ -706,6 +812,16 @@ tr:last-child td {
 
   .menu-btn {
     display: inline-block;
+    order: 2;
+  }
+
+  .lang-switch {
+    position: static;
+    order: 4;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.35rem;
+    margin-left: 0;
   }
 
   .site-nav {
@@ -759,10 +875,12 @@ tr:last-child td {
   }
 
   .home-banner {
-    min-height: 440px;
+    min-height: 310px;
+    background-position: center 36%;
   }
 
   .home-banner-content {
-    bottom: 1rem;
+    align-items: flex-end;
+    padding-bottom: 0.95rem;
   }
 }

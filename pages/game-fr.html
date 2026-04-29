@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeu Hirondelle | Help Hironelle</title>
+    <meta
+      name="description"
+      content="Mini-jeu Flappy Swallow: gardez l'hirondelle en vol et battez votre score."
+    />
+    <link rel="icon" type="image/png" href="../assets/icons/swallow-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script>
+      window.SITE_BASE = "../";
+      window.ACTIVE_PAGE = "game";
+      window.SITE_LANG = "fr";
+    </script>
+    <script src="../assets/js/site.js" defer></script>
+    <script src="../assets/js/flappy-swallow.js" defer></script>
+  </head>
+  <body>
+    <div data-site-header></div>
+
+    <main class="container" id="main-content">
+      <section class="page-hero">
+        <h1>Flappy Swallow</h1>
+        <p>Gardez l'hirondelle en l'air et essayez de battre votre meilleur score.</p>
+      </section>
+
+      <section id="flappy-swallow">
+        <h2>Mini-Jeu</h2>
+        <div class="game-shell" data-swallow-game>
+          <p class="game-description">
+            Appuyez, cliquez, ou utilisez <strong>Espace</strong>/<strong>Fleche Haut</strong> pour rester en vol.
+          </p>
+          <div class="game-hud" aria-live="polite">
+            <span>Score: <strong data-game-score>0</strong></span>
+            <span>Record: <strong data-game-best>0</strong></span>
+            <span class="game-state" data-game-status>Appuyez sur Start pour jouer.</span>
+          </div>
+          <canvas
+            class="game-canvas"
+            data-game-canvas
+            width="860"
+            height="340"
+            role="img"
+            aria-label="Zone de jeu Flappy Swallow avec obstacles mobiles"
+          ></canvas>
+          <div class="game-controls">
+            <button type="button" class="game-btn" data-game-start>Start game</button>
+            <button type="button" class="game-btn game-btn-alt" data-game-restart>Restart</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+  </body>
+</html>

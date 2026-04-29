@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carte du Parcours | Help Hironelle</title>
+    <meta
+      name="description"
+      content="Page parcours avec carte interactive et stations a decouvrir dans la region lausannoise."
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="icon" type="image/png" href="../assets/icons/swallow-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script>
+      window.SITE_BASE = "../";
+      window.ACTIVE_PAGE = "trail";
+      window.SITE_LANG = "fr";
+    </script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+      defer
+    ></script>
+    <script src="../assets/js/site.js" defer></script>
+    <script src="../assets/js/nest-map.js" defer></script>
+  </head>
+  <body>
+    <div data-site-header></div>
+
+    <main class="container" id="main-content">
+      <section class="page-hero">
+        <h1>Carte du Parcours Hirondelles</h1>
+        <p>Explorez les stations interactives. Les points actuels sont encore des donnees de demonstration.</p>
+      </section>
+
+      <section data-nest-map-root>
+        <h2>Stations Interactives</h2>
+        <div class="nest-map-layout">
+          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Carte demo avec marqueurs de nids"></div>
+          <aside class="nest-map-panel" aria-live="polite">
+            <h3 data-site-title>Site</h3>
+            <p class="nest-map-meta"><strong>Zone:</strong> <span data-site-area></span></p>
+            <p class="nest-map-meta"><strong>Statut:</strong> <span data-site-status></span></p>
+            <div class="nest-map-details">
+              <div><strong>Nombre de nids</strong><span data-site-nests></span></div>
+              <div><strong>Probleme principal</strong><span data-site-issue></span></div>
+              <div><strong>Action proposee</strong><span data-site-action></span></div>
+              <div><strong>Note de donnees</strong><span data-site-note></span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+  </body>
+</html>
