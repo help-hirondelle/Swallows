@@ -13,9 +13,12 @@ Static multi-page prototype for an informative website about house martins in Sw
   - `solutions.html`
   - `legal.html`
   - `faq-resources.html`
+  - `nest-map.html`
 - `assets/css/main.css`: shared design tokens and layout styles.
 - `assets/js/site.js`: shared header/footer, navigation, last-updated stamp, and automatic table of contents.
 - `assets/js/flappy-swallow.js`: homepage-only mini-game logic.
+- `assets/js/nest-map.js`: interactive demo map behavior for invented nest sites near Lausanne.
+- `assets/icons/`: favicon and app icon files.
 
 ## Editing rules
 

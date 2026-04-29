@@ -125,6 +125,15 @@ button:focus-visible {
 
 .site-nav {
   overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.site-nav::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
 }
 
 .site-nav a[aria-current="page"] {
@@ -446,10 +455,102 @@ tr:last-child td {
   background: #eef9f2;
 }
 
+.nest-map-layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1.45fr 1fr;
+  align-items: stretch;
+}
+
+.nest-map-canvas {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  height: 420px;
+  overflow: hidden;
+  background: #dfeee7;
+}
+
+.nest-map-canvas::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 72px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+.nest-map-canvas::after {
+  content: "OpenStreetMap basemap with invented demo nest points";
+  position: absolute;
+  top: 0.65rem;
+  left: 0.75rem;
+  font-size: 0.82rem;
+  color: #2f5f46;
+  font-weight: 700;
+}
+
+.nest-map-panel {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--card-shadow);
+  padding: 1rem;
+}
+
+.nest-map-panel h3 {
+  margin: 0 0 0.35rem;
+}
+
+.nest-map-meta {
+  margin: 0;
+  color: #355643;
+  font-size: 0.92rem;
+}
+
+.nest-map-details {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.nest-map-details div {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f8fcf9;
+  padding: 0.45rem 0.55rem;
+}
+
+.nest-map-details strong {
+  color: var(--pine-900);
+  display: block;
+  font-size: 0.88rem;
+}
+
+.leaflet-container {
+  font-family: "Karla", "Segoe UI", sans-serif;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+}
+
+.leaflet-popup-content {
+  margin: 0.7rem 0.85rem;
+  color: var(--ink);
+}
+
+.leaflet-control-attribution {
+  font-size: 0.72rem;
+}
+
 @media (max-width: 920px) {
   .hero,
   .card-grid.three,
-  .kpis {
+  .kpis,
+  .nest-map-layout {
     grid-template-columns: 1fr;
   }
 
@@ -502,5 +603,13 @@ tr:last-child td {
   .game-hud {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .nest-map-canvas {
+    height: 340px;
+  }
+
+  .nest-map-panel {
+    min-height: 0;
   }
 }

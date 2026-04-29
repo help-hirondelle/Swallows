@@ -7,6 +7,7 @@
   var navItems = [
     { key: "home", label: "Home", path: "index.html" },
     { key: "about", label: "About", path: "pages/about.html" },
+    { key: "map", label: "Nest Map", path: "pages/nest-map.html" },
     { key: "owners", label: "Owners", path: "pages/owners.html" },
     { key: "constructors", label: "Builders", path: "pages/constructors.html" },
     { key: "planners", label: "Planners", path: "pages/planners.html" },
