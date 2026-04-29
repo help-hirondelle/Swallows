@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swallow Game | Swallow Trail Vaud</title>
+    <meta
+      name="description"
+      content="Play the Flappy Swallow mini-game and keep the swallow flying through the city sky."
+    />
+    <link rel="icon" type="image/png" href="../assets/icons/swallow-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script>
+      window.SITE_BASE = "../";
+      window.ACTIVE_PAGE = "game";
+    </script>
+    <script src="../assets/js/site.js" defer></script>
+    <script src="../assets/js/flappy-swallow.js" defer></script>
+  </head>
+  <body>
+    <div data-site-header></div>
+
+    <main class="container" id="main-content">
+      <section class="page-hero">
+        <h1>Flappy Swallow</h1>
+        <p>Last tab, as requested. Keep your swallow in the air and beat your best score.</p>
+      </section>
+
+      <section id="flappy-swallow">
+        <h2>Mini-Game</h2>
+        <div class="game-shell" data-swallow-game>
+          <p class="game-description">
+            Tap, click, or press <strong>Space</strong>/<strong>Arrow Up</strong> to keep the swallow flying through gaps.
+          </p>
+          <div class="game-hud" aria-live="polite">
+            <span>Score: <strong data-game-score>0</strong></span>
+            <span>Best: <strong data-game-best>0</strong></span>
+            <span class="game-state" data-game-status>Press Start to play.</span>
+          </div>
+          <canvas
+            class="game-canvas"
+            data-game-canvas
+            width="860"
+            height="340"
+            role="img"
+            aria-label="Flappy Swallow game area with moving obstacles"
+          ></canvas>
+          <div class="game-controls">
+            <button type="button" class="game-btn" data-game-start>Start game</button>
+            <button type="button" class="game-btn game-btn-alt" data-game-restart>Restart</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+  </body>
+</html>

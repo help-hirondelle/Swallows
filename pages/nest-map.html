@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>House Martin Nest Map Demo | Lausanne Region</title>
+    <title>Swallow Trail Map & Stations | Lausanne Region</title>
     <meta
       name="description"
-      content="Interactive demo map with invented house martin nest sites near Lausanne. Click each site to view occupancy, conflict notes, and mitigation actions."
+      content="Trail page with map and station-style points for discovering swallows in the Lausanne region."
     />
     <link
       rel="stylesheet"
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../assets/css/main.css" />
     <script>
       window.SITE_BASE = "../";
-      window.ACTIVE_PAGE = "map";
+      window.ACTIVE_PAGE = "trail";
     </script>
     <script
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -37,15 +37,15 @@
 
     <main class="container" id="main-content">
       <section class="page-hero">
-        <h1>Nest Map Demo (Lausanne Region)</h1>
+        <h1>Swallow Trail Map (Lausanne Region)</h1>
         <p>
-          This is a prototype interaction model for mapping house martin colonies and conflict points.
-          Current site positions and details are intentionally invented for demo use.
+          Explore the trail with interactive stations. The current points are still prototype/demo data and can be replaced
+          later with verified local records.
         </p>
       </section>
 
       <section data-nest-map-root>
-        <h2>Interactive Nest Sites</h2>
+        <h2>Interactive Trail Stations</h2>
         <div class="nest-map-layout">
           <div class="nest-map-canvas" data-nest-map-canvas aria-label="Demo map with clickable nest markers"></div>
 
@@ -76,13 +76,31 @@
         </div>
       </section>
 
+      <section>
+        <h2>Station Highlights</h2>
+        <div class="card-grid three">
+          <article class="card">
+            <h3>Station 1: Urban Rooflines</h3>
+            <p>Look for overhangs and rough surfaces where nest attachment is easier and shelter is better.</p>
+          </article>
+          <article class="card">
+            <h3>Station 2: Conflict Zones</h3>
+            <p>Observe how entrances and walkways can create droppings conflicts if no board is installed below nests.</p>
+          </article>
+          <article class="card">
+            <h3>Station 3: Coexistence Solutions</h3>
+            <p>Discover simple interventions, like boards and artificial nests, that improve outcomes for birds and people.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="callout">
-        <h2>How This Could Be Used Later</h2>
+        <h2>How This Trail Can Grow</h2>
         <ul>
-          <li>Replace invented points with verified colony data from field surveys or municipal monitoring.</li>
+          <li>Replace prototype points with verified colony data from field surveys or municipal monitoring.</li>
           <li>Track occupancy over time by colony and building type.</li>
           <li>Flag repeated complaint zones and maintenance workload.</li>
-          <li>Plan interventions before renovation cycles begin.</li>
+          <li>Add student-friendly stop descriptions and QR codes along real routes.</li>
         </ul>
       </section>
     </main>

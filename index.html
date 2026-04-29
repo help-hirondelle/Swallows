@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>House Martins in Lausanne & Vaud | Coexistence Guide</title>
+    <title>Swallow Information | Lausanne & Vaud</title>
     <meta
       name="description"
-      content="House martin decline in Lausanne and Vaud: practical guidance for owners, builders, planners, and municipalities on nesting, droppings management, and coexistence."
+      content="Information page for the Swallow Trail project in Lausanne and Vaud: why swallows matter, how to protect nests, and where to continue with facts, trail stations, and the game."
     />
     <link rel="icon" type="image/png" href="assets/icons/swallow-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
@@ -15,122 +15,51 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <script>
       window.SITE_BASE = "";
-      window.ACTIVE_PAGE = "home";
+      window.ACTIVE_PAGE = "information";
     </script>
     <script src="assets/js/site.js" defer></script>
-    <script src="assets/js/flappy-swallow.js" defer></script>
   </head>
   <body>
     <div data-site-header></div>
 
     <main class="container" id="main-content">
-      <section class="hero">
-        <div>
-          <span class="badge">Project focus: Lausanne and Vaud</span>
-          <h1>House Martins Are Declining. Coexistence Must Be Designed.</h1>
-          <p>
-            In Lausanne and the canton of Vaud, house martin decline is linked to the way cities are built and maintained:
-            smoother facades, fewer overhangs, less mud, fewer insects, and management practices that remove nesting options.
-            Droppings beneath nests are one of the main conflict points, so this project combines conservation with practical
-            hygiene, maintenance, and aesthetic management.
-          </p>
-        </div>
-        <aside class="hero-panel">
-          <h2>Quick Start</h2>
-          <ul>
-            <li>Use role-specific guidance for owners, builders, planners, and municipalities.</li>
-            <li>Review realistic solutions, including limits and maintenance constraints.</li>
-            <li>Use the legal page as a draft framework until verified legal text is added.</li>
-          </ul>
-        </aside>
-      </section>
-
-      <section>
-        <h2>Main Pages</h2>
-        <div class="card-grid three">
-          <article class="card">
-            <h3><a href="pages/about.html">About House Martins</a></h3>
-            <p>Why they depend on buildings, why they are declining, and why this is both ecological and social.</p>
-          </article>
-          <article class="card">
-            <h3><a href="pages/owners.html">For House Owners</a></h3>
-            <p>How to manage droppings and complaints while preserving nesting opportunities and acceptance.</p>
-          </article>
-          <article class="card">
-            <h3><a href="pages/constructors.html">For Constructors</a></h3>
-            <p>How facade and roof choices can either block nesting or support long-term coexistence.</p>
-          </article>
-          <article class="card">
-            <h3><a href="pages/planners.html">For City Planners</a></h3>
-            <p>How municipalities can fund, coordinate, regulate, and scale actions across sites and communes.</p>
-          </article>
-          <article class="card">
-            <h3><a href="pages/solutions.html">Solutions Catalog</a></h3>
-            <p>Concrete measures with clear purpose, technical conditions, and known limitations.</p>
-          </article>
-          <article class="card">
-            <h3><a href="pages/legal.html">Swiss Legal Guidance</a></h3>
-            <p>Cautious high-level legal framing with explicit placeholders for verified legal and procedural details.</p>
-          </article>
-          <article class="card">
-            <h3><a href="pages/nest-map.html">Nest Map (Demo)</a></h3>
-            <p>Interactive demo map with invented nest-site points near Lausanne and site-specific notes.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="callout">
-        <h2>Project Objective</h2>
-        <div class="kpis">
-          <div class="kpi">
-            <strong>1. Stabilize populations</strong>
-            Preserve existing nests and create viable new nesting opportunities.
-          </div>
-          <div class="kpi">
-            <strong>2. Reduce conflict</strong>
-            Address hygiene, maintenance, and aesthetic concerns that drive complaints.
-          </div>
-          <div class="kpi">
-            <strong>3. Coordinate action</strong>
-            Shift from late, fragmented fixes to preventive planning and maintenance.
+      <section class="home-banner">
+        <img
+          src="assets/icons/Hirondelledefenetre-ReneDumoulin - Copie.jpg"
+          alt="House martin in flight near a building facade"
+        />
+        <div class="home-banner-content">
+          <div class="container home-banner-copy">
+            <span class="badge">Information</span>
+            <h1>Swallow Trail Vaud</h1>
+            <p>Helping people and swallows share cities with fewer conflicts and better design.</p>
+            <div class="home-priority">
+              <p>
+                <strong>Important:</strong> Do not remove active nests. Use protection boards and local guidance to solve
+                hygiene concerns without harming breeding birds.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section>
-        <h2>Support Materials</h2>
-        <div class="quick-links">
-          <a href="pages/faq-resources.html">FAQ and resources</a>
-          <a href="pages/solutions.html#checklists">Implementation checklists</a>
-          <a href="pages/legal.html#official-sources">Legal and source placeholders</a>
-          <a href="pages/nest-map.html">Interactive nest map demo</a>
-        </div>
-      </section>
-
-      <section id="flappy-swallow">
-        <h2>Flappy Swallow Mini-Game</h2>
-        <div class="game-shell" data-swallow-game>
-          <p class="game-description">
-            Tap, click, or press <strong>Space</strong>/<strong>Arrow Up</strong> to keep the swallow flying through gaps.
-          </p>
-          <div class="game-hud" aria-live="polite">
-            <span>Score: <strong data-game-score>0</strong></span>
-            <span>Best: <strong data-game-best>0</strong></span>
-            <span class="game-state" data-game-status>Press Start to play.</span>
-          </div>
-          <canvas
-            class="game-canvas"
-            data-game-canvas
-            width="860"
-            height="340"
-            role="img"
-            aria-label="Flappy Swallow game area with moving obstacles"
-          ></canvas>
-          <div class="game-controls">
-            <button type="button" class="game-btn" data-game-start>Start game</button>
-            <button type="button" class="game-btn game-btn-alt" data-game-restart>Restart</button>
-          </div>
-        </div>
+      <section class="home-essentials">
+        <h2>Why It Matters</h2>
+        <p>
+          House martins depend on buildings for nesting, so facade choices and maintenance decisions directly affect their
+          survival in Lausanne and Vaud.
+        </p>
+        <ul>
+          <li>Designing nesting-friendly facades is easier than retrofitting later.</li>
+          <li>Simple solutions can reduce complaints while protecting birds.</li>
+          <li>Education increases local acceptance and long-term success.</li>
+        </ul>
+        <ul class="home-plain-links">
+          <li><a href="pages/fun-facts.html">Fun Facts</a></li>
+          <li><a href="pages/nest-map.html">Trail</a></li>
+          <li><a href="pages/game.html">Game</a></li>
+          <li><a href="pages/about.html">About</a></li>
+        </ul>
       </section>
     </main>
 

@@ -1,19 +1,14 @@
 (function () {
   var base = window.SITE_BASE || "";
-  var activePage = window.ACTIVE_PAGE || "home";
+  var activePage = window.ACTIVE_PAGE || "information";
   var lastUpdated = window.LAST_UPDATED || "March 25, 2026";
-  var tocMinSections = window.TOC_MIN_SECTIONS || 2;
 
   var navItems = [
-    { key: "home", label: "Home", path: "index.html" },
-    { key: "about", label: "About", path: "pages/about.html" },
-    { key: "map", label: "Nest Map", path: "pages/nest-map.html" },
-    { key: "owners", label: "Owners", path: "pages/owners.html" },
-    { key: "constructors", label: "Builders", path: "pages/constructors.html" },
-    { key: "planners", label: "Planners", path: "pages/planners.html" },
-    { key: "solutions", label: "Solutions", path: "pages/solutions.html" },
-    { key: "legal", label: "Laws", path: "pages/legal.html" },
-    { key: "faq", label: "FAQ", path: "pages/faq-resources.html" }
+    { key: "information", label: "Information", path: "index.html" },
+    { key: "fun-facts", label: "Fun Facts", path: "pages/fun-facts.html" },
+    { key: "trail", label: "Trail", path: "pages/nest-map.html" },
+    { key: "game", label: "Game", path: "pages/game.html" },
+    { key: "about", label: "About", path: "pages/about.html" }
   ];
 
   function resolvePath(path) {
@@ -53,7 +48,10 @@
       '  <div class="container site-header-inner">' +
       '    <a class="brand" href="' +
       resolvePath("index.html") +
-      '">House Martins Switzerland</a>' +
+      '"><img class="brand-mark" src="' +
+      resolvePath("assets/icons/swallow-icon.png") +
+      '" alt="" aria-hidden="true" />' +
+      "<span>Swallow Trail Vaud</span></a>" +
       '    <button type="button" class="menu-btn" data-menu-btn aria-expanded="false">Menu</button>' +
       '    <nav class="site-nav" data-open="false"><ul>' +
       links +
@@ -109,134 +107,7 @@
     });
   }
 
-  function slugify(text) {
-    return text
-      .toLowerCase()
-      .trim()
-      .replace(/[^a-z0-9\s-]/g, "")
-      .replace(/\s+/g, "-")
-      .replace(/-+/g, "-");
-  }
-
-  function ensureSectionId(section, fallbackIndex) {
-    if (section.id) {
-      return section.id;
-    }
-
-    var heading = section.querySelector(":scope > h2");
-    var baseId = heading ? slugify(heading.textContent) : "";
-    if (!baseId) {
-      baseId = "section-" + String(fallbackIndex + 1);
-    }
-
-    var id = baseId;
-    var counter = 2;
-
-    while (document.getElementById(id)) {
-      id = baseId + "-" + String(counter);
-      counter += 1;
-    }
-
-    section.id = id;
-    return id;
-  }
-
-  function setActiveTocLink(id) {
-    var tocLinks = document.querySelectorAll("[data-toc-link]");
-    Array.prototype.forEach.call(tocLinks, function (link) {
-      link.classList.toggle("is-active", link.getAttribute("data-toc-link") === id);
-    });
-  }
-
-  function watchSections(sectionIds) {
-    if (!("IntersectionObserver" in window)) {
-      return;
-    }
-
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            setActiveTocLink(entry.target.id);
-          }
-        });
-      },
-      {
-        rootMargin: "-42% 0px -45% 0px",
-        threshold: [0, 1]
-      }
-    );
-
-    sectionIds.forEach(function (id) {
-      var section = document.getElementById(id);
-      if (section) {
-        observer.observe(section);
-      }
-    });
-  }
-
-  function renderToc() {
-    var main = document.getElementById("main-content") || document.querySelector("main");
-    if (!main) {
-      return;
-    }
-
-    var sections = Array.prototype.slice
-      .call(main.querySelectorAll(":scope > section"))
-      .filter(function (section) {
-        return !section.classList.contains("page-hero") && !section.classList.contains("hero");
-      });
-
-    if (sections.length < tocMinSections) {
-      return;
-    }
-
-    var items = sections
-      .map(function (section, index) {
-        var heading = section.querySelector(":scope > h2");
-        if (!heading) {
-          return null;
-        }
-
-        return {
-          id: ensureSectionId(section, index),
-          label: heading.textContent.trim()
-        };
-      })
-      .filter(Boolean);
-
-    if (items.length < tocMinSections) {
-      return;
-    }
-
-    var links = items
-      .map(function (item) {
-        return '<li><a data-toc-link="' + item.id + '" href="#' + item.id + '">' + item.label + "</a></li>";
-      })
-      .join("");
-
-    var toc = document.createElement("aside");
-    toc.className = "toc";
-    toc.setAttribute("aria-label", "On this page");
-    toc.innerHTML = '<p class="toc-title">On this page</p><ul>' + links + "</ul>";
-
-    var hero = main.querySelector(":scope > .page-hero, :scope > .hero");
-    if (hero) {
-      hero.insertAdjacentElement("afterend", toc);
-    } else {
-      main.prepend(toc);
-    }
-
-    setActiveTocLink(items[0].id);
-    watchSections(
-      items.map(function (item) {
-        return item.id;
-      })
-    );
-  }
-
   renderHeader();
   renderFooter();
   renderLastUpdated();
-  renderToc();
 })();
