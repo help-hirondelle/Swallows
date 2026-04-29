@@ -853,6 +853,13 @@ tr:last-child td {
     border-radius: 12px;
   }
 
+  .site-nav a[aria-current="page"] {
+    border-color: #9acaaa;
+    border-bottom-color: #9acaaa;
+    background: color-mix(in srgb, var(--surface) 84%, var(--mint-100) 16%);
+    border-radius: 12px;
+  }
+
   .site-nav a:hover {
     border-color: var(--line);
   }

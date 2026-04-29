@@ -39,7 +39,7 @@
       "how-to-do-more": "Mehr Tun",
       trail: "Pfad",
       game: "Spiel",
-      about: "Ueber Uns"
+      about: "Über Uns"
     }
   };
 
