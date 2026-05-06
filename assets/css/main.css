@@ -371,6 +371,20 @@ section h3 {
   margin: 0;
 }
 
+.home-priority-urgent {
+  border-left-color: #f4a37e;
+  background: rgba(40, 10, 10, 0.74);
+}
+
+.home-stop-line {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.02rem, 2vw, 1.22rem);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: #fff3ec;
+  font-weight: 800;
+}
+
 .home-essentials {
   padding-top: 1.6rem;
 }
