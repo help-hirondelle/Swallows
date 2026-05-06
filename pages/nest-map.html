@@ -6,7 +6,7 @@
     <title>Swallow Trail Map & Stations | Lausanne Region</title>
     <meta
       name="description"
-      content="Trail page with map and station-style points for discovering swallows in the Lausanne region."
+      content="QR-ready swallow trail with station pages and map directions to the next stage in Lausanne."
     />
     <link
       rel="stylesheet"
@@ -22,6 +22,7 @@
     <script>
       window.SITE_BASE = "../";
       window.ACTIVE_PAGE = "trail";
+      window.SITE_LANG = "en";
     </script>
     <script
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -39,69 +40,36 @@
       <section class="page-hero">
         <h1>Swallow Trail Map (Lausanne Region)</h1>
         <p>
-          Explore the trail with interactive stations. The current points are still prototype/demo data and can be replaced
-          later with verified local records.
+          Scan a station QR code to jump directly to it. Select map markers to switch between Migration, Food, Finding
+          Building Materials, and The Nest.
         </p>
       </section>
 
-      <section data-nest-map-root>
+      <section id="trail-map" data-nest-map-root>
         <h2>Interactive Trail Stations</h2>
         <div class="nest-map-layout">
-          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Demo map with clickable nest markers"></div>
-
-          <aside class="nest-map-panel" aria-live="polite">
-            <h3 data-site-title>Site</h3>
-            <p class="nest-map-meta"><strong>Area:</strong> <span data-site-area></span></p>
-            <p class="nest-map-meta"><strong>Status:</strong> <span data-site-status></span></p>
-
-            <div class="nest-map-details">
-              <div>
-                <strong>Nest count</strong>
-                <span data-site-nests></span>
-              </div>
-              <div>
-                <strong>Key issue</strong>
-                <span data-site-issue></span>
-              </div>
-              <div>
-                <strong>Suggested action</strong>
-                <span data-site-action></span>
-              </div>
-              <div>
-                <strong>Data note</strong>
-                <span data-site-note></span>
-              </div>
-            </div>
-          </aside>
+          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Trail map with clickable station markers"></div>
         </div>
-      </section>
 
-      <section>
-        <h2>Station Highlights</h2>
-        <div class="card-grid three">
-          <article class="card">
-            <h3>Station 1: Urban Rooflines</h3>
-            <p>Look for overhangs and rough surfaces where nest attachment is easier and shelter is better.</p>
-          </article>
-          <article class="card">
-            <h3>Station 2: Conflict Zones</h3>
-            <p>Observe how entrances and walkways can create droppings conflicts if no board is installed below nests.</p>
-          </article>
-          <article class="card">
-            <h3>Station 3: Coexistence Solutions</h3>
-            <p>Discover simple interventions, like boards and artificial nests, that improve outcomes for birds and people.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="callout">
-        <h2>How This Trail Can Grow</h2>
-        <ul>
-          <li>Replace prototype points with verified colony data from field surveys or municipal monitoring.</li>
-          <li>Track occupancy over time by colony and building type.</li>
-          <li>Flag repeated complaint zones and maintenance workload.</li>
-          <li>Add student-friendly stop descriptions and QR codes along real routes.</li>
-        </ul>
+        <article class="trail-focus-card card" aria-live="polite">
+          <h3 data-site-title>Station</h3>
+          <p class="nest-map-meta"><strong>Location:</strong> <span data-site-area></span></p>
+          <p class="nest-map-meta"><strong>Progress:</strong> <span data-site-status></span></p>
+          <p data-site-story></p>
+          <p><strong>Station link (for QR):</strong> <a data-site-note href="#"></a></p>
+          <p data-next-direction></p>
+          <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Open walking directions</a>
+          <div class="video-embed trail-video">
+            <iframe
+              data-station-video
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Station video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </article>
       </section>
     </main>
 

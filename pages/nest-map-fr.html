@@ -6,7 +6,7 @@
     <title>Carte du Parcours | Help Hironelle</title>
     <meta
       name="description"
-      content="Page parcours avec carte interactive et stations a decouvrir dans la region lausannoise."
+      content="Parcours QR avec stations et itineraire vers l'etape suivante dans la region lausannoise."
     />
     <link
       rel="stylesheet"
@@ -39,25 +39,36 @@
     <main class="container" id="main-content">
       <section class="page-hero">
         <h1>Carte du Parcours Hirondelles</h1>
-        <p>Explorez les stations interactives. Les points actuels sont encore des donnees de demonstration.</p>
+        <p>
+          Scannez un QR code pour ouvrir directement la station. Cliquez une icone sur la carte pour changer de station.
+        </p>
       </section>
 
-      <section data-nest-map-root>
+      <section id="trail-map" data-nest-map-root>
         <h2>Stations Interactives</h2>
         <div class="nest-map-layout">
-          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Carte demo avec marqueurs de nids"></div>
-          <aside class="nest-map-panel" aria-live="polite">
-            <h3 data-site-title>Site</h3>
-            <p class="nest-map-meta"><strong>Zone:</strong> <span data-site-area></span></p>
-            <p class="nest-map-meta"><strong>Statut:</strong> <span data-site-status></span></p>
-            <div class="nest-map-details">
-              <div><strong>Nombre de nids</strong><span data-site-nests></span></div>
-              <div><strong>Probleme principal</strong><span data-site-issue></span></div>
-              <div><strong>Action proposee</strong><span data-site-action></span></div>
-              <div><strong>Note de donnees</strong><span data-site-note></span></div>
-            </div>
-          </aside>
+          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Carte du parcours avec marqueurs de station"></div>
         </div>
+
+        <article class="trail-focus-card card" aria-live="polite">
+          <h3 data-site-title>Station</h3>
+          <p class="nest-map-meta"><strong>Lieu:</strong> <span data-site-area></span></p>
+          <p class="nest-map-meta"><strong>Progression:</strong> <span data-site-status></span></p>
+          <p data-site-story></p>
+          <p><strong>Lien station (pour QR):</strong> <a data-site-note href="#"></a></p>
+          <p data-next-direction></p>
+          <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Itineraire a pied</a>
+          <div class="video-embed trail-video">
+            <iframe
+              data-station-video
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Video station"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </article>
       </section>
     </main>
 

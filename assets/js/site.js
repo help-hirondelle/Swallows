@@ -1,7 +1,9 @@
 (function () {
   var base = window.SITE_BASE || "";
   var activePage = window.ACTIVE_PAGE || "information";
-  var lastUpdated = window.LAST_UPDATED || new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  var lastUpdated =
+    window.LAST_UPDATED ||
+    new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
   var lang = window.SITE_LANG || "en";
   if (lang !== "fr" && lang !== "de" && lang !== "en") {
     lang = "en";
@@ -39,7 +41,7 @@
       "how-to-do-more": "Mehr Tun",
       trail: "Pfad",
       game: "Spiel",
-      about: "Über Uns"
+      about: "Ueber Uns"
     }
   };
 
@@ -76,12 +78,13 @@
       { key: "en", label: "English" }
     ];
     var basePath = currentBasePath();
+    var suffix = window.location.search + window.location.hash;
 
     var options = items
       .map(function (item) {
         var selected = item.key === lang ? " selected" : "";
         var targetPath = localizedPath(basePath, item.key);
-        return '<option value="' + resolvePath(targetPath) + '"' + selected + ">" + item.label + "</option>";
+        return '<option value="' + resolvePath(targetPath) + suffix + '"' + selected + ">" + item.label + "</option>";
       })
       .join("");
 

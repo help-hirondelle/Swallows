@@ -6,7 +6,7 @@
     <title>Pfadkarte | Help Hironelle</title>
     <meta
       name="description"
-      content="Pfadseite mit interaktiver Karte und Stationen in der Region Lausanne."
+      content="QR-faehiger Schwalbenpfad mit Stationen und Weg zur naechsten Etappe in Lausanne."
     />
     <link
       rel="stylesheet"
@@ -39,25 +39,36 @@
     <main class="container" id="main-content">
       <section class="page-hero">
         <h1>Schwalben Pfadkarte</h1>
-        <p>Erkunden Sie die interaktiven Stationen. Aktuell sind die Punkte Demo-Daten.</p>
+        <p>
+          Scannen Sie einen QR-Code, um direkt zur passenden Station zu gelangen. Waehlen Sie Marker auf der Karte zum Wechseln.
+        </p>
       </section>
 
-      <section data-nest-map-root>
+      <section id="trail-map" data-nest-map-root>
         <h2>Interaktive Stationen</h2>
         <div class="nest-map-layout">
-          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Demo-Karte mit Nistmarkern"></div>
-          <aside class="nest-map-panel" aria-live="polite">
-            <h3 data-site-title>Standort</h3>
-            <p class="nest-map-meta"><strong>Bereich:</strong> <span data-site-area></span></p>
-            <p class="nest-map-meta"><strong>Status:</strong> <span data-site-status></span></p>
-            <div class="nest-map-details">
-              <div><strong>Anzahl Nester</strong><span data-site-nests></span></div>
-              <div><strong>Hauptthema</strong><span data-site-issue></span></div>
-              <div><strong>Empfohlene Aktion</strong><span data-site-action></span></div>
-              <div><strong>Datenhinweis</strong><span data-site-note></span></div>
-            </div>
-          </aside>
+          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Pfadkarte mit Stationsmarkern"></div>
         </div>
+
+        <article class="trail-focus-card card" aria-live="polite">
+          <h3 data-site-title>Station</h3>
+          <p class="nest-map-meta"><strong>Ort:</strong> <span data-site-area></span></p>
+          <p class="nest-map-meta"><strong>Fortschritt:</strong> <span data-site-status></span></p>
+          <p data-site-story></p>
+          <p><strong>Stationslink (fuer QR):</strong> <a data-site-note href="#"></a></p>
+          <p data-next-direction></p>
+          <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Gehroute oeffnen</a>
+          <div class="video-embed trail-video">
+            <iframe
+              data-station-video
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Stationsvideo"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </article>
       </section>
     </main>
 

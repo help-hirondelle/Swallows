@@ -706,17 +706,14 @@ tr:last-child td {
 }
 
 .nest-map-layout {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1.45fr 1fr;
-  align-items: stretch;
+  display: block;
 }
 
 .nest-map-canvas {
   position: relative;
   border: 1px solid var(--line);
   border-radius: 16px;
-  height: 420px;
+  height: 560px;
   overflow: hidden;
   background: #dfeee7;
 }
@@ -733,7 +730,7 @@ tr:last-child td {
 }
 
 .nest-map-canvas::after {
-  content: "OpenStreetMap basemap with invented demo nest points";
+  content: "OpenStreetMap trail stations (scan-ready route)";
   position: absolute;
   top: 0.65rem;
   left: 0.75rem;
@@ -742,41 +739,69 @@ tr:last-child td {
   font-weight: 700;
 }
 
-.nest-map-panel {
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: var(--card-shadow);
-  padding: 1rem;
-}
-
-.nest-map-panel h3 {
-  margin: 0 0 0.35rem;
-}
-
 .nest-map-meta {
-  margin: 0;
+  margin: 0.2rem 0 0;
   color: #355643;
-  font-size: 0.92rem;
+  font-size: 0.98rem;
 }
 
-.nest-map-details {
-  margin-top: 0.75rem;
-  display: grid;
-  gap: 0.45rem;
+.trail-focus-card {
+  margin-top: 1rem;
 }
 
-.nest-map-details div {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: #f8fcf9;
-  padding: 0.45rem 0.55rem;
+.trail-focus-card h3 {
+  margin: 0;
 }
 
-.nest-map-details strong {
-  color: var(--pine-900);
+.trail-focus-card p {
+  margin: 0.55rem 0 0;
+}
+
+.trail-focus-card a {
+  word-break: break-word;
+}
+
+.trail-focus-card .game-btn {
+  display: inline-block;
+  margin-top: 1.25rem;
+}
+
+.video-embed {
+  position: relative;
+  margin-top: 0.7rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #bddac8;
+  padding-top: 56.25%;
+  background: #e6f3eb;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.trail-video {
+  margin-top: 0.95rem;
+}
+
+.fact-photo {
+  margin: 0 0 0.75rem;
+  border: 1px solid #9ecab0;
+  border-radius: 12px;
+  min-height: 118px;
+  overflow: hidden;
+  background: #e8f4ed;
+}
+
+.fact-photo img {
   display: block;
-  font-size: 0.88rem;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .leaflet-container {
@@ -800,7 +825,6 @@ tr:last-child td {
   .hero,
   .card-grid.three,
   .kpis,
-  .nest-map-layout,
   .info-layout,
   .resource-grid {
     grid-template-columns: 1fr;
@@ -871,11 +895,7 @@ tr:last-child td {
   }
 
   .nest-map-canvas {
-    height: 340px;
-  }
-
-  .nest-map-panel {
-    min-height: 0;
+    height: 390px;
   }
 
   .hero-visual {
