@@ -539,7 +539,8 @@
     }).addTo(radiusMap);
 
     var diffKm = Math.abs(radiusGuessMeters - 300000) / 1000;
-    updateRadiusFeedback(labels.radius.revealPrefix + " " + formatKm(diffKm) + ".");
+    var playfulDiffKm = Math.round(diffKm) + 0.67;
+    updateRadiusFeedback(labels.radius.revealPrefix + " " + playfulDiffKm.toFixed(2) + " km.");
   }
 
   function initRadiusMap() {
