@@ -40,8 +40,8 @@
       <section class="page-hero">
         <h1>Swallow Trail Map (Lausanne Region)</h1>
         <p>
-          Scan a station QR code to jump directly to it. Select map markers to switch between Migration, Food, Finding
-          Building Materials, and The Nest.
+          Scan a station QR code to jump directly to it. Select map markers to switch between the four stops, from Theatre
+          Vidy-Lausanne to Ecole De Montoie, using pedestrian pathways through the park before the final school approach.
         </p>
       </section>
 
@@ -55,7 +55,28 @@
           <h3 data-site-title>Station</h3>
           <p class="nest-map-meta"><strong>Location:</strong> <span data-site-area></span></p>
           <p class="nest-map-meta"><strong>Progress:</strong> <span data-site-status></span></p>
-          <p data-site-story></p>
+          <div class="trail-story" data-site-story></div>
+          <figure class="trail-image-placeholder" data-station-image>
+            <div class="trail-image-art" aria-hidden="true"></div>
+            <figcaption>
+              <strong data-image-title>Image Placeholder</strong>
+              <span data-image-caption>Add a station photo here (bird behavior, habitat, or nest detail).</span>
+            </figcaption>
+          </figure>
+          <section class="radius-guess" data-radius-game hidden>
+            <h4>Migration Game: Daily Flight Guess</h4>
+            <p>Drag on the map to set your guess, then submit to reveal the real daily-distance circle.</p>
+            <div
+              class="radius-map-canvas"
+              data-radius-map-canvas
+              aria-label="Interactive map to estimate a swallow's daily flight radius"
+            ></div>
+            <div class="radius-controls">
+              <button type="button" class="game-btn" data-radius-submit disabled>Submit Guess</button>
+              <button type="button" class="game-btn game-btn-alt" data-radius-reset>Try Again</button>
+            </div>
+            <p class="radius-feedback" data-radius-feedback>Drag from the center marker to set your estimate.</p>
+          </section>
           <p><strong>Station link (for QR):</strong> <a data-site-note href="#"></a></p>
           <p data-next-direction></p>
           <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Open walking directions</a>

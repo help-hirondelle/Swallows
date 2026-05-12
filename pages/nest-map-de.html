@@ -54,7 +54,28 @@
           <h3 data-site-title>Station</h3>
           <p class="nest-map-meta"><strong>Ort:</strong> <span data-site-area></span></p>
           <p class="nest-map-meta"><strong>Fortschritt:</strong> <span data-site-status></span></p>
-          <p data-site-story></p>
+          <div class="trail-story" data-site-story></div>
+          <figure class="trail-image-placeholder" data-station-image>
+            <div class="trail-image-art" aria-hidden="true"></div>
+            <figcaption>
+              <strong data-image-title>Bild Platzhalter</strong>
+              <span data-image-caption>Hier ein Stationsbild einfuegen.</span>
+            </figcaption>
+          </figure>
+          <section class="radius-guess" data-radius-game hidden>
+            <h4>Migrationsspiel: Tagesdistanz Schaetzen</h4>
+            <p>Ziehen Sie Ihre Schaetzung auf der Karte und senden Sie, um den echten Distanzkreis zu sehen.</p>
+            <div
+              class="radius-map-canvas"
+              data-radius-map-canvas
+              aria-label="Interaktive Karte zum Einschaetzen des taeglichen Flugradius einer Schwalbe"
+            ></div>
+            <div class="radius-controls">
+              <button type="button" class="game-btn" data-radius-submit disabled>Senden</button>
+              <button type="button" class="game-btn game-btn-alt" data-radius-reset>Neu Versuch</button>
+            </div>
+            <p class="radius-feedback" data-radius-feedback>Ziehen Sie vom zentralen Marker aus.</p>
+          </section>
           <p><strong>Stationslink (fuer QR):</strong> <a data-site-note href="#"></a></p>
           <p data-next-direction></p>
           <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Gehroute oeffnen</a>

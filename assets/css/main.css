@@ -771,6 +771,99 @@ tr:last-child td {
   margin: 0.55rem 0 0;
 }
 
+.trail-story {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+}
+
+.trail-story-block {
+  border: 1px solid #cce1d4;
+  border-radius: 12px;
+  background: #f6fbf8;
+  padding: 0.6rem 0.75rem;
+}
+
+.trail-story-block strong {
+  display: block;
+  color: #214f37;
+  margin-bottom: 0.2rem;
+}
+
+.trail-story-block p {
+  margin: 0;
+  color: #1f3f30;
+}
+
+.trail-image-placeholder {
+  margin: 0.8rem 0 0;
+  border: 1px dashed #9dc4af;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #edf7f1, #dceee3);
+  overflow: hidden;
+}
+
+.trail-image-art {
+  min-height: 160px;
+  background:
+    radial-gradient(circle at 22% 25%, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 42%),
+    linear-gradient(140deg, #83b99a 0%, #6ba583 38%, #4d7f63 100%);
+}
+
+.trail-image-placeholder figcaption {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.55rem 0.7rem 0.7rem;
+}
+
+.trail-image-placeholder strong {
+  color: #214f37;
+}
+
+.trail-image-placeholder span {
+  color: #2f5c46;
+  font-size: 0.92rem;
+}
+
+.radius-guess {
+  margin-top: 0.95rem;
+  border: 1px solid #bad8c6;
+  border-radius: 14px;
+  background: #f4faf7;
+  padding: 0.75rem;
+}
+
+.radius-guess h4 {
+  margin: 0;
+  color: #17492f;
+}
+
+.radius-guess p {
+  margin-top: 0.45rem;
+}
+
+.radius-map-canvas {
+  margin-top: 0.65rem;
+  height: 320px;
+  border: 1px solid #a8cab7;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ddebe2;
+}
+
+.radius-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.radius-feedback {
+  margin-top: 0.55rem;
+  color: #2a5a42;
+  font-weight: 600;
+}
+
 .trail-focus-card a {
   word-break: break-word;
 }
@@ -910,6 +1003,10 @@ tr:last-child td {
 
   .nest-map-canvas {
     height: 390px;
+  }
+
+  .radius-map-canvas {
+    height: 260px;
   }
 
   .hero-visual {
