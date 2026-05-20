@@ -128,7 +128,7 @@
       {
         id: "migration",
         title: "The Great Journey (Migration)",
-        area: "Near Theatre Vidy-Lausanne (open lake view), 46.5123 N, 6.6111 E",
+        area: "Near Theatre Vidy-Lausanne (open lake view), 46.5146 N, 6.5992 E",
         lat: 46.5123,
         lng: 6.6111,
         storyLead:
@@ -147,7 +147,7 @@
       {
         id: "food",
         title: "The Lakeside Buffet (Diet and Hunting)",
-        area: "Eastern edge of Parc Louis Bourget (tree lines and marshier zones), 46.5152 N, 6.5986 E",
+        area: "Eastern edge of Parc Louis Bourget (tree lines and marshier zones), 46.5169 N, 6.6014 E",
         lat: 46.5152,
         lng: 6.5986,
         storyLead:
@@ -165,7 +165,7 @@
       {
         id: "materials",
         title: "Gathering the Mud (Building Material)",
-        area: "Wooded trails inland toward Chemin du Bois-de-Vaux, 46.5190 N, 6.6035 E",
+        area: "Wooded trails inland toward Chemin du Bois-de-Vaux, 46.5210 N, 6.6058 E",
         lat: 46.519,
         lng: 6.6035,
         storyLead:
@@ -184,7 +184,7 @@
       {
         id: "nest",
         title: "The Shared Roof (Coexistence and Artificial Nests)",
-        area: "Ecole De Montoie, Avenue de Montoie 19, 46.5218 N, 6.6095 E",
+        area: "Ecole De Montoie, Avenue de Montoie 19, 46.5190 N, 6.6121 E",
         lat: 46.5218,
         lng: 6.6095,
         storyLead:
@@ -205,7 +205,7 @@
       {
         id: "migration",
         title: "Le Grand Voyage (Migration)",
-        area: "Pres du Theatre Vidy-Lausanne (vue ouverte sur le lac), 46.5123 N, 6.6111 E",
+        area: "Pres du Theatre Vidy-Lausanne (vue ouverte sur le lac), 46.5146 N, 6.5992 E",
         lat: 46.5123,
         lng: 6.6111,
         story:
@@ -216,7 +216,7 @@
       {
         id: "food",
         title: "Le Buffet du Lac (Regime et Chasse)",
-        area: "Bord est du Parc Louis Bourget (arbres et zones plus humides), 46.5152 N, 6.5986 E",
+        area: "Bord est du Parc Louis Bourget (arbres et zones plus humides), 46.5169 N, 6.6014 E",
         lat: 46.5152,
         lng: 6.5986,
         story:
@@ -227,7 +227,7 @@
       {
         id: "materials",
         title: "Collecter la Boue (Materiaux du Nid)",
-        area: "Sentiers boises vers le Chemin du Bois-de-Vaux, 46.5190 N, 6.6035 E",
+        area: "Sentiers boises vers le Chemin du Bois-de-Vaux, 46.5210 N, 6.6058 E",
         lat: 46.519,
         lng: 6.6035,
         story:
@@ -238,7 +238,7 @@
       {
         id: "nest",
         title: "Le Toit Partage (Cohabitation et Nids Artificiels)",
-        area: "Ecole De Montoie, Avenue de Montoie 19, 46.5218 N, 6.6095 E",
+        area: "Ecole De Montoie, Avenue de Montoie 19, 46.5190 N, 6.6121 E",
         lat: 46.5218,
         lng: 6.6095,
         story:
@@ -251,7 +251,7 @@
       {
         id: "migration",
         title: "Die Grosse Reise (Migration)",
-        area: "Nahe Theatre Vidy-Lausanne (offener Seeblick), 46.5123 N, 6.6111 E",
+        area: "Nahe Theatre Vidy-Lausanne (offener Seeblick), 46.5146 N, 6.5992 E",
         lat: 46.5123,
         lng: 6.6111,
         story:
@@ -262,7 +262,7 @@
       {
         id: "food",
         title: "Das Ufer-Buffet (Nahrung und Jagd)",
-        area: "Oestlicher Rand des Parc Louis Bourget (Baumlinien und feuchtere Zonen), 46.5152 N, 6.5986 E",
+        area: "Oestlicher Rand des Parc Louis Bourget (Baumlinien und feuchtere Zonen), 46.5169 N, 6.6014 E",
         lat: 46.5152,
         lng: 6.5986,
         story:
@@ -273,7 +273,7 @@
       {
         id: "materials",
         title: "Schlamm Sammeln (Baumaterial)",
-        area: "Bewaldete Wege Richtung Chemin du Bois-de-Vaux, 46.5190 N, 6.6035 E",
+        area: "Bewaldete Wege Richtung Chemin du Bois-de-Vaux, 46.5210 N, 6.6058 E",
         lat: 46.519,
         lng: 6.6035,
         story:
@@ -284,7 +284,7 @@
       {
         id: "nest",
         title: "Das Geteilte Dach (Koexistenz und Kunstnester)",
-        area: "Ecole De Montoie, Avenue de Montoie 19, 46.5218 N, 6.6095 E",
+        area: "Ecole De Montoie, Avenue de Montoie 19, 46.5190 N, 6.6121 E",
         lat: 46.5218,
         lng: 6.6095,
         story:
@@ -297,8 +297,54 @@
 
   var labels = copy[lang] || copy.en;
   var stations = stationData[lang] || stationData.en;
+  var stationTrailCoords = {
+    migration: { lat: 46.5145556, lng: 6.5991944 },
+    food: { lat: 46.5169167, lng: 6.6014167 },
+    materials: { lat: 46.521, lng: 6.60575 },
+    nest: { lat: 46.5189722, lng: 6.6120556 }
+  };
+  var sketchedTrailWaypoints = [
+    [46.5145556, 6.5991944],
+    [46.51486, 6.59943],
+    [46.51517, 6.59979],
+    [46.51558, 6.60022],
+    [46.51605, 6.60072],
+    [46.51653, 6.60113],
+    [46.5169167, 6.6014167],
+    [46.51727, 6.60182],
+    [46.51767, 6.60221],
+    [46.51802, 6.60212],
+    [46.51845, 6.60236],
+    [46.51893, 6.60279],
+    [46.51941, 6.60331],
+    [46.51989, 6.60395],
+    [46.52031, 6.60458],
+    [46.52068, 6.60514],
+    [46.521, 6.60575],
+    [46.52095, 6.60644],
+    [46.52088, 6.60721],
+    [46.52082, 6.60801],
+    [46.52075, 6.60882],
+    [46.52067, 6.60963],
+    [46.52054, 6.61043],
+    [46.52033, 6.61112],
+    [46.51999, 6.61166],
+    [46.51953, 6.61195],
+    [46.5189722, 6.6120556]
+  ];
+  var stationWaypointIndexById = {
+    migration: 0,
+    food: 6,
+    materials: 16,
+    nest: 26
+  };
   var stationById = {};
   stations.forEach(function (station, index) {
+    var trailCoord = stationTrailCoords[station.id];
+    if (trailCoord) {
+      station.lat = trailCoord.lat;
+      station.lng = trailCoord.lng;
+    }
     station.order = index + 1;
     stationById[station.id] = station;
   });
@@ -314,7 +360,8 @@
 
   var markerNodes = [];
   var activeId = "";
-  var routeLine = null;
+  var fullTrailLine = null;
+  var nextTrailLine = null;
   var radiusMap = null;
   var radiusCenter = L.latLng(46.5197, 6.6323);
   var radiusGuessCircle = null;
@@ -354,6 +401,68 @@
 
   function popupHtml(station) {
     return "<strong>" + station.title + "</strong><br />" + station.area + "<br />" + station.mapHint;
+  }
+
+  function stationRouteLatLng(station) {
+    return [station.lat, station.lng];
+  }
+
+  function segmentPathBetweenStations(originStation, nextStation) {
+    if (!originStation || !nextStation) {
+      return [];
+    }
+
+    var startIndex = stationWaypointIndexById[originStation.id];
+    var endIndex = stationWaypointIndexById[nextStation.id];
+
+    if (typeof startIndex === "number" && typeof endIndex === "number" && endIndex > startIndex) {
+      return sketchedTrailWaypoints.slice(startIndex, endIndex + 1);
+    }
+
+    return [stationRouteLatLng(originStation), stationRouteLatLng(nextStation)];
+  }
+
+  function fullTrailPath() {
+    if (sketchedTrailWaypoints && sketchedTrailWaypoints.length > 1) {
+      return sketchedTrailWaypoints;
+    }
+    return stations.map(function (station) {
+      return stationRouteLatLng(station);
+    });
+  }
+
+  function drawTrail(currentStation, nextStation) {
+    if (fullTrailLine) {
+      map.removeLayer(fullTrailLine);
+      fullTrailLine = null;
+    }
+
+    if (nextTrailLine) {
+      map.removeLayer(nextTrailLine);
+      nextTrailLine = null;
+    }
+
+    fullTrailLine = L.polyline(
+      fullTrailPath(),
+      {
+        color: "#2f6b4a",
+        weight: 5,
+        opacity: 0.55
+      }
+    ).addTo(map);
+
+    if (!nextStation) {
+      return;
+    }
+
+    nextTrailLine = L.polyline(
+      segmentPathBetweenStations(currentStation, nextStation),
+      {
+        color: "#cf6f3c",
+        weight: 6,
+        opacity: 0.95
+      }
+    ).addTo(map);
   }
 
   function extractYouTubeId(url) {
@@ -632,11 +741,7 @@
 
   function setNextDirections(station) {
     var nextStation = stations[station.order] || null;
-
-    if (routeLine) {
-      map.removeLayer(routeLine);
-      routeLine = null;
-    }
+    drawTrail(station, nextStation);
 
     if (!nextStation) {
       nextDirectionNode.textContent = labels.thisIsLast + " " + labels.noNextDirection;
@@ -674,19 +779,6 @@
     nextLinkNode.textContent = labels.directionsLabel;
     nextLinkNode.href = walkLink;
     nextLinkNode.removeAttribute("hidden");
-
-    routeLine = L.polyline(
-      [
-        [station.lat, station.lng],
-        [nextStation.lat, nextStation.lng]
-      ],
-      {
-        color: "#cf6f3c",
-        weight: 4,
-        opacity: 0.9,
-        dashArray: "8 8"
-      }
-    ).addTo(map);
   }
 
   function renderStation(station) {
