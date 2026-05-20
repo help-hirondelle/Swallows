@@ -87,7 +87,7 @@
         details: "A Cette Station"
       },
       imageTitle: "Visuel du parcours",
-      imageCaption: "Chaque station relie un lieu local à un besoin concret des hirondelles.",
+      imageCaption: "Chaque station relie un lieu local ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  un besoin concret des hirondelles.",
       radius: {
         defaultFeedback: "Faites glisser depuis le marqueur central pour definir votre estimation.",
         needGuess: "Dessinez d'abord un cercle estime.",
@@ -113,7 +113,7 @@
         details: "An Dieser Station"
       },
       imageTitle: "Pfadbild",
-      imageCaption: "Jede Station verbindet einen lokalen Ort mit einem konkreten Bedürfnis der Schwalben.",
+      imageCaption: "Jede Station verbindet einen lokalen Ort mit einem konkreten BedÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼rfnis der Schwalben.",
       radius: {
         defaultFeedback: "Ziehen Sie vom zentralen Marker, um Ihren Radius zu schaetzen.",
         needGuess: "Zeichnen Sie zuerst einen Schaetzwert-Kreis.",
@@ -202,7 +202,7 @@
         lat: 46.5123,
         lng: 6.6111,
         story:
-          "Contemplez le lac Léman et imaginez l'immensité de l'horizon. Chaque automne, les hirondelles entament un voyage incroyable depuis l'Europe, traversant la mer Méditerranée et le vaste désert du Sahara pour rejoindre l'Afrique subsaharienne. Jeu - Pack Your Bags: Devinez sur notre site combien de kilomètres ces petits oiseaux peuvent parcourir en une seule journée. Regardez la carte de suivi pour voir leurs routes migratoires.",
+          "Contemplez le lac LÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©man et imaginez l'immensitÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© de l'horizon. Chaque automne, les hirondelles entament un voyage incroyable depuis l'Europe, traversant la mer MÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©diterranÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©e et le vaste dÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©sert du Sahara pour rejoindre l'Afrique subsaharienne. Jeu - Pack Your Bags: Devinez sur notre site combien de kilomÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¨tres ces petits oiseaux peuvent parcourir en une seule journÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©e. Regardez la carte de suivi pour voir leurs routes migratoires.",
         mapHint: "Depart pres du Theatre Vidy-Lausanne",
         videoUrl: ""
       },
@@ -213,7 +213,7 @@
         lat: 46.5152,
         lng: 6.5986,
         story:
-          "En vous promenant au bord du parc, observez les arbres et la végétation humide. C'est le buffet aérien idéal ! Les hirondelles sont des insectivores aériens, ce qui signifie qu'elles chassent et capturent toutes leurs proies en plein vol à grande vitesse. Jeu - Beak Snapshot: Essayez de claquer des doigts le plus vite possible. Pouvez-vous claquer des doigts assez vite pour attraper un moustique ? Les hirondelles volent la bouche grande ouverte comme de petits filets pour capturer des milliers d'insectes chaque jour.",
+          "En vous promenant au bord du parc, observez les arbres et la vÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©gÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©tation humide. C'est le buffet aÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©rien idÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©al ! Les hirondelles sont des insectivores aÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©riens, ce qui signifie qu'elles chassent et capturent toutes leurs proies en plein vol ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  grande vitesse. Jeu - Beak Snapshot: Essayez de claquer des doigts le plus vite possible. Pouvez-vous claquer des doigts assez vite pour attraper un moustique ? Les hirondelles volent la bouche grande ouverte comme de petits filets pour capturer des milliers d'insectes chaque jour.",
         mapHint: "Couloir d'alimentation au bord du lac",
         videoUrl: "https://www.youtube.com/watch?v=ku_rMIjIFfE"
       },
@@ -224,7 +224,7 @@
         lat: 46.519,
         lng: 6.6035,
         story:
-          "En vous enfonçant dans les terres vers des sentiers plus calmes, remarquez les zones boueuses et le sol humide. C'est ici que le travail d'ingénierie commence. Les hirondelles de fenêtre collectent de minuscules boulettes de boue humide, les mélangent à leur salive collante et les assemblent sur les façades. Jeu - Count the Pellets: Devinez combien de boulettes de boue individuelles sont nécessaires pour construire un seul nid. Il faut plus de 1 000 allers-retours ! Regardez la vidéo ci-dessous pour voir ce travail d'équipe architectural incroyable.",
+          "En vous enfonÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ant dans les terres vers des sentiers plus calmes, remarquez les zones boueuses et le sol humide. C'est ici que le travail d'ingÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©nierie commence. Les hirondelles de fenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âªtre collectent de minuscules boulettes de boue humide, les mÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©langent ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  leur salive collante et les assemblent sur les faÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ades. Jeu - Count the Pellets: Devinez combien de boulettes de boue individuelles sont nÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©cessaires pour construire un seul nid. Il faut plus de 1 000 allers-retours ! Regardez la vidÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©o ci-dessous pour voir ce travail d'ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©quipe architectural incroyable.",
         mapHint: "Zone de collecte de boue",
         videoUrl: "https://www.youtube.com/watch?v=xk_LBGByssY"
       },
@@ -235,7 +235,7 @@
         lat: 46.5218,
         lng: 6.6095,
         story:
-          "Bienvenue à l'Ecole De Montoie ! Regardez attentivement les façades de l'école. Les bâtiments modernes ont souvent des murs lisses où la boue n'adhère pas, ou la boue se fait rare en ville. Pour les aider, les humains installent des nids artificiels. Jeu - Spot the Difference: Comptez combien de nids artificiels vous pouvez voir sur les murs. Pouvez-vous repérer des hirondelles actives ou entendre leurs gazouillis ? Écoutez le clip audio ci-dessous pour reconnaître le chant distinct de l'hirondelle de fenêtre.",
+          "Bienvenue ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  l'Ecole De Montoie ! Regardez attentivement les faÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ades de l'ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©cole. Les bÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢timents modernes ont souvent des murs lisses oÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹ la boue n'adhÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¨re pas, ou la boue se fait rare en ville. Pour les aider, les humains installent des nids artificiels. Jeu - Spot the Difference: Comptez combien de nids artificiels vous pouvez voir sur les murs. Pouvez-vous repÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©rer des hirondelles actives ou entendre leurs gazouillis ? ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â°coutez le clip audio ci-dessous pour reconnaÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â®tre le chant distinct de l'hirondelle de fenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âªtre.",
         mapHint: "Arrivee a l'Ecole De Montoie",
         videoUrl: "https://www.youtube.com/watch?v=rV5SaQk7_5I"
       }
@@ -248,7 +248,7 @@
         lat: 46.5123,
         lng: 6.6111,
         story:
-          "Blicken Sie über den Genfersee und stellen Sie sich den weiten Horizont vor. Jeden Herbst begeben sich Schwalben auf eine unglaubliche Reise von Europa über das Mittelmeer und die Sahara bis nach Subsahara-Afrika. Spiel - Pack Your Bags: Ratet auf unserer Website, wie viele Kilometer diese winzigen Vögel an einem einzigen Tag fliegen können. Schaut auf die interaktive Karte, um ihre globalen Routen zu verfolgen.",
+          "Blicken Sie ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ber den Genfersee und stellen Sie sich den weiten Horizont vor. Jeden Herbst begeben sich Schwalben auf eine unglaubliche Reise von Europa ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ber das Mittelmeer und die Sahara bis nach Subsahara-Afrika. Spiel - Pack Your Bags: Ratet auf unserer Website, wie viele Kilometer diese winzigen VÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶gel an einem einzigen Tag fliegen kÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶nnen. Schaut auf die interaktive Karte, um ihre globalen Routen zu verfolgen.",
         mapHint: "Start nahe Theatre Vidy-Lausanne",
         videoUrl: ""
       },
@@ -259,7 +259,7 @@
         lat: 46.5152,
         lng: 6.5986,
         story:
-          "Während Sie am Rand des Parks entlanggehen, beobachten Sie die Bäume und die feuchte Ufervegetation. Dies ist das perfekte Luft-Buffet! Schwalben sind Luft-Insektenjaeger, was bedeutet, dass sie all ihre Beute im Hochgeschwindigkeitsflug fangen. Spiel - Beak Snapshot: Versucht, so schnell wie möglich mit den Fingern zu schnipsen. Könnt ihr schnell genug schnipsen, um eine Mücke zu fangen? Schwalben fliegen mit weit geöffnetem Schnabel wie kleine Netze, um jeden Tag Tausende von Insekten aufzusaugen.",
+          "WÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤hrend Sie am Rand des Parks entlanggehen, beobachten Sie die BÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ume und die feuchte Ufervegetation. Dies ist das perfekte Luft-Buffet! Schwalben sind Luft-Insektenjaeger, was bedeutet, dass sie all ihre Beute im Hochgeschwindigkeitsflug fangen. Spiel - Beak Snapshot: Versucht, so schnell wie mÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶glich mit den Fingern zu schnipsen. KÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶nnt ihr schnell genug schnipsen, um eine MÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼cke zu fangen? Schwalben fliegen mit weit geÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶ffnetem Schnabel wie kleine Netze, um jeden Tag Tausende von Insekten aufzusaugen.",
         mapHint: "Nahrungskorridor am Ufer",
         videoUrl: "https://www.youtube.com/watch?v=ku_rMIjIFfE"
       },
@@ -270,7 +270,7 @@
         lat: 46.519,
         lng: 6.6035,
         story:
-          "Wenn Sie landeinwärts auf die ruhigeren Pfade gehen, achten Sie auf die schlammigen Stellen und die feuchte Erde. Hier findet die große Ingenieursarbeit statt. Mehlschwalben sammeln winzige Kügelchen aus feuchtem Schlamm, mischen sie mit ihrem klebrigen Speichel und kleben sie an Hauswände. Spiel - Count the Pellets: Ratet, wie viele einzelne Schlammkugeln man braucht, um nur ein einziges Nest zu bauen. Es braucht mehr als 1.000 Hin- und Rückflüge! Schaut euch das Video unten an, um einen Zeitraffer dieser unglaublichen architektonischen Teamarbeit zu sehen.",
+          "Wenn Sie landeinwÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤rts auf die ruhigeren Pfade gehen, achten Sie auf die schlammigen Stellen und die feuchte Erde. Hier findet die groÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸e Ingenieursarbeit statt. Mehlschwalben sammeln winzige KÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼gelchen aus feuchtem Schlamm, mischen sie mit ihrem klebrigen Speichel und kleben sie an HauswÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤nde. Spiel - Count the Pellets: Ratet, wie viele einzelne Schlammkugeln man braucht, um nur ein einziges Nest zu bauen. Es braucht mehr als 1.000 Hin- und RÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ckflÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ge! Schaut euch das Video unten an, um einen Zeitraffer dieser unglaublichen architektonischen Teamarbeit zu sehen.",
         mapHint: "Zone fuer Baumaterial",
         videoUrl: "https://www.youtube.com/watch?v=xk_LBGByssY"
       },
@@ -281,7 +281,7 @@
         lat: 46.5218,
         lng: 6.6095,
         story:
-          "Willkommen an der Ecole De Montoie! Schaut euch die Schulfassaden ganz genau an. Moderne Gebäude haben oft glatte Wände, an denen Schlamm nicht haftet, oder Schlamm ist in Städten selten. Um ihnen zu helfen, installieren Menschen künstliche Nisthilfen. Spiel - Spot the Difference: Zählt, wie viele Kunstnester ihr an den Wänden entdecken könnt. Könnt ihr echte Schwalben sehen oder ihr wunderschönes Zwitschern hören? Hört euch den Audioclip unten an, um den typischen Mehlschwalbengesang zu erkennen.",
+          "Willkommen an der Ecole De Montoie! Schaut euch die Schulfassaden ganz genau an. Moderne GebÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ude haben oft glatte WÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤nde, an denen Schlamm nicht haftet, oder Schlamm ist in StÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤dten selten. Um ihnen zu helfen, installieren Menschen kÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼nstliche Nisthilfen. Spiel - Spot the Difference: ZÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤hlt, wie viele Kunstnester ihr an den WÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤nden entdecken kÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶nnt. KÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶nnt ihr echte Schwalben sehen oder ihr wunderschÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶nes Zwitschern hÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶ren? HÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶rt euch den Audioclip unten an, um den typischen Mehlschwalbengesang zu erkennen.",
         mapHint: "Finale Station Ecole De Montoie",
         videoUrl: "https://www.youtube.com/watch?v=rV5SaQk7_5I"
       }
@@ -294,12 +294,12 @@
       title: {
         en: "Long-Distance Return",
         fr: "Retour longue distance",
-        de: "Rückkehr über weite Strecken"
+        de: "RÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ckkehr ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ber weite Strecken"
       },
       caption: {
         en: "Swallows return each spring to familiar breeding areas and nesting sites.",
         fr: "Les hirondelles reviennent chaque printemps vers des zones de reproduction connues.",
-        de: "Schwalben kehren im Frühling zu vertrauten Brutgebieten zurück."
+        de: "Schwalben kehren im FrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼hling zu vertrauten Brutgebieten zurÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ck."
       }
     },
     food: {
@@ -311,8 +311,8 @@
       },
       caption: {
         en: "Healthy green and wet areas support the insects swallows catch in flight.",
-        fr: "Les espaces verts et humides soutiennent les insectes capturés en vol.",
-        de: "Grüne und feuchte Flächen fördern Insekten, die Schwalben im Flug fangen."
+        fr: "Les espaces verts et humides soutiennent les insectes capturÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©s en vol.",
+        de: "GrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ne und feuchte FlÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤chen fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶rdern Insekten, die Schwalben im Flug fangen."
       }
     },
     materials: {
@@ -320,11 +320,11 @@
       title: {
         en: "Mud for Nest Building",
         fr: "Boue pour construire les nids",
-        de: "Lehm für den Nestbau"
+        de: "Lehm fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r den Nestbau"
       },
       caption: {
         en: "Clay-rich mud near colonies helps house martins build and repair nests.",
-        fr: "Une boue argileuse proche des colonies aide à construire et réparer les nids.",
+        fr: "Une boue argileuse proche des colonies aide ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  construire et rÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©parer les nids.",
         de: "Tonreicher Lehm nahe Kolonien hilft beim Bau und bei der Reparatur von Nestern."
       }
     },
@@ -332,13 +332,13 @@
       src: "../assets/images/common-house-martin-nest.jpg",
       title: {
         en: "Shared Buildings",
-        fr: "Bâtiments partagés",
-        de: "Geteilte Gebäude"
+        fr: "BÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢timents partagÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©s",
+        de: "Geteilte GebÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ude"
       },
       caption: {
         en: "Nests under roofs show why coexistence depends on building design and tolerance.",
-        fr: "Les nids sous les toits montrent que la cohabitation dépend du bâti et de la tolérance.",
-        de: "Nester unter Dächern zeigen, wie sehr Koexistenz von Bauweise und Toleranz abhängt."
+        fr: "Les nids sous les toits montrent que la cohabitation dÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©pend du bÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ti et de la tolÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©rance.",
+        de: "Nester unter DÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤chern zeigen, wie sehr Koexistenz von Bauweise und Toleranz abhÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ngt."
       }
     }
   };
@@ -346,45 +346,108 @@
   var labels = copy[lang] || copy.en;
   var stations = stationData[lang] || stationData.en;
   var stationTrailCoords = {
-    migration: { lat: 46.5145556, lng: 6.5991944 },
-    food: { lat: 46.5169167, lng: 6.6014167 },
-    materials: { lat: 46.521, lng: 6.60575 },
-    nest: { lat: 46.5189722, lng: 6.6120556 }
+    migration: { lat: 46.51489, lng: 6.598987 },
+    food: { lat: 46.517134, lng: 6.601525 },
+    materials: { lat: 46.521111, lng: 6.605778 },
+    nest: { lat: 46.519099, lng: 6.611513 }
   };
   var sketchedTrailWaypoints = [
-    [46.5145556, 6.5991944],
-    [46.51486, 6.59943],
-    [46.51517, 6.59979],
-    [46.51558, 6.60022],
-    [46.51605, 6.60072],
-    [46.51653, 6.60113],
-    [46.5169167, 6.6014167],
-    [46.51727, 6.60182],
-    [46.51767, 6.60221],
-    [46.51802, 6.60212],
-    [46.51845, 6.60236],
-    [46.51893, 6.60279],
-    [46.51941, 6.60331],
-    [46.51989, 6.60395],
-    [46.52031, 6.60458],
-    [46.52068, 6.60514],
-    [46.521, 6.60575],
-    [46.52095, 6.60644],
-    [46.52088, 6.60721],
-    [46.52082, 6.60801],
-    [46.52075, 6.60882],
-    [46.52067, 6.60963],
-    [46.52054, 6.61043],
-    [46.52033, 6.61112],
-    [46.51999, 6.61166],
-    [46.51953, 6.61195],
-    [46.5189722, 6.6120556]
+    [46.51489, 6.598987],
+    [46.51494, 6.599015],
+    [46.514987, 6.599033],
+    [46.515051, 6.599042],
+    [46.515113, 6.599029],
+    [46.515177, 6.599002],
+    [46.515226, 6.598967],
+    [46.515277, 6.598915],
+    [46.515308, 6.598958],
+    [46.515332, 6.598984],
+    [46.515363, 6.598998],
+    [46.515401, 6.599004],
+    [46.515434, 6.598996],
+    [46.515476, 6.598978],
+    [46.516245, 6.598523],
+    [46.51653, 6.598821],
+    [46.516821, 6.599128],
+    [46.516858, 6.599166],
+    [46.516906, 6.599184],
+    [46.51696, 6.599184],
+    [46.517016, 6.599171],
+    [46.517054, 6.59915],
+    [46.517078, 6.599111],
+    [46.517091, 6.599063],
+    [46.517036, 6.59793],
+    [46.517144, 6.597921],
+    [46.517306, 6.597909],
+    [46.517428, 6.597921],
+    [46.517483, 6.597927],
+    [46.517583, 6.597948],
+    [46.517656, 6.597972],
+    [46.517726, 6.59802],
+    [46.517757, 6.598049],
+    [46.517844, 6.598125],
+    [46.517789, 6.598274],
+    [46.517764, 6.598339],
+    [46.517675, 6.598608],
+    [46.517582, 6.599005],
+    [46.517542, 6.599178],
+    [46.51743, 6.599777],
+    [46.517359, 6.600363],
+    [46.517246, 6.60105],
+    [46.517134, 6.601525],
+    [46.517083, 6.602111],
+    [46.517417, 6.602333],
+    [46.517861, 6.602806],
+    [46.517944, 6.6025],
+    [46.518139, 6.602722],
+    [46.518222, 6.602944],
+    [46.518139, 6.603083],
+    [46.518278, 6.603417],
+    [46.518222, 6.603778],
+    [46.518278, 6.604056],
+    [46.518333, 6.604222],
+    [46.518472, 6.604417],
+    [46.518611, 6.604472],
+    [46.518806, 6.604389],
+    [46.519083, 6.604333],
+    [46.519278, 6.604417],
+    [46.519667, 6.604917],
+    [46.519833, 6.605028],
+    [46.520056, 6.605139],
+    [46.520222, 6.605389],
+    [46.520361, 6.605583],
+    [46.520722, 6.605722],
+    [46.521111, 6.605778],
+    [46.521028, 6.605861],
+    [46.520944, 6.605889],
+    [46.5205, 6.605917],
+    [46.520472, 6.605944],
+    [46.520417, 6.606111],
+    [46.520306, 6.606083],
+    [46.521014, 6.606521],
+    [46.520951, 6.606655],
+    [46.520168, 6.608786],
+    [46.520093, 6.609032],
+    [46.52003, 6.609273],
+    [46.519955, 6.609628],
+    [46.519635, 6.611212],
+    [46.519547, 6.61125],
+    [46.519494, 6.611267],
+    [46.519454, 6.610832],
+    [46.519441, 6.610657],
+    [46.519409, 6.61067],
+    [46.519319, 6.610707],
+    [46.519227, 6.610756],
+    [46.519176, 6.610818],
+    [46.519166, 6.610848],
+    [46.518905, 6.611204],
+    [46.519099, 6.611513]
   ];
   var stationWaypointIndexById = {
     migration: 0,
-    food: 6,
-    materials: 16,
-    nest: 26
+    food: 42,
+    materials: 65,
+    nest: 89
   };
   var stationById = {};
   stations.forEach(function (station, index) {
