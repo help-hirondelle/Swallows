@@ -23,11 +23,11 @@
   var stationImageArtNode = root.querySelector(".trail-image-art");
   var stationImageTitleNode = root.querySelector("[data-image-title]");
   var stationImageCaptionNode = root.querySelector("[data-image-caption]");
-  var radiusGameNode = root.querySelector("[data-radius-game]");
-  var radiusMapNode = root.querySelector("[data-radius-map-canvas]");
-  var radiusSubmitNode = root.querySelector("[data-radius-submit]");
-  var radiusResetNode = root.querySelector("[data-radius-reset]");
-  var radiusFeedbackNode = root.querySelector("[data-radius-feedback]");
+  var radiusGameNode = document.querySelector("[data-radius-game]");
+  var radiusMapNode = document.querySelector("[data-radius-map-canvas]");
+  var radiusSubmitNode = document.querySelector("[data-radius-submit]");
+  var radiusResetNode = document.querySelector("[data-radius-reset]");
+  var radiusFeedbackNode = document.querySelector("[data-radius-feedback]");
 
   if (
     !mapNode ||
@@ -872,22 +872,6 @@
         stationVideoNode.src = "about:blank";
       } else {
         stationVideoNode.href = "#";
-      }
-    }
-
-    if (radiusGameNode) {
-      if (station.id === "migration") {
-        radiusGameNode.removeAttribute("hidden");
-        if (radiusMap) {
-          window.setTimeout(function () {
-            radiusMap.invalidateSize();
-          }, 0);
-        }
-      } else {
-        radiusGameNode.setAttribute("hidden", "hidden");
-        if (radiusMap) {
-          clearRadiusGuess();
-        }
       }
     }
 

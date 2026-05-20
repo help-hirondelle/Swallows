@@ -3,17 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carte des Nids | Help Hirondelle</title>
+    <title>Carte du parcours | Help Hirondelle</title>
     <meta
       name="description"
-      content="Carte interactive des nids avec points de colonie de démonstration, fiches de station et itinéraires autour de Lausanne."
+      content="Carte interactive du parcours hirondelles avec points de démonstration, fiches de station et itinéraires autour de Lausanne."
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="icon" type="image/png" href="../assets/icons/swallow-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png" />
@@ -24,12 +19,7 @@
       window.ACTIVE_PAGE = "trail";
       window.SITE_LANG = "fr";
     </script>
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-      defer
-    ></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
     <script src="../assets/js/site.js" defer></script>
     <script src="../assets/js/nest-map.js" defer></script>
   </head>
@@ -38,25 +28,14 @@
 
     <main class="container" id="main-content">
       <section class="page-hero reveal-on-scroll">
-        <h1>Carte des Nids d'Hirondelles</h1>
-        <p>
-          Explorez des points de colonie de démonstration autour de Lausanne et découvrez pourquoi les inventaires de nids
-          sont utiles avant les rénovations, démolitions et plans d'action communaux.
-        </p>
-      </section>
-
-      <section class="callout reveal-on-scroll">
-        <h2>Pourquoi Cartographier les Nids ?</h2>
-        <p>
-          Les colonies existantes doivent être inventoriées et suivies. Si les données manquent ou ont plus de cinq ans,
-          un nouvel inventaire aide les communes à maintenir, renforcer ou créer des sites de nidification.
-        </p>
+        <h1>Carte du parcours hirondelles</h1>
+        <p>Explorez des stations de démonstration autour de Lausanne et voyez comment une carte peut guider la protection, les rénovations et l'action publique.</p>
       </section>
 
       <section id="trail-map" class="reveal-on-scroll" data-nest-map-root>
-        <h2>Stations Interactives</h2>
+        <h2>Carte interactive du parcours</h2>
         <div class="nest-map-layout">
-          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Carte des nids avec marqueurs de station"></div>
+          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Carte du parcours avec marqueurs de station"></div>
         </div>
 
         <article class="trail-focus-card card reveal-on-scroll" aria-live="polite">
@@ -71,34 +50,42 @@
               <span data-image-caption>Chaque station relie un lieu local à un besoin concret des hirondelles.</span>
             </figcaption>
           </figure>
-          <section class="radius-guess" data-radius-game hidden>
-            <h4>Jeu Migration: Distance Quotidienne</h4>
-            <p>Tracez votre estimation sur la carte, puis validez pour reveler le vrai cercle de distance.</p>
-            <div
-              class="radius-map-canvas"
-              data-radius-map-canvas
-              aria-label="Carte interactive pour estimer le rayon quotidien de vol d'une hirondelle"
-            ></div>
-            <div class="radius-controls">
-              <button type="button" class="game-btn" data-radius-submit disabled>Valider</button>
-              <button type="button" class="game-btn game-btn-alt" data-radius-reset>Recommencer</button>
-            </div>
-            <p class="radius-feedback" data-radius-feedback>Faites glisser depuis le marqueur central.</p>
-          </section>
-          <p><strong>Lien station (pour QR):</strong> <a data-site-note href="#"></a></p>
+          <a data-site-note href="#" hidden></a>
           <p data-next-direction></p>
-          <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Itineraire a pied</a>
+          <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Itinéraire à pied</a>
           <div class="video-embed trail-video reveal-on-scroll">
-            <iframe
-              data-station-video
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Video station"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+            <iframe data-station-video src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video station" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </article>
+      </section>
+
+      <section class="callout reveal-on-scroll">
+        <h2>Guide communal: pourquoi cartographier ?</h2>
+        <p>
+          Les colonies existantes doivent être inventoriées et suivies. Si les données manquent ou ont plus de cinq ans,
+          un nouvel inventaire aide les communes à maintenir, renforcer ou créer des sites de nidification.
+        </p>
+      </section>
+
+      <section>
+        <h2>Comment une commune peut utiliser cette carte</h2>
+        <div class="detail-grid">
+          <article class="detail-card reveal-on-scroll"><h3>Maintenir</h3><p>Protéger les colonies fortes existantes et éviter que les travaux ou nettoyages ne les suppriment involontairement.</p></article>
+          <article class="detail-card reveal-on-scroll"><h3>Renforcer</h3><p>Soutenir les sites fragiles, en baisse ou récemment abandonnés avec de la boue, des nids artificiels et une gestion des conflits.</p></article>
+          <article class="detail-card reveal-on-scroll"><h3>Créer</h3><p>Identifier des bâtiments adaptés où de nouvelles possibilités de nidification pourraient être ajoutées près de l'activité existante.</p></article>
+          <article class="detail-card reveal-on-scroll"><h3>Suivre</h3><p>Mesurer les installations, le taux d'occupation, les plaintes, les interventions de nettoyage et les sites participants.</p></article>
+        </div>
+      </section>
+
+      <section class="callout reveal-on-scroll" data-radius-game>
+        <h2>Jeu migration: distance quotidienne</h2>
+        <p>Tracez sur la carte votre estimation de la distance qu'une hirondelle peut parcourir en une journée, puis validez pour révéler le cercle de référence.</p>
+        <div class="radius-map-canvas" data-radius-map-canvas aria-label="Carte interactive pour estimer le rayon quotidien de vol d'une hirondelle"></div>
+        <div class="radius-controls">
+          <button type="button" class="game-btn" data-radius-submit disabled>Valider</button>
+          <button type="button" class="game-btn game-btn-alt" data-radius-reset>Recommencer</button>
+        </div>
+        <p class="radius-feedback" data-radius-feedback>Faites glisser depuis le marqueur central pour définir votre estimation.</p>
       </section>
     </main>
 

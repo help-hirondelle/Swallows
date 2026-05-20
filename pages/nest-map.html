@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Swallow Nest Map & Stations | Lausanne Region</title>
+    <title>Swallow Trail Map | Lausanne Region</title>
     <meta
       name="description"
-      content="Interactive swallow nest map with demo colony points, station details, and walking directions around Lausanne."
+      content="Interactive swallow trail map with example colony points, station details, and walking directions around Lausanne."
     />
     <link
       rel="stylesheet"
@@ -38,25 +38,14 @@
 
     <main class="container" id="main-content">
       <section class="page-hero reveal-on-scroll">
-        <h1>Swallow Nest Map (Lausanne Region)</h1>
-        <p>
-          Explore demo colony points around Lausanne and learn why mapping matters: communes need up-to-date nest records before
-          renovation, demolition, or public action plans.
-        </p>
-      </section>
-
-      <section class="callout reveal-on-scroll">
-        <h2>Why Map Nests?</h2>
-        <p>
-          Existing colonies should be inventoried and monitored regularly. If data are missing or older than five years, a new
-          inventory helps communes decide where to maintain, reinforce, or create nesting opportunities.
-        </p>
+        <h1>Swallow Trail Map</h1>
+        <p>Explore example swallow stations around Lausanne and see how mapped colonies can guide protection, renovation planning, and public action.</p>
       </section>
 
       <section id="trail-map" class="reveal-on-scroll" data-nest-map-root>
-        <h2>Interactive Nest Stations</h2>
+        <h2>Interactive trail map</h2>
         <div class="nest-map-layout">
-          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Nest map with clickable station markers"></div>
+          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Trail map with clickable station markers"></div>
         </div>
 
         <article class="trail-focus-card card reveal-on-scroll" aria-live="polite">
@@ -71,21 +60,7 @@
               <span data-image-caption>Each station connects a local place with one concrete swallow need.</span>
             </figcaption>
           </figure>
-          <section class="radius-guess" data-radius-game hidden>
-            <h4>Migration Game: Daily Flight Guess</h4>
-            <p>Drag on the map to set your guess, then submit to reveal the real daily-distance circle.</p>
-            <div
-              class="radius-map-canvas"
-              data-radius-map-canvas
-              aria-label="Interactive map to estimate a swallow's daily flight radius"
-            ></div>
-            <div class="radius-controls">
-              <button type="button" class="game-btn" data-radius-submit disabled>Submit Guess</button>
-              <button type="button" class="game-btn game-btn-alt" data-radius-reset>Try Again</button>
-            </div>
-            <p class="radius-feedback" data-radius-feedback>Drag from the center marker to set your estimate.</p>
-          </section>
-          <p><strong>Station link (for QR):</strong> <a data-site-note href="#"></a></p>
+          <a data-site-note href="#" hidden></a>
           <p data-next-direction></p>
           <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Open walking directions</a>
           <div class="video-embed trail-video reveal-on-scroll">
@@ -99,6 +74,35 @@
             ></iframe>
           </div>
         </article>
+      </section>
+
+      <section class="callout reveal-on-scroll">
+        <h2>Community guide: why mapping matters</h2>
+        <p>
+          Existing colonies should be inventoried and monitored regularly. If data are missing or older than five years, a new
+          inventory helps communes decide where to maintain, reinforce, or create nesting opportunities.
+        </p>
+      </section>
+
+      <section>
+        <h2>How communes can use this trail map</h2>
+        <div class="detail-grid">
+          <article class="detail-card reveal-on-scroll"><h3>Maintain</h3><p>Protect strong existing colonies and make sure renovation or cleaning work does not accidentally remove them.</p></article>
+          <article class="detail-card reveal-on-scroll"><h3>Reinforce</h3><p>Support fragile, declining, or recently abandoned sites with mud access, artificial nests, and conflict management.</p></article>
+          <article class="detail-card reveal-on-scroll"><h3>Create</h3><p>Identify suitable buildings where new nesting opportunities could be added near existing swallow activity.</p></article>
+          <article class="detail-card reveal-on-scroll"><h3>Monitor</h3><p>Track installed nesting solutions, occupancy rates, complaints, cleaning interventions, and participating sites.</p></article>
+        </div>
+      </section>
+
+      <section class="callout reveal-on-scroll" data-radius-game>
+        <h2>Migration game: daily flight guess</h2>
+        <p>Drag on the map to estimate how far a swallow can fly in one day, then submit to reveal the reference circle.</p>
+        <div class="radius-map-canvas" data-radius-map-canvas aria-label="Interactive map to estimate a swallow's daily flight radius"></div>
+        <div class="radius-controls">
+          <button type="button" class="game-btn" data-radius-submit disabled>Submit guess</button>
+          <button type="button" class="game-btn game-btn-alt" data-radius-reset>Try again</button>
+        </div>
+        <p class="radius-feedback" data-radius-feedback>Drag from the center marker to set your estimate.</p>
       </section>
     </main>
 

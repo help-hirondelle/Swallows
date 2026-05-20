@@ -25,25 +25,25 @@
       information: "Home",
       "fun-facts": "Learn",
       "how-to-do-more": "Take Action",
-      trail: "Nest Map",
-      game: "Play",
-      about: "About"
+      trail: "Trail Map",
+      game: "Game",
+      about: "Project"
     },
     fr: {
       information: "Accueil",
-      "fun-facts": "Apprendre",
+      "fun-facts": "Découvrir",
       "how-to-do-more": "Agir",
-      trail: "Carte des nids",
-      game: "Jouer",
-      about: "À propos"
+      trail: "Carte du parcours",
+      game: "Jeu",
+      about: "Projet"
     },
     de: {
       information: "Start",
-      "fun-facts": "Lernen",
-      "how-to-do-more": "Handeln",
-      trail: "Nestkarte",
-      game: "Spielen",
-      about: "Über uns"
+      "fun-facts": "Entdecken",
+      "how-to-do-more": "Helfen",
+      trail: "Pfadkarte",
+      game: "Spiel",
+      about: "Projekt"
     }
   };
 
@@ -75,8 +75,8 @@
 
   function renderLanguageSwitchDropdown() {
     var items = [
-      { key: "fr", label: "French" },
-      { key: "de", label: "German" },
+      { key: "fr", label: "Français" },
+      { key: "de", label: "Deutsch" },
       { key: "en", label: "English" }
     ];
     var basePath = currentBasePath();
@@ -184,7 +184,7 @@
     host.innerHTML =
       '<footer class="site-footer">' +
       '  <div class="container site-footer-inner">' +
-      '    <span>Prototype for people-swallow coexistence in Vaud.</span>' +
+      '    <span>A prototype for coexistence between people and swallows in Vaud.</span>' +
       '    <span class="site-footer-meta"><a href="' +
       resolvePath("pages/photo-credits.html") +
       '">Photo credits</a> · Last updated: <span data-last-updated></span></span>' +
