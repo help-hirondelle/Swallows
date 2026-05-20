@@ -87,7 +87,7 @@
         details: "A Cette Station"
       },
       imageTitle: "Visuel du parcours",
-      imageCaption: "Chaque station relie un lieu local ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  un besoin concret des hirondelles.",
+      imageCaption: "Chaque station relie un lieu local a un besoin concret des hirondelles.",
       radius: {
         defaultFeedback: "Faites glisser depuis le marqueur central pour definir votre estimation.",
         needGuess: "Dessinez d'abord un cercle estime.",
@@ -113,7 +113,7 @@
         details: "An Dieser Station"
       },
       imageTitle: "Pfadbild",
-      imageCaption: "Jede Station verbindet einen lokalen Ort mit einem konkreten BedÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼rfnis der Schwalben.",
+      imageCaption: "Jede Station verbindet einen lokalen Ort mit einem konkreten Beduerfnis der Schwalben.",
       radius: {
         defaultFeedback: "Ziehen Sie vom zentralen Marker, um Ihren Radius zu schaetzen.",
         needGuess: "Zeichnen Sie zuerst einen Schaetzwert-Kreis.",
@@ -201,8 +201,14 @@
         area: "Pres du Theatre Vidy-Lausanne (vue ouverte sur le lac), 46.5146 N, 6.5992 E",
         lat: 46.5123,
         lng: 6.6111,
-        story:
-          "Contemplez le lac LÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©man et imaginez l'immensitÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© de l'horizon. Chaque automne, les hirondelles entament un voyage incroyable depuis l'Europe, traversant la mer MÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©diterranÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©e et le vaste dÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©sert du Sahara pour rejoindre l'Afrique subsaharienne. Jeu - Pack Your Bags: Devinez sur notre site combien de kilomÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¨tres ces petits oiseaux peuvent parcourir en une seule journÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©e. Regardez la carte de suivi pour voir leurs routes migratoires.",
+        storyLead:
+          "Commencez au bord du lac et regardez l'horizon ouvert. Il rappelle les grandes distances parcourues chaque annee.",
+        storyTheme:
+          "Migration saisonniere depuis l'Europe, au-dela de la Mediterranee et du Sahara, vers l'Afrique subsaharienne.",
+        storyActivity:
+          "Jeu Pack Your Bags: estimez la distance qu'une hirondelle peut voler en une journee.",
+        storyDigital:
+          "Affichez une carte de migration animee ou un suivi interactif d'hirondelles balisees.",
         mapHint: "Depart pres du Theatre Vidy-Lausanne",
         videoUrl: ""
       },
@@ -212,8 +218,14 @@
         area: "Bord est du Parc Louis Bourget (arbres et zones plus humides), 46.5169 N, 6.6014 E",
         lat: 46.5152,
         lng: 6.5986,
-        story:
-          "En vous promenant au bord du parc, observez les arbres et la vÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©gÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©tation humide. C'est le buffet aÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©rien idÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©al ! Les hirondelles sont des insectivores aÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©riens, ce qui signifie qu'elles chassent et capturent toutes leurs proies en plein vol ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  grande vitesse. Jeu - Beak Snapshot: Essayez de claquer des doigts le plus vite possible. Pouvez-vous claquer des doigts assez vite pour attraper un moustique ? Les hirondelles volent la bouche grande ouverte comme de petits filets pour capturer des milliers d'insectes chaque jour.",
+        storyLead:
+          "Marchez le long de la rive la ou l'eau, la vegetation et les arbres creent des zones riches en insectes.",
+        storyTheme:
+          "Les hirondelles sont insectivores aeriennes et attrapent leur nourriture entierement en vol.",
+        storyActivity:
+          "Jeu Beak Snapshot: claquez des doigts le plus vite possible et comparez avec la chasse des hirondelles.",
+        storyDigital:
+          "Montrez une video au ralenti d'une hirondelle capturant des insectes en plein air.",
         mapHint: "Couloir d'alimentation au bord du lac",
         videoUrl: "https://www.youtube.com/watch?v=ku_rMIjIFfE"
       },
@@ -223,20 +235,32 @@
         area: "Sentiers boises vers le Chemin du Bois-de-Vaux, 46.5210 N, 6.6058 E",
         lat: 46.519,
         lng: 6.6035,
-        story:
-          "En vous enfonÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ant dans les terres vers des sentiers plus calmes, remarquez les zones boueuses et le sol humide. C'est ici que le travail d'ingÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©nierie commence. Les hirondelles de fenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âªtre collectent de minuscules boulettes de boue humide, les mÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©langent ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  leur salive collante et les assemblent sur les faÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ades. Jeu - Count the Pellets: Devinez combien de boulettes de boue individuelles sont nÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©cessaires pour construire un seul nid. Il faut plus de 1 000 allers-retours ! Regardez la vidÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©o ci-dessous pour voir ce travail d'ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©quipe architectural incroyable.",
-        mapHint: "Zone de collecte de boue",
+        storyLead:
+          "En allant vers des sentiers plus calmes, reperez les zones humides et la boue proche du sol.",
+        storyTheme:
+          "Les hirondelles de fenetre construisent des nids en coupelle avec de petites boulettes de boue melangees a la salive.",
+        storyActivity:
+          "Jeu Count the Pellets: estimez combien de boulettes de boue sont necessaires pour un nid (plus de 1 000).",
+        storyDigital:
+          "Lancez un time-lapse de construction pour voir le travail boulette par boulette.",
+        mapHint: "Zone de collecte de boue dans les terres",
         videoUrl: "https://www.youtube.com/watch?v=xk_LBGByssY"
       },
       {
         id: "nest",
-        title: "Le Toit Partage (Cohabitation et Nids Artificiels)",
+        title: "Le Toit Partage (Coexistence et Nids Artificiels)",
         area: "Ecole De Montoie, Avenue de Montoie 19, 46.5190 N, 6.6121 E",
         lat: 46.5218,
         lng: 6.6095,
-        story:
-          "Bienvenue ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  l'Ecole De Montoie ! Regardez attentivement les faÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ades de l'ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©cole. Les bÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢timents modernes ont souvent des murs lisses oÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹ la boue n'adhÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¨re pas, ou la boue se fait rare en ville. Pour les aider, les humains installent des nids artificiels. Jeu - Spot the Difference: Comptez combien de nids artificiels vous pouvez voir sur les murs. Pouvez-vous repÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©rer des hirondelles actives ou entendre leurs gazouillis ? ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â°coutez le clip audio ci-dessous pour reconnaÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â®tre le chant distinct de l'hirondelle de fenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âªtre.",
-        mapHint: "Arrivee a l'Ecole De Montoie",
+        storyLead:
+          "A l'Ecole De Montoie, le parcours se termine sur la coexistence entre humains et hirondelles.",
+        storyTheme:
+          "La conservation passe aussi par l'architecture: les nids artificiels aident quand les facades modernes et la boue rare limitent la nidification.",
+        storyActivity:
+          "Jeu Spot the Difference: comptez les nids artificiels et cherchez des hirondelles actives.",
+        storyDigital:
+          "Ajoutez un flux nest-cam ou un clip d'alimentation des poussins pour observer le nid de pres.",
+        mapHint: "Arret final a l'Ecole De Montoie",
         videoUrl: "https://www.youtube.com/watch?v=rV5SaQk7_5I"
       }
     ],
@@ -244,34 +268,52 @@
       {
         id: "migration",
         title: "Die Grosse Reise (Migration)",
-        area: "Nahe Theatre Vidy-Lausanne (offener Seeblick), 46.5146 N, 6.5992 E",
+        area: "Nahe Theatre Vidy-Lausanne (freier Blick auf den See), 46.5146 N, 6.5992 E",
         lat: 46.5123,
         lng: 6.6111,
-        story:
-          "Blicken Sie ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ber den Genfersee und stellen Sie sich den weiten Horizont vor. Jeden Herbst begeben sich Schwalben auf eine unglaubliche Reise von Europa ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ber das Mittelmeer und die Sahara bis nach Subsahara-Afrika. Spiel - Pack Your Bags: Ratet auf unserer Website, wie viele Kilometer diese winzigen VÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶gel an einem einzigen Tag fliegen kÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶nnen. Schaut auf die interaktive Karte, um ihre globalen Routen zu verfolgen.",
+        storyLead:
+          "Starten Sie am Seeufer und schauen Sie auf den offenen Horizont. Er zeigt die grossen Distanzen dieser Voegel.",
+        storyTheme:
+          "Saisonale Migration von Europa ueber Mittelmeer und Sahara nach Subsahara-Afrika.",
+        storyActivity:
+          "Pack Your Bags Spiel: Schaetzen Sie, wie weit eine Schwalbe an einem Tag fliegen kann.",
+        storyDigital:
+          "Nutzen Sie eine animierte Migrationsroute oder eine interaktive Tracking-Karte markierter Schwalben.",
         mapHint: "Start nahe Theatre Vidy-Lausanne",
         videoUrl: ""
       },
       {
         id: "food",
-        title: "Das Ufer-Buffet (Nahrung und Jagd)",
+        title: "Das Seeufer-Buffet (Nahrung und Jagd)",
         area: "Oestlicher Rand des Parc Louis Bourget (Baumlinien und feuchtere Zonen), 46.5169 N, 6.6014 E",
         lat: 46.5152,
         lng: 6.5986,
-        story:
-          "WÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤hrend Sie am Rand des Parks entlanggehen, beobachten Sie die BÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ume und die feuchte Ufervegetation. Dies ist das perfekte Luft-Buffet! Schwalben sind Luft-Insektenjaeger, was bedeutet, dass sie all ihre Beute im Hochgeschwindigkeitsflug fangen. Spiel - Beak Snapshot: Versucht, so schnell wie mÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶glich mit den Fingern zu schnipsen. KÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶nnt ihr schnell genug schnipsen, um eine MÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼cke zu fangen? Schwalben fliegen mit weit geÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶ffnetem Schnabel wie kleine Netze, um jeden Tag Tausende von Insekten aufzusaugen.",
-        mapHint: "Nahrungskorridor am Ufer",
+        storyLead:
+          "Gehen Sie entlang der Uferzone, wo Wasser, Vegetation und Baeume viele Insekten anziehen.",
+        storyTheme:
+          "Schwalben sind Luftinsektenfresser und fangen ihre Nahrung vollstaendig im Flug.",
+        storyActivity:
+          "Beak Snapshot Spiel: Schnipsen Sie so schnell wie moeglich und vergleichen Sie das mit der Jagdgeschwindigkeit der Schwalben.",
+        storyDigital:
+          "Zeigen Sie eine Zeitlupenaufnahme einer Schwalbe beim Insektenfang in der Luft.",
+        mapHint: "Futterkorridor am Ufer",
         videoUrl: "https://www.youtube.com/watch?v=ku_rMIjIFfE"
       },
       {
         id: "materials",
-        title: "Schlamm Sammeln (Baumaterial)",
-        area: "Bewaldete Wege Richtung Chemin du Bois-de-Vaux, 46.5210 N, 6.6058 E",
+        title: "Lehm Sammeln (Nistmaterial)",
+        area: "Bewaldete Wege landeinwaerts Richtung Chemin du Bois-de-Vaux, 46.5210 N, 6.6058 E",
         lat: 46.519,
         lng: 6.6035,
-        story:
-          "Wenn Sie landeinwÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤rts auf die ruhigeren Pfade gehen, achten Sie auf die schlammigen Stellen und die feuchte Erde. Hier findet die groÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸e Ingenieursarbeit statt. Mehlschwalben sammeln winzige KÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼gelchen aus feuchtem Schlamm, mischen sie mit ihrem klebrigen Speichel und kleben sie an HauswÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤nde. Spiel - Count the Pellets: Ratet, wie viele einzelne Schlammkugeln man braucht, um nur ein einziges Nest zu bauen. Es braucht mehr als 1.000 Hin- und RÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ckflÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ge! Schaut euch das Video unten an, um einen Zeitraffer dieser unglaublichen architektonischen Teamarbeit zu sehen.",
-        mapHint: "Zone fuer Baumaterial",
+        storyLead:
+          "Auf ruhigeren Wegen landeinwaerts sehen Sie feuchte Erde und schlammige Stellen am Boden.",
+        storyTheme:
+          "Mehlschwalben bauen geschlossene Lehmnester aus kleinen Schlammkugeln, gemischt mit Speichel.",
+        storyActivity:
+          "Count the Pellets Spiel: Schaetzen Sie, wie viele Schlammkugeln fuer ein Nest noetig sind (mehr als 1.000).",
+        storyDigital:
+          "Zeigen Sie einen Nestbau-Zeitraffer, um die Teamarbeit Kugel fuer Kugel sichtbar zu machen.",
+        mapHint: "Landeinwaertige Lehm-Sammelzone",
         videoUrl: "https://www.youtube.com/watch?v=xk_LBGByssY"
       },
       {
@@ -280,26 +322,31 @@
         area: "Ecole De Montoie, Avenue de Montoie 19, 46.5190 N, 6.6121 E",
         lat: 46.5218,
         lng: 6.6095,
-        story:
-          "Willkommen an der Ecole De Montoie! Schaut euch die Schulfassaden ganz genau an. Moderne GebÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ude haben oft glatte WÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤nde, an denen Schlamm nicht haftet, oder Schlamm ist in StÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤dten selten. Um ihnen zu helfen, installieren Menschen kÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼nstliche Nisthilfen. Spiel - Spot the Difference: ZÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤hlt, wie viele Kunstnester ihr an den WÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤nden entdecken kÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶nnt. KÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶nnt ihr echte Schwalben sehen oder ihr wunderschÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶nes Zwitschern hÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶ren? HÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶rt euch den Audioclip unten an, um den typischen Mehlschwalbengesang zu erkennen.",
-        mapHint: "Finale Station Ecole De Montoie",
+        storyLead:
+          "An der Ecole De Montoie endet der Pfad mit Koexistenz: Menschen und Schwalben teilen gebaute Raeume.",
+        storyTheme:
+          "Schutz durch Architektur: Kunstnester helfen, wenn moderne Fassaden und wenig Lehm natuerliche Nester begrenzen.",
+        storyActivity:
+          "Spot the Difference Spiel: Zaehlen Sie Kunstnester und achten Sie auf aktive Nutzung durch Schwalben.",
+        storyDigital:
+          "Ergaenzen Sie einen Nest-Cam-Stream oder einen Futterclip mit Jungvoegeln aus der Naehe.",
+        mapHint: "Letzte Station an der Ecole De Montoie",
         videoUrl: "https://www.youtube.com/watch?v=rV5SaQk7_5I"
       }
     ]
   };
-
   var stationVisuals = {
     migration: {
       src: "../assets/images/house-martin-returning-nest.jpg",
       title: {
         en: "Long-Distance Return",
         fr: "Retour longue distance",
-        de: "RÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ckkehr ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ber weite Strecken"
+        de: "Rueckkehr ueber weite Strecken"
       },
       caption: {
         en: "Swallows return each spring to familiar breeding areas and nesting sites.",
         fr: "Les hirondelles reviennent chaque printemps vers des zones de reproduction connues.",
-        de: "Schwalben kehren im FrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼hling zu vertrauten Brutgebieten zurÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ck."
+        de: "Schwalben kehren im Fruehling zu vertrauten Brutgebieten zurueck."
       }
     },
     food: {
@@ -311,8 +358,8 @@
       },
       caption: {
         en: "Healthy green and wet areas support the insects swallows catch in flight.",
-        fr: "Les espaces verts et humides soutiennent les insectes capturÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©s en vol.",
-        de: "GrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ne und feuchte FlÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤chen fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶rdern Insekten, die Schwalben im Flug fangen."
+        fr: "Les espaces verts et humides soutiennent les insectes captures en vol.",
+        de: "Gruene und feuchte Flaechen foerdern Insekten, die Schwalben im Flug fangen."
       }
     },
     materials: {
@@ -320,11 +367,11 @@
       title: {
         en: "Mud for Nest Building",
         fr: "Boue pour construire les nids",
-        de: "Lehm fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r den Nestbau"
+        de: "Lehm fuer den Nestbau"
       },
       caption: {
         en: "Clay-rich mud near colonies helps house martins build and repair nests.",
-        fr: "Une boue argileuse proche des colonies aide ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  construire et rÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©parer les nids.",
+        fr: "Une boue argileuse proche des colonies aide a construire et reparer les nids.",
         de: "Tonreicher Lehm nahe Kolonien hilft beim Bau und bei der Reparatur von Nestern."
       }
     },
@@ -332,13 +379,13 @@
       src: "../assets/images/common-house-martin-nest.jpg",
       title: {
         en: "Shared Buildings",
-        fr: "BÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢timents partagÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©s",
-        de: "Geteilte GebÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ude"
+        fr: "Batiments partages",
+        de: "Geteilte Gebaeude"
       },
       caption: {
         en: "Nests under roofs show why coexistence depends on building design and tolerance.",
-        fr: "Les nids sous les toits montrent que la cohabitation dÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©pend du bÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ti et de la tolÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©rance.",
-        de: "Nester unter DÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤chern zeigen, wie sehr Koexistenz von Bauweise und Toleranz abhÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ngt."
+        fr: "Les nids sous les toits montrent que la cohabitation depend du bati et de la tolerance.",
+        de: "Nester unter Daechern zeigen, wie sehr Koexistenz von Bauweise und Toleranz abhaengt."
       }
     }
   };
@@ -346,108 +393,78 @@
   var labels = copy[lang] || copy.en;
   var stations = stationData[lang] || stationData.en;
   var stationTrailCoords = {
-    migration: { lat: 46.51489, lng: 6.598987 },
+    migration: { lat: 46.514528, lng: 6.599111 },
     food: { lat: 46.517134, lng: 6.601525 },
     materials: { lat: 46.521111, lng: 6.605778 },
     nest: { lat: 46.519099, lng: 6.611513 }
   };
   var sketchedTrailWaypoints = [
-    [46.51489, 6.598987],
-    [46.51494, 6.599015],
-    [46.514987, 6.599033],
-    [46.515051, 6.599042],
-    [46.515113, 6.599029],
-    [46.515177, 6.599002],
-    [46.515226, 6.598967],
-    [46.515277, 6.598915],
-    [46.515308, 6.598958],
-    [46.515332, 6.598984],
-    [46.515363, 6.598998],
-    [46.515401, 6.599004],
-    [46.515434, 6.598996],
-    [46.515476, 6.598978],
-    [46.516245, 6.598523],
-    [46.51653, 6.598821],
-    [46.516821, 6.599128],
-    [46.516858, 6.599166],
-    [46.516906, 6.599184],
-    [46.51696, 6.599184],
-    [46.517016, 6.599171],
-    [46.517054, 6.59915],
-    [46.517078, 6.599111],
-    [46.517091, 6.599063],
-    [46.517036, 6.59793],
-    [46.517144, 6.597921],
-    [46.517306, 6.597909],
-    [46.517428, 6.597921],
-    [46.517483, 6.597927],
-    [46.517583, 6.597948],
-    [46.517656, 6.597972],
-    [46.517726, 6.59802],
-    [46.517757, 6.598049],
-    [46.517844, 6.598125],
-    [46.517789, 6.598274],
-    [46.517764, 6.598339],
-    [46.517675, 6.598608],
-    [46.517582, 6.599005],
-    [46.517542, 6.599178],
-    [46.51743, 6.599777],
-    [46.517359, 6.600363],
-    [46.517246, 6.60105],
-    [46.517134, 6.601525],
-    [46.517083, 6.602111],
-    [46.517417, 6.602333],
-    [46.517861, 6.602806],
-    [46.517944, 6.6025],
-    [46.518139, 6.602722],
-    [46.518222, 6.602944],
-    [46.518139, 6.603083],
-    [46.518278, 6.603417],
-    [46.518222, 6.603778],
-    [46.518278, 6.604056],
-    [46.518333, 6.604222],
-    [46.518472, 6.604417],
-    [46.518611, 6.604472],
-    [46.518806, 6.604389],
-    [46.519083, 6.604333],
-    [46.519278, 6.604417],
-    [46.519667, 6.604917],
-    [46.519833, 6.605028],
-    [46.520056, 6.605139],
-    [46.520222, 6.605389],
-    [46.520361, 6.605583],
-    [46.520722, 6.605722],
-    [46.521111, 6.605778],
-    [46.521028, 6.605861],
-    [46.520944, 6.605889],
-    [46.5205, 6.605917],
-    [46.520472, 6.605944],
-    [46.520417, 6.606111],
-    [46.520306, 6.606083],
-    [46.521014, 6.606521],
-    [46.520951, 6.606655],
-    [46.520168, 6.608786],
-    [46.520093, 6.609032],
-    [46.52003, 6.609273],
-    [46.519955, 6.609628],
-    [46.519635, 6.611212],
-    [46.519547, 6.61125],
-    [46.519494, 6.611267],
-    [46.519454, 6.610832],
-    [46.519441, 6.610657],
-    [46.519409, 6.61067],
-    [46.519319, 6.610707],
-    [46.519227, 6.610756],
-    [46.519176, 6.610818],
-    [46.519166, 6.610848],
-    [46.518905, 6.611204],
-    [46.519099, 6.611513]
+    [46.514528, 6.599111 ],
+    [46.515, 6.599333 ],
+    [46.515417, 6.599361 ],
+    [46.515806, 6.599083 ],
+    [46.516222, 6.598889 ],
+    [46.516972, 6.599639 ],
+    [46.51725, 6.599778 ],
+    [46.517, 6.600361 ],
+    [46.517, 6.601167 ],
+    [46.517134, 6.601525 ],
+    [46.517083, 6.602111 ],
+    [46.517417, 6.602333 ],
+    [46.517861, 6.602806 ],
+    [46.517944, 6.6025 ],
+    [46.518139, 6.602722 ],
+    [46.518222, 6.602944 ],
+    [46.518139, 6.603083 ],
+    [46.518278, 6.603417 ],
+    [46.518222, 6.603778 ],
+    [46.518278, 6.604056 ],
+    [46.518333, 6.604222 ],
+    [46.518472, 6.604417 ],
+    [46.518611, 6.604472 ],
+    [46.518806, 6.604389 ],
+    [46.519083, 6.604333 ],
+    [46.519278, 6.604417 ],
+    [46.519667, 6.604917 ],
+    [46.519833, 6.605028 ],
+    [46.520056, 6.605139 ],
+    [46.520222, 6.605389 ],
+    [46.520361, 6.605583 ],
+    [46.520722, 6.605722 ],
+    [46.521111, 6.605778 ],
+    [46.521028, 6.605861 ],
+    [46.520944, 6.605889 ],
+    [46.5205, 6.605917 ],
+    [46.520472, 6.605944 ],
+    [46.520417, 6.606111 ],
+    [46.520306, 6.606083 ],
+    [46.519917, 6.607222 ],
+    [46.519658, 6.607751 ],
+    [46.51915, 6.608855 ],
+    [46.519135, 6.608888 ],
+    [46.519088, 6.60895 ],
+    [46.519078, 6.609054 ],
+    [46.519217, 6.609436 ],
+    [46.519261, 6.609548 ],
+    [46.519275, 6.609589 ],
+    [46.51934, 6.609783 ],
+    [46.519348, 6.609819 ],
+    [46.51937, 6.609917 ],
+    [46.519404, 6.610129 ],
+    [46.519441, 6.610657 ],
+    [46.519409, 6.61067 ],
+    [46.519319, 6.610707 ],
+    [46.519227, 6.610756 ],
+    [46.519176, 6.610818 ],
+    [46.519166, 6.610848 ],
+    [46.518905, 6.611204 ],
+    [46.519099, 6.611513 ]
   ];
   var stationWaypointIndexById = {
     migration: 0,
-    food: 42,
-    materials: 65,
-    nest: 89
+    food: 9,
+    materials: 32,
+    nest: 59
   };
   var stationById = {};
   stations.forEach(function (station, index) {
