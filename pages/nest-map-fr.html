@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carte du Parcours | Help Hironelle</title>
+    <title>Carte des Nids | Help Hirondelle</title>
     <meta
       name="description"
-      content="Parcours QR avec stations et itineraire vers l'etape suivante dans la region lausannoise."
+      content="Carte interactive des nids avec points de colonie de démonstration, fiches de station et itinéraires autour de Lausanne."
     />
     <link
       rel="stylesheet"
@@ -37,29 +37,38 @@
     <div data-site-header></div>
 
     <main class="container" id="main-content">
-      <section class="page-hero">
-        <h1>Carte du Parcours Hirondelles</h1>
+      <section class="page-hero reveal-on-scroll">
+        <h1>Carte des Nids d'Hirondelles</h1>
         <p>
-          Scannez un QR code pour ouvrir directement la station. Cliquez une icone sur la carte pour changer de station.
+          Explorez des points de colonie de démonstration autour de Lausanne et découvrez pourquoi les inventaires de nids
+          sont utiles avant les rénovations, démolitions et plans d'action communaux.
         </p>
       </section>
 
-      <section id="trail-map" data-nest-map-root>
+      <section class="callout reveal-on-scroll">
+        <h2>Pourquoi Cartographier les Nids ?</h2>
+        <p>
+          Les colonies existantes doivent être inventoriées et suivies. Si les données manquent ou ont plus de cinq ans,
+          un nouvel inventaire aide les communes à maintenir, renforcer ou créer des sites de nidification.
+        </p>
+      </section>
+
+      <section id="trail-map" class="reveal-on-scroll" data-nest-map-root>
         <h2>Stations Interactives</h2>
         <div class="nest-map-layout">
-          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Carte du parcours avec marqueurs de station"></div>
+          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Carte des nids avec marqueurs de station"></div>
         </div>
 
-        <article class="trail-focus-card card" aria-live="polite">
+        <article class="trail-focus-card card reveal-on-scroll" aria-live="polite">
           <h3 data-site-title>Station</h3>
           <p class="nest-map-meta"><strong>Lieu:</strong> <span data-site-area></span></p>
           <p class="nest-map-meta"><strong>Progression:</strong> <span data-site-status></span></p>
           <div class="trail-story" data-site-story></div>
-          <figure class="trail-image-placeholder" data-station-image>
+          <figure class="trail-image-card" data-station-image>
             <div class="trail-image-art" aria-hidden="true"></div>
             <figcaption>
-              <strong data-image-title>Espace Image</strong>
-              <span data-image-caption>Ajoutez ici une image de la station.</span>
+              <strong data-image-title>Visuel de station</strong>
+              <span data-image-caption>Chaque station relie un lieu local à un besoin concret des hirondelles.</span>
             </figcaption>
           </figure>
           <section class="radius-guess" data-radius-game hidden>
@@ -79,7 +88,7 @@
           <p><strong>Lien station (pour QR):</strong> <a data-site-note href="#"></a></p>
           <p data-next-direction></p>
           <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Itineraire a pied</a>
-          <div class="video-embed trail-video">
+          <div class="video-embed trail-video reveal-on-scroll">
             <iframe
               data-station-video
               src="https://www.youtube.com/embed/dQw4w9WgXcQ"

@@ -20,6 +20,7 @@
   var stationVideoNode = root.querySelector("[data-station-video]");
   var stationVideoWrapNode = root.querySelector(".trail-video");
   var stationImageNode = root.querySelector("[data-station-image]");
+  var stationImageArtNode = root.querySelector(".trail-image-art");
   var stationImageTitleNode = root.querySelector("[data-image-title]");
   var stationImageCaptionNode = root.querySelector("[data-image-caption]");
   var radiusGameNode = root.querySelector("[data-radius-game]");
@@ -59,8 +60,8 @@
         digital: "Digital Content Idea",
         details: "At This Stop"
       },
-      imageTitle: "Image Placeholder",
-      imageCaption: "Add a station photo here (bird behavior, habitat, or nest detail).",
+      imageTitle: "Trail visual",
+      imageCaption: "Each station connects a local place with one concrete swallow need.",
       radius: {
         defaultFeedback: "Drag from the center marker to set your estimate.",
         needGuess: "Draw a guess circle first.",
@@ -85,8 +86,8 @@
         digital: "Idee Numerique",
         details: "A Cette Station"
       },
-      imageTitle: "Espace Image",
-      imageCaption: "Ajoutez ici une image de la station (comportement, habitat ou nid).",
+      imageTitle: "Visuel du parcours",
+      imageCaption: "Chaque station relie un lieu local à un besoin concret des hirondelles.",
       radius: {
         defaultFeedback: "Faites glisser depuis le marqueur central pour definir votre estimation.",
         needGuess: "Dessinez d'abord un cercle estime.",
@@ -111,8 +112,8 @@
         digital: "Digitale Idee",
         details: "An Dieser Station"
       },
-      imageTitle: "Bild Platzhalter",
-      imageCaption: "Hier ein Stationsbild einfuegen (Verhalten, Lebensraum oder Nestdetail).",
+      imageTitle: "Pfadbild",
+      imageCaption: "Jede Station verbindet einen lokalen Ort mit einem konkreten Bedürfnis der Schwalben.",
       radius: {
         defaultFeedback: "Ziehen Sie vom zentralen Marker, um Ihren Radius zu schaetzen.",
         needGuess: "Zeichnen Sie zuerst einen Schaetzwert-Kreis.",
@@ -139,8 +140,6 @@
           "Pack Your Bags game: estimate how far a swallow can fly in one day.",
         storyDigital:
           "Use an animated migration route or an interactive tracking map of tagged swallows.",
-        imageTitle: "Stop 1 Visual Placeholder",
-        imageCaption: "Add a migration route visual or skyline photo from the lakefront.",
         mapHint: "Start near Theatre Vidy-Lausanne",
         videoUrl: ""
       },
@@ -157,8 +156,6 @@
           "Beak Snapshot: try snapping your fingers as fast as possible and compare that to swallow hunting speed.",
         storyDigital:
           "Show a slow-motion clip of a swallow catching insects mid-air to highlight aerodynamic precision.",
-        imageTitle: "Stop 2 Visual Placeholder",
-        imageCaption: "Add an action photo of swallows hunting over water or marsh-edge vegetation.",
         mapHint: "Shoreline feeding corridor",
         videoUrl: "https://www.youtube.com/watch?v=ku_rMIjIFfE"
       },
@@ -176,8 +173,6 @@
           "Count the Pellets: estimate how many mud balls are needed for one nest (more than 1,000).",
         storyDigital:
           "Play a nest-building time-lapse to show pellet-by-pellet construction and teamwork.",
-        imageTitle: "Stop 3 Visual Placeholder",
-        imageCaption: "Add a close-up of mud pellets, damp soil, or a nest under construction.",
         mapHint: "Inland mud-collection zone",
         videoUrl: "https://www.youtube.com/watch?v=xk_LBGByssY"
       },
@@ -195,8 +190,6 @@
           "Spot the Difference: count artificial nests and look for active use by swallows bringing food.",
         storyDigital:
           "Add a nest-cam stream or a chick-feeding clip showing nest activity up close.",
-        imageTitle: "Stop 4 Visual Placeholder",
-        imageCaption: "Add a facade photo showing installed artificial nests at the school.",
         mapHint: "Final stop at Ecole De Montoie",
         videoUrl: "https://www.youtube.com/watch?v=rV5SaQk7_5I"
       }
@@ -293,6 +286,61 @@
         videoUrl: "https://www.youtube.com/watch?v=rV5SaQk7_5I"
       }
     ]
+  };
+
+  var stationVisuals = {
+    migration: {
+      src: "../assets/images/house-martin-returning-nest.jpg",
+      title: {
+        en: "Long-Distance Return",
+        fr: "Retour longue distance",
+        de: "Rückkehr über weite Strecken"
+      },
+      caption: {
+        en: "Swallows return each spring to familiar breeding areas and nesting sites.",
+        fr: "Les hirondelles reviennent chaque printemps vers des zones de reproduction connues.",
+        de: "Schwalben kehren im Frühling zu vertrauten Brutgebieten zurück."
+      }
+    },
+    food: {
+      src: "../assets/icons/Barn-Swallow-mayfly-800-I-have-some-egrets-bawk-bawk-CC.jpg",
+      title: {
+        en: "Flying Insect Food",
+        fr: "Insectes volants",
+        de: "Fliegende Insekten"
+      },
+      caption: {
+        en: "Healthy green and wet areas support the insects swallows catch in flight.",
+        fr: "Les espaces verts et humides soutiennent les insectes capturés en vol.",
+        de: "Grüne und feuchte Flächen fördern Insekten, die Schwalben im Flug fangen."
+      }
+    },
+    materials: {
+      src: "../assets/images/house-martin-mud-collecting.jpg",
+      title: {
+        en: "Mud for Nest Building",
+        fr: "Boue pour construire les nids",
+        de: "Lehm für den Nestbau"
+      },
+      caption: {
+        en: "Clay-rich mud near colonies helps house martins build and repair nests.",
+        fr: "Une boue argileuse proche des colonies aide à construire et réparer les nids.",
+        de: "Tonreicher Lehm nahe Kolonien hilft beim Bau und bei der Reparatur von Nestern."
+      }
+    },
+    nest: {
+      src: "../assets/images/common-house-martin-nest.jpg",
+      title: {
+        en: "Shared Buildings",
+        fr: "Bâtiments partagés",
+        de: "Geteilte Gebäude"
+      },
+      caption: {
+        en: "Nests under roofs show why coexistence depends on building design and tolerance.",
+        fr: "Les nids sous les toits montrent que la cohabitation dépend du bâti et de la tolérance.",
+        de: "Nester unter Dächern zeigen, wie sehr Koexistenz von Bauweise und Toleranz abhängt."
+      }
+    }
   };
 
   var labels = copy[lang] || copy.en;
@@ -430,13 +478,23 @@
     }
   }
 
-  function renderImagePlaceholder(station) {
+  function renderStationImage(station) {
     if (!stationImageNode || !stationImageTitleNode || !stationImageCaptionNode) {
       return;
     }
 
-    stationImageTitleNode.textContent = station.imageTitle || labels.imageTitle || copy.en.imageTitle;
-    stationImageCaptionNode.textContent = station.imageCaption || labels.imageCaption || copy.en.imageCaption;
+    var visual = stationVisuals[station.id] || {};
+    if (stationImageArtNode && visual.src) {
+      stationImageArtNode.style.backgroundImage =
+        'linear-gradient(180deg, rgba(12, 35, 24, 0.08), rgba(12, 35, 24, 0.28)), url("' + visual.src + '")';
+      stationImageArtNode.style.backgroundSize = "cover";
+      stationImageArtNode.style.backgroundPosition = "center";
+    }
+
+    stationImageTitleNode.textContent =
+      station.imageTitle || (visual.title && visual.title[lang]) || labels.imageTitle || copy.en.imageTitle;
+    stationImageCaptionNode.textContent =
+      station.imageCaption || (visual.caption && visual.caption[lang]) || labels.imageCaption || copy.en.imageCaption;
   }
 
   function formatKm(valueKm) {
@@ -696,7 +754,7 @@
     areaNode.textContent = station.area;
     statusNode.textContent = labels.progress + " " + station.order + " " + labels.of + " " + stations.length;
     renderStory(station);
-    renderImagePlaceholder(station);
+    renderStationImage(station);
     qrLinkNode.textContent = stationUrl;
     qrLinkNode.href = stationUrl;
     qrLinkNode.setAttribute("aria-label", labels.qrPrefix + " " + station.title);

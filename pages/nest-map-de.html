@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pfadkarte | Help Hironelle</title>
+    <title>Nestkarte | Help Hirondelle</title>
     <meta
       name="description"
-      content="QR-faehiger Schwalbenpfad mit Stationen und Weg zur naechsten Etappe in Lausanne."
+      content="Interaktive Schwalben-Nestkarte mit Demo-Koloniepunkten, Stationsdetails und Wegen rund um Lausanne."
     />
     <link
       rel="stylesheet"
@@ -37,29 +37,38 @@
     <div data-site-header></div>
 
     <main class="container" id="main-content">
-      <section class="page-hero">
-        <h1>Schwalben Pfadkarte</h1>
+      <section class="page-hero reveal-on-scroll">
+        <h1>Schwalben-Nestkarte</h1>
         <p>
-          Scannen Sie einen QR-Code, um direkt zur passenden Station zu gelangen. Waehlen Sie Marker auf der Karte zum Wechseln.
+          Erkunden Sie Demo-Koloniepunkte rund um Lausanne und erfahren Sie, warum aktuelle Nestdaten vor Sanierungen,
+          Abrissen und kommunalen Aktionsplänen wichtig sind.
         </p>
       </section>
 
-      <section id="trail-map" data-nest-map-root>
+      <section class="callout reveal-on-scroll">
+        <h2>Warum Nester kartieren?</h2>
+        <p>
+          Bestehende Kolonien sollten erfasst und beobachtet werden. Wenn Daten fehlen oder älter als fünf Jahre sind,
+          hilft ein neues Inventar Gemeinden beim Erhalten, Verstärken oder Schaffen von Nistorten.
+        </p>
+      </section>
+
+      <section id="trail-map" class="reveal-on-scroll" data-nest-map-root>
         <h2>Interaktive Stationen</h2>
         <div class="nest-map-layout">
-          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Pfadkarte mit Stationsmarkern"></div>
+          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Nestkarte mit Stationsmarkern"></div>
         </div>
 
-        <article class="trail-focus-card card" aria-live="polite">
+        <article class="trail-focus-card card reveal-on-scroll" aria-live="polite">
           <h3 data-site-title>Station</h3>
           <p class="nest-map-meta"><strong>Ort:</strong> <span data-site-area></span></p>
           <p class="nest-map-meta"><strong>Fortschritt:</strong> <span data-site-status></span></p>
           <div class="trail-story" data-site-story></div>
-          <figure class="trail-image-placeholder" data-station-image>
+          <figure class="trail-image-card" data-station-image>
             <div class="trail-image-art" aria-hidden="true"></div>
             <figcaption>
-              <strong data-image-title>Bild Platzhalter</strong>
-              <span data-image-caption>Hier ein Stationsbild einfuegen.</span>
+              <strong data-image-title>Stationsbild</strong>
+              <span data-image-caption>Jede Station verbindet einen lokalen Ort mit einem konkreten Bedürfnis der Schwalben.</span>
             </figcaption>
           </figure>
           <section class="radius-guess" data-radius-game hidden>
@@ -79,7 +88,7 @@
           <p><strong>Stationslink (fuer QR):</strong> <a data-site-note href="#"></a></p>
           <p data-next-direction></p>
           <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Gehroute oeffnen</a>
-          <div class="video-embed trail-video">
+          <div class="video-embed trail-video reveal-on-scroll">
             <iframe
               data-station-video
               src="https://www.youtube.com/embed/dQw4w9WgXcQ"

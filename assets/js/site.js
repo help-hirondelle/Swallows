@@ -9,6 +9,8 @@
     lang = "en";
   }
 
+  document.documentElement.classList.add("js-reveal");
+
   var navItems = [
     { key: "information", path: "index.html" },
     { key: "fun-facts", path: "pages/fun-facts.html" },
@@ -20,28 +22,28 @@
 
   var navLabels = {
     en: {
-      information: "Information",
-      "fun-facts": "Fun Facts",
-      "how-to-do-more": "Do More",
-      trail: "Trail",
-      game: "Game",
+      information: "Home",
+      "fun-facts": "Learn",
+      "how-to-do-more": "Take Action",
+      trail: "Nest Map",
+      game: "Play",
       about: "About"
     },
     fr: {
-      information: "Information",
-      "fun-facts": "Faits Amusants",
-      "how-to-do-more": "Agir Plus",
-      trail: "Parcours",
-      game: "Jeu",
-      about: "A propos"
+      information: "Accueil",
+      "fun-facts": "Apprendre",
+      "how-to-do-more": "Agir",
+      trail: "Carte des nids",
+      game: "Jouer",
+      about: "À propos"
     },
     de: {
-      information: "Information",
-      "fun-facts": "Fun Fakten",
-      "how-to-do-more": "Mehr Tun",
-      trail: "Pfad",
-      game: "Spiel",
-      about: "Ueber Uns"
+      information: "Start",
+      "fun-facts": "Lernen",
+      "how-to-do-more": "Handeln",
+      trail: "Nestkarte",
+      game: "Spielen",
+      about: "Über uns"
     }
   };
 
@@ -128,7 +130,7 @@
       '"><img class="brand-mark" src="' +
       resolvePath("assets/icons/swallow-icon.png") +
       '" alt="" aria-hidden="true" />' +
-      "<span>Help Hironelle</span></a>" +
+      "<span>Help Hirondelle</span></a>" +
       '    <div class="lang-switch" aria-label="Language selection">' +
       renderLanguageSwitchDropdown() +
       "</div>" +
@@ -182,8 +184,10 @@
     host.innerHTML =
       '<footer class="site-footer">' +
       '  <div class="container site-footer-inner">' +
-      '    <span>Informative prototype for coexistence between people and house martins in Switzerland.</span>' +
-      '    <span class="site-footer-meta">Last updated: <span data-last-updated></span></span>' +
+      '    <span>Prototype for people-swallow coexistence in Vaud.</span>' +
+      '    <span class="site-footer-meta"><a href="' +
+      resolvePath("pages/photo-credits.html") +
+      '">Photo credits</a> · Last updated: <span data-last-updated></span></span>' +
       "  </div>" +
       "</footer>";
   }
@@ -195,7 +199,38 @@
     });
   }
 
+  function initScrollReveal() {
+    var nodes = document.querySelectorAll(".reveal-on-scroll");
+    if (!nodes.length) {
+      return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      Array.prototype.forEach.call(nodes, function (node) {
+        node.classList.add("is-visible");
+      });
+      return;
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        Array.prototype.forEach.call(entries, function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    );
+
+    Array.prototype.forEach.call(nodes, function (node) {
+      observer.observe(node);
+    });
+  }
+
   renderHeader();
   renderFooter();
   renderLastUpdated();
+  initScrollReveal();
 })();
