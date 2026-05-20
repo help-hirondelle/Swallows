@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Swallow Trail Map & Stations | Lausanne Region</title>
+    <title>Swallow Nest Map & Stations | Lausanne Region</title>
     <meta
       name="description"
-      content="QR-ready swallow trail with station pages and map directions to the next stage in Lausanne."
+      content="Interactive swallow nest map with demo colony points, station details, and walking directions around Lausanne."
     />
     <link
       rel="stylesheet"
@@ -37,30 +37,38 @@
     <div data-site-header></div>
 
     <main class="container" id="main-content">
-      <section class="page-hero">
-        <h1>Swallow Trail Map (Lausanne Region)</h1>
+      <section class="page-hero reveal-on-scroll">
+        <h1>Swallow Nest Map (Lausanne Region)</h1>
         <p>
-          Scan a station QR code to jump directly to it. Select map markers to switch between the four stops, from Theatre
-          Vidy-Lausanne to Ecole De Montoie, using pedestrian pathways through the park before the final school approach.
+          Explore demo colony points around Lausanne and learn why mapping matters: communes need up-to-date nest records before
+          renovation, demolition, or public action plans.
         </p>
       </section>
 
-      <section id="trail-map" data-nest-map-root>
-        <h2>Interactive Trail Stations</h2>
+      <section class="callout reveal-on-scroll">
+        <h2>Why Map Nests?</h2>
+        <p>
+          Existing colonies should be inventoried and monitored regularly. If data are missing or older than five years, a new
+          inventory helps communes decide where to maintain, reinforce, or create nesting opportunities.
+        </p>
+      </section>
+
+      <section id="trail-map" class="reveal-on-scroll" data-nest-map-root>
+        <h2>Interactive Nest Stations</h2>
         <div class="nest-map-layout">
-          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Trail map with clickable station markers"></div>
+          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Nest map with clickable station markers"></div>
         </div>
 
-        <article class="trail-focus-card card" aria-live="polite">
+        <article class="trail-focus-card card reveal-on-scroll" aria-live="polite">
           <h3 data-site-title>Station</h3>
           <p class="nest-map-meta"><strong>Location:</strong> <span data-site-area></span></p>
           <p class="nest-map-meta"><strong>Progress:</strong> <span data-site-status></span></p>
           <div class="trail-story" data-site-story></div>
-          <figure class="trail-image-placeholder" data-station-image>
+          <figure class="trail-image-card" data-station-image>
             <div class="trail-image-art" aria-hidden="true"></div>
             <figcaption>
-              <strong data-image-title>Image Placeholder</strong>
-              <span data-image-caption>Add a station photo here (bird behavior, habitat, or nest detail).</span>
+              <strong data-image-title>Station visual</strong>
+              <span data-image-caption>Each station connects a local place with one concrete swallow need.</span>
             </figcaption>
           </figure>
           <section class="radius-guess" data-radius-game hidden>
@@ -80,7 +88,7 @@
           <p><strong>Station link (for QR):</strong> <a data-site-note href="#"></a></p>
           <p data-next-direction></p>
           <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Open walking directions</a>
-          <div class="video-embed trail-video">
+          <div class="video-embed trail-video reveal-on-scroll">
             <iframe
               data-station-video
               src="https://www.youtube.com/embed/dQw4w9WgXcQ"
