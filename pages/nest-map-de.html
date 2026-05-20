@@ -3,17 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nestkarte | Help Hirondelle</title>
+    <title>Schwalben-Pfadkarte | Help Hirondelle</title>
     <meta
       name="description"
-      content="Interaktive Schwalben-Nestkarte mit Demo-Koloniepunkten, Stationsdetails und Wegen rund um Lausanne."
+      content="Interaktive Schwalben-Pfadkarte mit Beispielstationen, Stationsdetails und Wegen rund um Lausanne."
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="icon" type="image/png" href="../assets/icons/swallow-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png" />
@@ -24,12 +19,7 @@
       window.ACTIVE_PAGE = "trail";
       window.SITE_LANG = "de";
     </script>
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-      defer
-    ></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
     <script src="../assets/js/site.js" defer></script>
     <script src="../assets/js/nest-map.js" defer></script>
   </head>
@@ -38,25 +28,14 @@
 
     <main class="container" id="main-content">
       <section class="page-hero reveal-on-scroll">
-        <h1>Schwalben-Nestkarte</h1>
-        <p>
-          Erkunden Sie Demo-Koloniepunkte rund um Lausanne und erfahren Sie, warum aktuelle Nestdaten vor Sanierungen,
-          Abrissen und kommunalen Aktionsplänen wichtig sind.
-        </p>
-      </section>
-
-      <section class="callout reveal-on-scroll">
-        <h2>Warum Nester kartieren?</h2>
-        <p>
-          Bestehende Kolonien sollten erfasst und beobachtet werden. Wenn Daten fehlen oder älter als fünf Jahre sind,
-          hilft ein neues Inventar Gemeinden beim Erhalten, Verstärken oder Schaffen von Nistorten.
-        </p>
+        <h1>Schwalben-Pfadkarte</h1>
+        <p>Erkunden Sie Beispielstationen rund um Lausanne und sehen Sie, wie eine Karte Schutz, Sanierungen und öffentliche Massnahmen unterstützen kann.</p>
       </section>
 
       <section id="trail-map" class="reveal-on-scroll" data-nest-map-root>
-        <h2>Interaktive Stationen</h2>
+        <h2>Interaktive Pfadkarte</h2>
         <div class="nest-map-layout">
-          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Nestkarte mit Stationsmarkern"></div>
+          <div class="nest-map-canvas" data-nest-map-canvas aria-label="Pfadkarte mit Stationsmarkern"></div>
         </div>
 
         <article class="trail-focus-card card reveal-on-scroll" aria-live="polite">
@@ -71,34 +50,42 @@
               <span data-image-caption>Jede Station verbindet einen lokalen Ort mit einem konkreten Bedürfnis der Schwalben.</span>
             </figcaption>
           </figure>
-          <section class="radius-guess" data-radius-game hidden>
-            <h4>Migrationsspiel: Tagesdistanz Schaetzen</h4>
-            <p>Ziehen Sie Ihre Schaetzung auf der Karte und senden Sie, um den echten Distanzkreis zu sehen.</p>
-            <div
-              class="radius-map-canvas"
-              data-radius-map-canvas
-              aria-label="Interaktive Karte zum Einschaetzen des taeglichen Flugradius einer Schwalbe"
-            ></div>
-            <div class="radius-controls">
-              <button type="button" class="game-btn" data-radius-submit disabled>Senden</button>
-              <button type="button" class="game-btn game-btn-alt" data-radius-reset>Neu Versuch</button>
-            </div>
-            <p class="radius-feedback" data-radius-feedback>Ziehen Sie vom zentralen Marker aus.</p>
-          </section>
-          <p><strong>Stationslink (fuer QR):</strong> <a data-site-note href="#"></a></p>
+          <a data-site-note href="#" hidden></a>
           <p data-next-direction></p>
-          <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Gehroute oeffnen</a>
+          <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Wegbeschreibung öffnen</a>
           <div class="video-embed trail-video reveal-on-scroll">
-            <iframe
-              data-station-video
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Stationsvideo"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+            <iframe data-station-video src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Stationsvideo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </article>
+      </section>
+
+      <section class="callout reveal-on-scroll">
+        <h2>Gemeindeleitfaden: warum kartieren?</h2>
+        <p>
+          Bestehende Kolonien sollten erfasst und beobachtet werden. Wenn Daten fehlen oder älter als fünf Jahre sind,
+          hilft ein neues Inventar Gemeinden beim Erhalten, Verstärken oder Schaffen von Nistorten.
+        </p>
+      </section>
+
+      <section>
+        <h2>Wie Gemeinden diese Karte nutzen können</h2>
+        <div class="detail-grid">
+          <article class="detail-card reveal-on-scroll"><h3>Erhalten</h3><p>Starke bestehende Kolonien schützen und verhindern, dass Arbeiten oder Reinigung sie unbeabsichtigt entfernen.</p></article>
+          <article class="detail-card reveal-on-scroll"><h3>Stärken</h3><p>Schwache, rückläufige oder kürzlich verlassene Standorte mit Lehm, Kunstnestern und Konfliktmanagement unterstützen.</p></article>
+          <article class="detail-card reveal-on-scroll"><h3>Neu schaffen</h3><p>Geeignete Gebäude finden, an denen neue Nistmöglichkeiten nahe bestehender Aktivität entstehen können.</p></article>
+          <article class="detail-card reveal-on-scroll"><h3>Beobachten</h3><p>Installierte Lösungen, Belegung, Beschwerden, Reinigungseinsätze und teilnehmende Standorte verfolgen.</p></article>
+        </div>
+      </section>
+
+      <section class="callout reveal-on-scroll" data-radius-game>
+        <h2>Migrationsspiel: Tagesdistanz schätzen</h2>
+        <p>Ziehen Sie auf der Karte Ihre Schätzung, wie weit eine Schwalbe an einem Tag fliegen kann, und senden Sie sie ab, um den Referenzkreis zu sehen.</p>
+        <div class="radius-map-canvas" data-radius-map-canvas aria-label="Interaktive Karte zum Einschätzen des täglichen Flugradius einer Schwalbe"></div>
+        <div class="radius-controls">
+          <button type="button" class="game-btn" data-radius-submit disabled>Senden</button>
+          <button type="button" class="game-btn game-btn-alt" data-radius-reset>Neuer Versuch</button>
+        </div>
+        <p class="radius-feedback" data-radius-feedback>Ziehen Sie vom zentralen Marker, um Ihren Radius zu schätzen.</p>
       </section>
     </main>
 

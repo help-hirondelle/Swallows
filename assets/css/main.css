@@ -465,56 +465,33 @@ section h3 {
 }
 
 .home-link-card {
-  text-decoration: none;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: #fff;
-  padding: 0.38rem 0.8rem;
-}
-
-.home-cta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 1.45rem 0 0;
-}
-
-.primary-cta,
-.secondary-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--pine-700);
+  border: 1px solid var(--line);
   border-radius: 999px;
+  background: #fff;
   padding: 0.62rem 1rem;
   font-weight: 800;
   text-decoration: none;
 }
 
-.primary-cta {
-  color: #fff;
-  background: var(--pine-700);
-  box-shadow: 0 12px 24px rgba(19, 49, 34, 0.14);
-}
-
-.secondary-cta {
-  color: var(--pine-900);
-  background: #fff;
+.home-link-card:hover {
+  border-color: var(--pine-500);
+  background: var(--mint-100);
 }
 
 .home-plain-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.85rem 1.2rem;
-  margin: 1.35rem 0 0;
+  gap: 0.75rem;
+  margin: 1.45rem 0 0;
   padding: 0;
   list-style: none;
 }
 
 .home-plain-links a {
-  color: #1e573b;
-  font-weight: 700;
-  text-decoration-thickness: 2px;
+  color: var(--pine-900);
 }
 
 .hero-panel,
@@ -787,6 +764,28 @@ tr:last-child td {
 
 .audience-grid .resource-content p {
   margin-bottom: 0;
+}
+
+.detail-grid {
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.4rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.detail-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #ffffffd8;
+  box-shadow: var(--card-shadow);
+  padding: clamp(1rem, 1.7vw, 1.3rem);
+}
+
+.detail-card h3 {
+  margin: 0 0 0.55rem;
+}
+
+.detail-card p {
+  margin: 0;
 }
 
 .action-label {
@@ -1151,6 +1150,7 @@ tr:last-child td {
   .kpis,
   .info-layout,
   .resource-grid,
+  .detail-grid,
   .home-snapshot,
   .pressure-grid,
   .about-visual-card {
