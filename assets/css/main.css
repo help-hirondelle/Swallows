@@ -183,6 +183,44 @@ button:focus-visible {
   color: var(--pine-900);
 }
 
+.landing-page .site-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  border-bottom-color: rgba(255, 255, 255, 0.18);
+  background: rgba(8, 31, 21, 0.38);
+  box-shadow: 0 12px 30px rgba(4, 18, 12, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.landing-page .brand,
+.landing-page .site-nav a {
+  color: #f7fff9;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.28);
+}
+
+.landing-page .brand-mark {
+  filter: brightness(0) invert(1);
+}
+
+.landing-page .site-nav a[aria-current="page"] {
+  border-bottom-color: rgba(255, 255, 255, 0.92);
+  color: #ffffff;
+}
+
+.landing-page .lang-select,
+.landing-page .menu-btn {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(10, 35, 24, 0.36);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(4, 18, 12, 0.12);
+}
+
+.landing-page .lang-select option {
+  color: var(--pine-900);
+  background: #ffffff;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1.25fr 1fr;
@@ -318,6 +356,11 @@ section h3 {
   background-position: center 32%;
 }
 
+.landing-page .home-banner {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
 .home-banner::before {
   content: "";
   position: absolute;
@@ -341,6 +384,7 @@ section h3 {
 .home-banner-copy {
   max-width: 720px;
   color: #f6fffa;
+  padding-top: clamp(4rem, 10vh, 7rem);
 }
 
 .home-banner-copy h1 {
@@ -1245,6 +1289,22 @@ tr:last-child td {
   .home-banner-content {
     align-items: flex-end;
     padding-bottom: 2.2rem;
+  }
+
+  .landing-page .site-nav {
+    border-bottom-color: rgba(255, 255, 255, 0.16);
+    background: rgba(8, 31, 21, 0.82);
+    backdrop-filter: blur(14px);
+  }
+
+  .landing-page .site-nav a {
+    border-color: rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .landing-page .site-nav a[aria-current="page"] {
+    border-color: rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.14);
   }
 }
 
