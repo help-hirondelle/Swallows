@@ -1155,6 +1155,28 @@ tr:last-child td {
   margin-top: 0.95rem;
 }
 
+.trail-station-marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: 2px solid #ffffff;
+  background: #2d6f4b;
+  box-shadow: 0 0 0 1px rgba(18, 42, 30, 0.2);
+  cursor: pointer;
+  padding: 0;
+}
+
+.trail-station-marker.is-active {
+  width: 20px;
+  height: 20px;
+  border-width: 3px;
+  background: #9f3f2b;
+}
+
+.maplibregl-popup-content {
+  border-radius: 14px;
+}
+
 .fact-photo {
   margin: 0 0 0.75rem;
   border: 1px solid #9ecab0;

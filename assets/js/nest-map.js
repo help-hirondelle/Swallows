@@ -1,8 +1,9 @@
 (function () {
   var root = document.querySelector("[data-nest-map-root]");
-  if (!root || !window.L) {
+  if (!root || !window.maplibregl) {
     return;
   }
+  var hasLeaflet = !!window.L;
 
   var lang = window.SITE_LANG || "en";
   if (lang !== "fr" && lang !== "de" && lang !== "en") {
@@ -477,21 +478,24 @@
     stationById[station.id] = station;
   });
 
-  var map = L.map(mapNode, {
-    scrollWheelZoom: true
-  }).setView([46.517, 6.605], 14);
-
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
+  var map = new window.maplibregl.Map({
+    container: mapNode,
+    style: "https://tiles.openfreemap.org/styles/bright",
+    center: [6.605, 46.517],
+    zoom: 14,
+    bearing: 0,
+    pitch: 0
+  });
+  map.addControl(new window.maplibregl.NavigationControl(), "top-right");
 
   var markerNodes = [];
   var activeId = "";
-  var fullTrailLine = null;
-  var nextTrailLine = null;
+  var TRAIL_FULL_SOURCE_ID = "trail-full-source";
+  var TRAIL_FULL_LAYER_ID = "trail-full-layer";
+  var TRAIL_NEXT_SOURCE_ID = "trail-next-source";
+  var TRAIL_NEXT_LAYER_ID = "trail-next-layer";
   var radiusMap = null;
-  var radiusCenter = L.latLng(46.5197, 6.6323);
+  var radiusCenter = hasLeaflet ? L.latLng(46.5197, 6.6323) : null;
   var radiusGuessCircle = null;
   var radiusActualCircle = null;
   var radiusGuessMeters = 0;
@@ -528,11 +532,83 @@
   }
 
   function popupHtml(station) {
-    return "<strong>" + station.title + "</strong><br />" + station.area + "<br />" + station.mapHint;
+    return "<strong>" + station.title + "</strong>";
   }
 
   function stationRouteLatLng(station) {
     return [station.lat, station.lng];
+  }
+
+  function latLngToGeoPoint(latLngPair) {
+    return [latLngPair[1], latLngPair[0]];
+  }
+
+  function lineFeatureFromLatLngs(latLngList) {
+    return {
+      type: "Feature",
+      geometry: {
+        type: "LineString",
+        coordinates: (latLngList || []).map(latLngToGeoPoint)
+      },
+      properties: {}
+    };
+  }
+
+  function setLineSourceData(sourceId, latLngList) {
+    var source = map.getSource(sourceId);
+    if (!source) {
+      return;
+    }
+    var features = [];
+    if (latLngList && latLngList.length > 1) {
+      features.push(lineFeatureFromLatLngs(latLngList));
+    }
+    source.setData({
+      type: "FeatureCollection",
+      features: features
+    });
+  }
+
+  function initTrailLayers() {
+    if (map.getSource(TRAIL_FULL_SOURCE_ID) || map.getSource(TRAIL_NEXT_SOURCE_ID)) {
+      return;
+    }
+
+    map.addSource(TRAIL_FULL_SOURCE_ID, {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: [lineFeatureFromLatLngs(fullTrailPath())]
+      }
+    });
+    map.addLayer({
+      id: TRAIL_FULL_LAYER_ID,
+      type: "line",
+      source: TRAIL_FULL_SOURCE_ID,
+      paint: {
+        "line-color": "#283833",
+        "line-width": 5,
+        "line-opacity": 0.8
+      }
+    });
+
+    map.addSource(TRAIL_NEXT_SOURCE_ID, {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: []
+      }
+    });
+    map.addLayer({
+      id: TRAIL_NEXT_LAYER_ID,
+      type: "line",
+      source: TRAIL_NEXT_SOURCE_ID,
+      paint: {
+        "line-color": "#8bc2ba",
+        "line-width": 6,
+        "line-opacity": 0.8
+      }
+    });
   }
 
   function segmentPathBetweenStations(originStation, nextStation) {
@@ -560,37 +636,16 @@
   }
 
   function drawTrail(currentStation, nextStation) {
-    if (fullTrailLine) {
-      map.removeLayer(fullTrailLine);
-      fullTrailLine = null;
-    }
-
-    if (nextTrailLine) {
-      map.removeLayer(nextTrailLine);
-      nextTrailLine = null;
-    }
-
-    fullTrailLine = L.polyline(
-      fullTrailPath(),
-      {
-        color: "#2f6b4a",
-        weight: 5,
-        opacity: 0.55
-      }
-    ).addTo(map);
-
-    if (!nextStation) {
+    if (!map.getSource(TRAIL_FULL_SOURCE_ID) || !map.getSource(TRAIL_NEXT_SOURCE_ID)) {
       return;
     }
+    setLineSourceData(TRAIL_FULL_SOURCE_ID, fullTrailPath());
 
-    nextTrailLine = L.polyline(
-      segmentPathBetweenStations(currentStation, nextStation),
-      {
-        color: "#cf6f3c",
-        weight: 6,
-        opacity: 0.95
-      }
-    ).addTo(map);
+    if (!nextStation) {
+      setLineSourceData(TRAIL_NEXT_SOURCE_ID, []);
+      return;
+    }
+    setLineSourceData(TRAIL_NEXT_SOURCE_ID, segmentPathBetweenStations(currentStation, nextStation));
   }
 
   function extractYouTubeId(url) {
@@ -700,6 +755,9 @@
   }
 
   function clearRadiusGuess() {
+    if (!hasLeaflet) {
+      return;
+    }
     radiusGuessMeters = 0;
     radiusDragging = false;
     if (radiusGuessCircle && radiusMap) {
@@ -717,7 +775,7 @@
   }
 
   function setGuessFromLatLng(targetLatLng) {
-    if (!radiusMap) {
+    if (!hasLeaflet || !radiusMap) {
       return;
     }
 
@@ -749,7 +807,7 @@
   }
 
   function revealActualRadius() {
-    if (!radiusMap) {
+    if (!hasLeaflet || !radiusMap) {
       return;
     }
 
@@ -791,6 +849,12 @@
   }
 
   function initRadiusMap() {
+    if (!hasLeaflet) {
+      if (radiusGameNode) {
+        radiusGameNode.setAttribute("hidden", "hidden");
+      }
+      return;
+    }
     if (!radiusGameNode || !radiusMapNode || !radiusSubmitNode || !radiusResetNode || !radiusFeedbackNode) {
       return;
     }
@@ -968,25 +1032,26 @@
 
     markerNodes.forEach(function (marker) {
       var isActive = marker.stationId === stationId;
-      marker.setStyle({
-        radius: isActive ? 10 : 8,
-        fillColor: isActive ? "#9f3f2b" : "#2d6f4b",
-        color: "#ffffff",
-        weight: isActive ? 3 : 2,
-        fillOpacity: 0.95
-      });
+      var popup = marker.instance.getPopup();
+      marker.element.classList.toggle("is-active", isActive);
 
       if (isActive) {
-        marker.openPopup();
+        if (popup && !popup.isOpen()) {
+          marker.instance.togglePopup();
+        }
+      } else if (popup && popup.isOpen()) {
+        marker.instance.togglePopup();
       }
     });
 
     renderStation(station);
 
     if (shouldFly) {
-      map.flyTo([station.lat, station.lng], Math.max(map.getZoom(), 14), {
-        animate: true,
-        duration: 0.7
+      map.flyTo({
+        center: [station.lng, station.lat],
+        zoom: Math.max(map.getZoom(), 14),
+        essential: true,
+        duration: 700
       });
     }
 
@@ -997,25 +1062,36 @@
   }
 
   function createMarker(station) {
-    var marker = L.circleMarker([station.lat, station.lng], {
-      radius: 8,
-      color: "#ffffff",
-      weight: 2,
-      fillColor: "#2d6f4b",
-      fillOpacity: 0.95
-    }).addTo(map);
+    var markerElement = document.createElement("button");
+    markerElement.type = "button";
+    markerElement.className = "trail-station-marker";
+    markerElement.setAttribute("aria-label", station.title);
 
-    marker.stationId = station.id;
-    marker.bindPopup(popupHtml(station), {
-      closeButton: false,
-      offset: [0, -8]
-    });
+    var marker = new window.maplibregl.Marker({
+      element: markerElement,
+      anchor: "center"
+    })
+      .setLngLat([station.lng, station.lat])
+      .setPopup(
+        new window.maplibregl.Popup({
+          closeButton: false,
+          closeOnClick: false,
+          offset: 14
+        }).setHTML(popupHtml(station))
+      )
+      .addTo(map);
 
-    marker.on("click", function () {
+    markerElement.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
       setActive(station.id, true);
     });
 
-    markerNodes.push(marker);
+    markerNodes.push({
+      stationId: station.id,
+      instance: marker,
+      element: markerElement
+    });
   }
 
   function stationFromUrl() {
@@ -1034,12 +1110,13 @@
   }
 
   initRadiusMap();
-
-  stations.forEach(function (station) {
-    createMarker(station);
+  map.on("load", function () {
+    initTrailLayers();
+    stations.forEach(function (station) {
+      createMarker(station);
+    });
+    setActive(stationFromUrl(), true);
   });
-
-  setActive(stationFromUrl(), true);
 
   window.addEventListener("hashchange", function () {
     var stationId = stationFromUrl();
@@ -1049,7 +1126,7 @@
   });
 
   window.setTimeout(function () {
-    map.invalidateSize();
+    map.resize();
     if (radiusMap) {
       radiusMap.invalidateSize();
     }
