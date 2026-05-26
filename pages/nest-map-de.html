@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Schwalben-Pfadkarte | Help Hirondelle</title>
+    <title>Erlebnispfad Schwalben | Help Hirondelle</title>
     <meta
       name="description"
-      content="Interaktive Schwalben-Pfadkarte mit Beispielstationen, Stationsdetails und Wegen rund um Lausanne."
+      content="Interaktive Karte des Schwalbenpfads mit Beispielstationen, Details und Routen rund um Lausanne."
     />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.20.0/dist/maplibre-gl.css" />
@@ -30,20 +30,19 @@
 
     <main class="container" id="main-content">
       <section class="page-hero reveal-on-scroll">
-        <h1>Schwalben-Pfadkarte</h1>
-        <p>Erkunden Sie Beispielstationen rund um Lausanne und sehen Sie, wie eine Karte Schutz, Sanierungen und öffentliche Massnahmen unterstützen kann.</p>
+        <h1>Erlebnispfad Schwalben</h1>
+        <p>Entdecken Sie die Stationen rund um Lausanne und erfahren Sie, wie Geodaten den Schutz, Sanierungen und kommunale Massnahmen unterstützen können.</p>
       </section>
 
       <section id="trail-map" class="reveal-on-scroll" data-nest-map-root>
-        <h2>Interaktive Pfadkarte</h2>
+        <h2>Interaktive Karte</h2>
         <div class="nest-map-layout">
           <div class="nest-map-canvas" data-nest-map-canvas aria-label="Pfadkarte mit Stationsmarkern"></div>
         </div>
 
         <article class="trail-focus-card card reveal-on-scroll" aria-live="polite">
           <h3 data-site-title>Station</h3>
-          <p class="nest-map-meta"><strong>Ort:</strong> <span data-site-area></span></p>
-          <p class="nest-map-meta"><strong>Fortschritt:</strong> <span data-site-status></span></p>
+
           <div class="trail-story" data-site-story></div>
           <figure class="trail-image-card" data-station-image>
             <div class="trail-image-art" aria-hidden="true"></div>
@@ -52,9 +51,17 @@
               <span data-image-caption>Jede Station verbindet einen lokalen Ort mit einem konkreten Bedürfnis der Schwalben.</span>
             </figcaption>
           </figure>
+          <section class="radius-guess" data-radius-game>
+            <h4>Migrationsspiel: Flugdistanz schätzen</h4>
+            <p>Zeichnen Sie auf der Karte einen Kreis für Ihre Schätzung, wie weit eine Schwalbe an einem Tag fliegen kann. Klicken Sie dann auf Abschicken, um das Ergebnis zu sehen.</p>
+            <div class="radius-map-canvas" data-radius-map-canvas aria-label="Interaktive Karte zum Einschätzen des täglichen Flugradius einer Schwalbe"></div>
+            <div class="radius-controls">
+              <button type="button" class="game-btn" data-radius-submit disabled>Abschicken</button>
+              <button type="button" class="game-btn game-btn-alt" data-radius-reset>Neuer Versuch</button>
+            </div>
+            <p class="radius-feedback" data-radius-feedback>Ziehen Sie den Kreis vom Zentrum aus auf die gewünschte Grösse.</p>
+          </section>
           <a data-site-note href="#" hidden></a>
-          <p data-next-direction></p>
-          <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Wegbeschreibung öffnen</a>
           <div class="video-embed trail-video reveal-on-scroll">
             <iframe data-station-video src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Stationsvideo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
@@ -62,32 +69,21 @@
       </section>
 
       <section class="callout reveal-on-scroll">
-        <h2>Gemeindeleitfaden: warum kartieren?</h2>
+        <h2>Leitfaden für Gemeinden: Warum Kartierung wichtig ist</h2>
         <p>
-          Bestehende Kolonien sollten erfasst und beobachtet werden. Wenn Daten fehlen oder älter als fünf Jahre sind,
-          hilft ein neues Inventar Gemeinden beim Erhalten, Verstärken oder Schaffen von Nistorten.
+          Bestehende Kolonien müssen erfasst und überwacht werden. Wenn Daten fehlen oder älter als fünf Jahre sind,
+          hilft ein aktuelles Inventar den Gemeinden dabei, Nistplätze gezielt zu erhalten, zu fördern oder neu zu schaffen.
         </p>
       </section>
 
       <section>
-        <h2>Wie Gemeinden diese Karte nutzen können</h2>
+        <h2>Nutzen der Kartierung für die Gemeinde</h2>
         <div class="detail-grid">
-          <article class="detail-card reveal-on-scroll"><h3>Erhalten</h3><p>Starke bestehende Kolonien schützen und verhindern, dass Arbeiten oder Reinigung sie unbeabsichtigt entfernen.</p></article>
-          <article class="detail-card reveal-on-scroll"><h3>Stärken</h3><p>Schwache, rückläufige oder kürzlich verlassene Standorte mit Lehm, Kunstnestern und Konfliktmanagement unterstützen.</p></article>
+          <article class="detail-card reveal-on-scroll"><h3>Erhalt</h3><p>Starke bestehende Kolonien schützen und verhindern, dass sie durch Bauarbeiten oder Reinigungsmassnahmen gefährdet werden.</p></article>
+          <article class="detail-card reveal-on-scroll"><h3>Förderung</h3><p>Schwache oder gefährdete Standorte durch Lehmstellen, Kunstnester und gezieltes Konfliktmanagement unterstützen.</p></article>
           <article class="detail-card reveal-on-scroll"><h3>Neu schaffen</h3><p>Geeignete Gebäude finden, an denen neue Nistmöglichkeiten nahe bestehender Aktivität entstehen können.</p></article>
-          <article class="detail-card reveal-on-scroll"><h3>Beobachten</h3><p>Installierte Lösungen, Belegung, Beschwerden, Reinigungseinsätze und teilnehmende Standorte verfolgen.</p></article>
+          <article class="detail-card reveal-on-scroll"><h3>Monitoring</h3><p>Massnahmen, Belegungsraten, Rückmeldungen aus der Bevölkerung und den Erfolg der installierten Nester überwachen.</p></article>
         </div>
-      </section>
-
-      <section class="callout reveal-on-scroll" data-radius-game>
-        <h2>Migrationsspiel: Tagesdistanz schätzen</h2>
-        <p>Ziehen Sie auf der Karte Ihre Schätzung, wie weit eine Schwalbe an einem Tag fliegen kann, und senden Sie sie ab, um den Referenzkreis zu sehen.</p>
-        <div class="radius-map-canvas" data-radius-map-canvas aria-label="Interaktive Karte zum Einschätzen des täglichen Flugradius einer Schwalbe"></div>
-        <div class="radius-controls">
-          <button type="button" class="game-btn" data-radius-submit disabled>Senden</button>
-          <button type="button" class="game-btn game-btn-alt" data-radius-reset>Neuer Versuch</button>
-        </div>
-        <p class="radius-feedback" data-radius-feedback>Ziehen Sie vom zentralen Marker, um Ihren Radius zu schätzen.</p>
       </section>
     </main>
 

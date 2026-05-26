@@ -42,8 +42,6 @@
 
         <article class="trail-focus-card card reveal-on-scroll" aria-live="polite">
           <h3 data-site-title>Station</h3>
-          <p class="nest-map-meta"><strong>Lieu:</strong> <span data-site-area></span></p>
-          <p class="nest-map-meta"><strong>Progression:</strong> <span data-site-status></span></p>
           <div class="trail-story" data-site-story></div>
           <figure class="trail-image-card" data-station-image>
             <div class="trail-image-art" aria-hidden="true"></div>
@@ -52,9 +50,17 @@
               <span data-image-caption>Chaque station relie un lieu local à un besoin concret des hirondelles.</span>
             </figcaption>
           </figure>
+          <section class="radius-guess" data-radius-game>
+            <h4>Jeu migration: distance quotidienne</h4>
+            <p>Tracez sur la carte votre estimation de la distance qu'une hirondelle peut parcourir en une journée, puis validez pour révéler le cercle de référence.</p>
+            <div class="radius-map-canvas" data-radius-map-canvas aria-label="Carte interactive pour estimer le rayon quotidien de vol d'une hirondelle"></div>
+            <div class="radius-controls">
+              <button type="button" class="game-btn" data-radius-submit disabled>Valider</button>
+              <button type="button" class="game-btn game-btn-alt" data-radius-reset>Recommencer</button>
+            </div>
+            <p class="radius-feedback" data-radius-feedback>Faites glisser depuis le marqueur central pour définir votre estimation.</p>
+          </section>
           <a data-site-note href="#" hidden></a>
-          <p data-next-direction></p>
-          <a class="game-btn game-btn-alt" data-next-link target="_blank" rel="noopener">Itinéraire à pied</a>
           <div class="video-embed trail-video reveal-on-scroll">
             <iframe data-station-video src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video station" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
@@ -77,17 +83,6 @@
           <article class="detail-card reveal-on-scroll"><h3>Créer</h3><p>Identifier des bâtiments adaptés où de nouvelles possibilités de nidification pourraient être ajoutées près de l'activité existante.</p></article>
           <article class="detail-card reveal-on-scroll"><h3>Suivre</h3><p>Mesurer les installations, le taux d'occupation, les plaintes, les interventions de nettoyage et les sites participants.</p></article>
         </div>
-      </section>
-
-      <section class="callout reveal-on-scroll" data-radius-game>
-        <h2>Jeu migration: distance quotidienne</h2>
-        <p>Tracez sur la carte votre estimation de la distance qu'une hirondelle peut parcourir en une journée, puis validez pour révéler le cercle de référence.</p>
-        <div class="radius-map-canvas" data-radius-map-canvas aria-label="Carte interactive pour estimer le rayon quotidien de vol d'une hirondelle"></div>
-        <div class="radius-controls">
-          <button type="button" class="game-btn" data-radius-submit disabled>Valider</button>
-          <button type="button" class="game-btn game-btn-alt" data-radius-reset>Recommencer</button>
-        </div>
-        <p class="radius-feedback" data-radius-feedback>Faites glisser depuis le marqueur central pour définir votre estimation.</p>
       </section>
     </main>
 

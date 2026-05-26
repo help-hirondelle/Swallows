@@ -4,6 +4,8 @@
     return;
   }
   var hasLeaflet = !!window.L;
+  // Toggle this to true to re-enable station popups.
+  var ENABLE_STATION_POPUPS = false;
 
   var lang = window.SITE_LANG || "en";
   if (lang !== "fr" && lang !== "de" && lang !== "en") {
@@ -33,12 +35,8 @@
   if (
     !mapNode ||
     !titleNode ||
-    !areaNode ||
-    !statusNode ||
     !storyNode ||
     !qrLinkNode ||
-    !nextDirectionNode ||
-    !nextLinkNode ||
     !stationVideoNode
   ) {
     return;
@@ -100,26 +98,26 @@
     de: {
       progress: "Station",
       of: "von",
-      thisIsLast: "Letzte Station erreicht.",
-      directionsLabel: "Gehroute oeffnen",
+      thisIsLast: "Letzte Station erreicht",
+      directionsLabel: "Wegbeschreibung öffnen",
       qrPrefix: "QR-Ziel:",
-      noNextDirection: "Sie sind an der letzten Station bei der Ecole De Montoie in Lausanne angekommen.",
-      directionIntro: "Gehen Sie",
+      noNextDirection: "Sie haben die letzte Station an der Ecole De Montoie in Lausanne erreicht.",
+      directionIntro: "Wegbeschreibung",
       towardsWord: "Richtung",
-      nextWord: "Naechste",
+      nextWord: "Nächste",
       storyLabels: {
         stopTheme: "Thema",
-        activity: "Kinderaktivitaet",
-        digital: "Digitale Idee",
-        details: "An Dieser Station"
+        activity: "Aktivität für Kinder",
+        digital: "Digitaler Inhalt",
+        details: "An dieser Station"
       },
-      imageTitle: "Pfadbild",
-      imageCaption: "Jede Station verbindet einen lokalen Ort mit einem konkreten Beduerfnis der Schwalben.",
+      imageTitle: "Visualisierung",
+      imageCaption: "Jede Station verknüpft einen lokalen Ort mit einem spezifischen Bedürfnis der Schwalben.",
       radius: {
-        defaultFeedback: "Ziehen Sie vom zentralen Marker, um Ihren Radius zu schaetzen.",
-        needGuess: "Zeichnen Sie zuerst einen Schaetzwert-Kreis.",
-        guessSaved: "Schaetzung gespeichert. Senden zum Anzeigen beider Kreise.",
-        revealPrefix: "Tatsaechlicher Radius: 300 km. Abweichung:",
+        defaultFeedback: "Ziehen Sie den Kreis vom Zentrum aus auf die gewünschte Grösse.",
+        needGuess: "Zeichnen Sie zuerst einen geschätzten Kreis ein.",
+        guessSaved: "Schätzung gespeichert. Klicken Sie auf Senden, um das Ergebnis zu sehen.",
+        revealPrefix: "Tatsächlicher Radius: 300 km. Ihre Abweichung:",
         centerLabel: "Referenzzentrum (Lausanne)"
       }
     }
@@ -130,67 +128,44 @@
       {
         id: "migration",
         title: "The Great Journey (Migration)",
-        area: "Near Theatre Vidy-Lausanne (open lake view), 46.5146 N, 6.5992 E",
+        area: "",
         lat: 46.5123,
         lng: 6.6111,
-        storyLead:
-          "Start at the lakefront and look at the open horizon. It mirrors the huge distances these birds cross each year.",
-        storyTheme:
-          "Seasonal migration from Europe across the Mediterranean and Sahara Desert to Sub-Saharan Africa.",
-        storyActivity:
-          "Pack Your Bags game: estimate how far a swallow can fly in one day.",
-        storyDigital:
-          "Use an animated migration route or an interactive tracking map of tagged swallows.",
+        story:
+          "As you look out over the water, try to imagine the incredible journey of the house martins. Every spring, around April, these small birds arrive here in Switzerland after flying thousands of kilometers all the way from their wintering grounds in Africa. Lakeshores like this one are vital resource zones for them to rest and recover after their long flight. They spend the summer months here to build nests and raise their young. When autumn approaches in September, you might see them gathering in large numbers right here over the water, preparing to fly back south across continents and oceans to escape the cold winter.",
         mapHint: "Start near Theatre Vidy-Lausanne",
         videoUrl: ""
       },
       {
         id: "food",
-        title: "The Lakeside Buffet (Diet and Hunting)",
-        area: "Eastern edge of Parc Louis Bourget (tree lines and marshier zones), 46.5169 N, 6.6014 E",
+        title: "The Buffet (Diet and Hunting)",
+        area: "",
         lat: 46.5152,
         lng: 6.5986,
-        storyLead:
-          "Move west along the shoreline where open water meets vegetation, trees, and moist insect-rich zones.",
-        storyTheme: "Swallows are aerial insectivores and catch their food entirely in flight.",
-        storyActivity:
-          "Beak Snapshot: try snapping your fingers as fast as possible and compare that to swallow hunting speed.",
-        storyDigital:
-          "Show a slow-motion clip of a swallow catching insects mid-air to highlight aerodynamic precision.",
+        story:
+          "Take a moment to look around this park. The open green spaces, trees, and grass are filled with tiny flying insects that you might barely notice. For house martins, however, this park is the perfect buffet. These birds are strictly insectivores, meaning they hunt and eat insects entirely while flying at high speeds through the air. They act as a natural pest control system for our neighborhoods. To successfully raise just one family of chicks, a pair of swallows must catch up to 150,000 flying insects such as flies and mosquitoes, which equals about one full kilogram of food. Thanks to their non-stop hunting in spaces like this, they help keep our parks comfortable and insect-free.",
         mapHint: "Shoreline feeding corridor",
         videoUrl: "https://www.youtube.com/watch?v=ku_rMIjIFfE"
       },
       {
         id: "materials",
         title: "Gathering the Mud (Building Material)",
-        area: "Wooded trails inland toward Chemin du Bois-de-Vaux, 46.5210 N, 6.6058 E",
+        area: "",
         lat: 46.519,
         lng: 6.6035,
-        storyLead:
-          "Head inland toward quieter wooded trails and look for damp earth and muddy patches near the ground.",
-        storyTheme:
-          "House martins build enclosed mud-cup nests from tiny mud pellets mixed with saliva.",
-        storyActivity:
-          "Count the Pellets: estimate how many mud balls are needed for one nest (more than 1,000).",
-        storyDigital:
-          "Play a nest-building time-lapse to show pellet-by-pellet construction and teamwork.",
+        story:
+          "Look down at the ground beneath your feet. In a park like this, especially after a rainy day, you can find puddles and patches of damp earth. This mud is like gold to house martins. They build their dome-shaped homes entirely out of tiny pellets of wet mud and clay, which they scoop up in their beaks and stick together piece by piece. To save energy, they need to find this mud very close to their nesting site, ideally within 200 meters. Unfortunately, because modern towns are increasingly paved over with asphalt and concrete, open muddy areas are disappearing. By preserving natural patches of dirt in parks, we ensure these little architects have the building blocks they need.",
         mapHint: "Inland mud-collection zone",
         videoUrl: "https://www.youtube.com/watch?v=xk_LBGByssY"
       },
       {
         id: "nest",
         title: "The Shared Roof (Coexistence and Artificial Nests)",
-        area: "Ecole De Montoie, Avenue de Montoie 19, 46.5190 N, 6.6121 E",
+        area: "",
         lat: 46.5218,
         lng: 6.6095,
-        storyLead:
-          "At Ecole De Montoie, the story ends with coexistence: people and birds sharing built space.",
-        storyTheme:
-          "Conservation through architecture: artificial nests help when modern facades and scarce mud limit natural nesting.",
-        storyActivity:
-          "Spot the Difference: count artificial nests and look for active use by swallows bringing food.",
-        storyDigital:
-          "Add a nest-cam stream or a chick-feeding clip showing nest activity up close.",
+        story:
+          "Look up at the walls and the roof overhang of the school building. Do you see the nests tucked safely beneath the eaves? For centuries, house martins have chosen to live right alongside humans, sharing our structures. However, many modern buildings are made with materials that are too smooth for natural mud nests to stick to. To help them, we can install pre-made artificial nests like the ones on this building. To ensure that humans and birds coexist happily, a simple wooden board can be placed about 50 centimeters below the nests. This board catches the birds' droppings, keeping the school walls and sidewalks perfectly clean while allowing the swallows to raise their families safely right above our heads.",
         mapHint: "Final stop at Ecole De Montoie",
         videoUrl: "https://www.youtube.com/watch?v=rV5SaQk7_5I"
       }
@@ -199,68 +174,44 @@
       {
         id: "migration",
         title: "Le Grand Voyage (Migration)",
-        area: "Pres du Theatre Vidy-Lausanne (vue ouverte sur le lac), 46.5146 N, 6.5992 E",
+        area: "",
         lat: 46.5123,
         lng: 6.6111,
-        storyLead:
-          "Commencez au bord du lac et regardez l'horizon ouvert. Il rappelle les grandes distances parcourues chaque annee.",
-        storyTheme:
-          "Migration saisonniere depuis l'Europe, au-dela de la Mediterranee et du Sahara, vers l'Afrique subsaharienne.",
-        storyActivity:
-          "Jeu Pack Your Bags: estimez la distance qu'une hirondelle peut voler en une journee.",
-        storyDigital:
-          "Affichez une carte de migration animee ou un suivi interactif d'hirondelles balisees.",
+        story:
+          "En regardant l'eau, essayez d'imaginer l'incroyable voyage des hirondelles de fenetre. Chaque printemps, vers avril, ces petits oiseaux arrivent ici en Suisse apres avoir vole des milliers de kilometres depuis leurs quartiers d'hiver en Afrique. Les rives de lac comme celle-ci sont des zones de ressources vitales pour se reposer et recuperer apres ce long vol. Elles passent les mois d'ete ici pour construire leurs nids et elever leurs jeunes. Quand l'automne approche en septembre, vous pouvez les voir se rassembler en grand nombre juste au-dessus de l'eau, se preparant a repartir vers le sud a travers continents et oceans pour echapper au froid de l'hiver.",
         mapHint: "Depart pres du Theatre Vidy-Lausanne",
         videoUrl: ""
       },
       {
         id: "food",
-        title: "Le Buffet du Lac (Regime et Chasse)",
-        area: "Bord est du Parc Louis Bourget (arbres et zones plus humides), 46.5169 N, 6.6014 E",
+        title: "Le Buffet (Regime et Chasse)",
+        area: "",
         lat: 46.5152,
         lng: 6.5986,
-        storyLead:
-          "Marchez le long de la rive la ou l'eau, la vegetation et les arbres creent des zones riches en insectes.",
-        storyTheme:
-          "Les hirondelles sont insectivores aeriennes et attrapent leur nourriture entierement en vol.",
-        storyActivity:
-          "Jeu Beak Snapshot: claquez des doigts le plus vite possible et comparez avec la chasse des hirondelles.",
-        storyDigital:
-          "Montrez une video au ralenti d'une hirondelle capturant des insectes en plein air.",
+        story:
+          "Prenez un moment pour observer ce parc. Les espaces verts ouverts, les arbres et l'herbe sont remplis de minuscules insectes volants que vous remarquez a peine. Pour les hirondelles de fenetre, pourtant, ce parc est un buffet ideal. Ces oiseaux sont strictement insectivores, ce qui signifie qu'ils chassent et mangent les insectes uniquement en vol, a grande vitesse. Ils agissent comme un systeme naturel de controle des nuisibles dans nos quartiers. Pour elever une seule famille de poussins, un couple d'hirondelles doit attraper jusqu'a 150 000 insectes volants, comme les mouches et les moustiques, soit environ un kilogramme de nourriture. Grace a leur chasse continue dans des espaces comme celui-ci, elles aident a garder nos parcs agreables et pauvres en insectes.",
         mapHint: "Couloir d'alimentation au bord du lac",
         videoUrl: "https://www.youtube.com/watch?v=ku_rMIjIFfE"
       },
       {
         id: "materials",
         title: "Collecter la Boue (Materiaux du Nid)",
-        area: "Sentiers boises vers le Chemin du Bois-de-Vaux, 46.5210 N, 6.6058 E",
+        area: "",
         lat: 46.519,
         lng: 6.6035,
-        storyLead:
-          "En allant vers des sentiers plus calmes, reperez les zones humides et la boue proche du sol.",
-        storyTheme:
-          "Les hirondelles de fenetre construisent des nids en coupelle avec de petites boulettes de boue melangees a la salive.",
-        storyActivity:
-          "Jeu Count the Pellets: estimez combien de boulettes de boue sont necessaires pour un nid (plus de 1 000).",
-        storyDigital:
-          "Lancez un time-lapse de construction pour voir le travail boulette par boulette.",
+        story:
+          "Regardez le sol sous vos pieds. Dans un parc comme celui-ci, surtout apres la pluie, vous pouvez trouver des flaques et des zones de terre humide. Cette boue est de l'or pour les hirondelles de fenetre. Elles construisent leurs maisons en forme de dome entierement avec de petites boulettes de boue et d'argile humide, qu'elles prennent dans leur bec et collent une par une. Pour economiser leur energie, elles doivent trouver cette boue tres pres du site de nidification, idealement dans un rayon de 200 metres. Malheureusement, comme les villes modernes sont de plus en plus couvertes d'asphalte et de beton, les zones de boue ouverte disparaissent. En preservant des surfaces naturelles de terre dans les parcs, on garantit a ces petites architectes les materiaux dont elles ont besoin.",
         mapHint: "Zone de collecte de boue dans les terres",
         videoUrl: "https://www.youtube.com/watch?v=xk_LBGByssY"
       },
       {
         id: "nest",
         title: "Le Toit Partage (Coexistence et Nids Artificiels)",
-        area: "Ecole De Montoie, Avenue de Montoie 19, 46.5190 N, 6.6121 E",
+        area: "",
         lat: 46.5218,
         lng: 6.6095,
-        storyLead:
-          "A l'Ecole De Montoie, le parcours se termine sur la coexistence entre humains et hirondelles.",
-        storyTheme:
-          "La conservation passe aussi par l'architecture: les nids artificiels aident quand les facades modernes et la boue rare limitent la nidification.",
-        storyActivity:
-          "Jeu Spot the Difference: comptez les nids artificiels et cherchez des hirondelles actives.",
-        storyDigital:
-          "Ajoutez un flux nest-cam ou un clip d'alimentation des poussins pour observer le nid de pres.",
+        story:
+          "Levez les yeux vers les murs et l'avancee du toit de l'ecole. Voyez-vous les nids bien proteges sous les avant-toits? Depuis des siecles, les hirondelles de fenetre choisissent de vivre au plus pres des humains, en partageant nos constructions. Pourtant, de nombreux batiments modernes utilisent des materiaux trop lisses pour que les nids naturels en boue puissent y adherer. Pour les aider, on peut installer des nids artificiels pre-fabriques comme ceux de ce batiment. Pour assurer une coexistence harmonieuse entre humains et oiseaux, une simple planche de bois peut etre placee environ 50 centimetres sous les nids. Cette planche recueille les fientes, garde les murs de l'ecole et les trottoirs propres, et permet aux hirondelles d'elever leurs petits en securite juste au-dessus de nos tetes.",
         mapHint: "Arret final a l'Ecole De Montoie",
         videoUrl: "https://www.youtube.com/watch?v=rV5SaQk7_5I"
       }
@@ -269,68 +220,44 @@
       {
         id: "migration",
         title: "Die Grosse Reise (Migration)",
-        area: "Nahe Theatre Vidy-Lausanne (freier Blick auf den See), 46.5146 N, 6.5992 E",
+        area: "",
         lat: 46.5123,
         lng: 6.6111,
-        storyLead:
-          "Starten Sie am Seeufer und schauen Sie auf den offenen Horizont. Er zeigt die grossen Distanzen dieser Voegel.",
-        storyTheme:
-          "Saisonale Migration von Europa ueber Mittelmeer und Sahara nach Subsahara-Afrika.",
-        storyActivity:
-          "Pack Your Bags Spiel: Schaetzen Sie, wie weit eine Schwalbe an einem Tag fliegen kann.",
-        storyDigital:
-          "Nutzen Sie eine animierte Migrationsroute oder eine interaktive Tracking-Karte markierter Schwalben.",
+        story:
+          "Wenn Sie über das Wasser blicken, stellen Sie sich die unglaubliche Reise der Mehlschwalben vor. Jeden Frühling, etwa im April, kommen diese kleinen Vögel hier in der Schweiz an, nachdem sie Tausende Kilometer aus ihren Überwinterungsgebieten in Afrika geflogen sind. Seeufer wie dieses sind für sie lebenswichtige Rastplätze, um sich nach dem langen Flug zu erholen. Sie verbringen die Sommermonate hier, bauen Nester und ziehen ihre Jungen auf. Wenn sich im September der Herbst nähert, können Sie sie oft in grossen Schwärmen direkt über dem Wasser sehen, wie sie sich auf den Rückflug nach Süden vorbereiten, um dem kalten Winter zu entkommen.",
         mapHint: "Start nahe Theatre Vidy-Lausanne",
         videoUrl: ""
       },
       {
         id: "food",
-        title: "Das Seeufer-Buffet (Nahrung und Jagd)",
-        area: "Oestlicher Rand des Parc Louis Bourget (Baumlinien und feuchtere Zonen), 46.5169 N, 6.6014 E",
+        title: "Das Buffet (Nahrung und Jagd)",
+        area: "",
         lat: 46.5152,
         lng: 6.5986,
-        storyLead:
-          "Gehen Sie entlang der Uferzone, wo Wasser, Vegetation und Baeume viele Insekten anziehen.",
-        storyTheme:
-          "Schwalben sind Luftinsektenfresser und fangen ihre Nahrung vollstaendig im Flug.",
-        storyActivity:
-          "Beak Snapshot Spiel: Schnipsen Sie so schnell wie moeglich und vergleichen Sie das mit der Jagdgeschwindigkeit der Schwalben.",
-        storyDigital:
-          "Zeigen Sie eine Zeitlupenaufnahme einer Schwalbe beim Insektenfang in der Luft.",
+        story:
+          "Nehmen Sie sich einen Moment Zeit und schauen Sie sich in diesem Park um. Die offenen Grünflächen, Bäume und Wiesen sind voller winziger Fluginsekten, die man kaum bemerkt. Für Mehlschwalben ist dieser Park jedoch das perfekte Buffet. Diese Vögel sind reine Insektenfresser; das heisst, sie jagen ihre Beute ausschliesslich im Flug. Damit wirken sie als natürliche Schädlingsbekämpfer in unseren Quartieren. Um nur eine einzige Brut erfolgreich aufzuziehen, muss ein Schwalbenpaar bis zu 150.000 Insekten wie Fliegen und Mücken fangen – das entspricht etwa einem Kilogramm Nahrung. Dank ihrer unermüdlichen Jagd helfen sie dabei, unsere Parks angenehm und insektenarm zu halten.",
         mapHint: "Futterkorridor am Ufer",
         videoUrl: "https://www.youtube.com/watch?v=ku_rMIjIFfE"
       },
       {
         id: "materials",
         title: "Lehm Sammeln (Nistmaterial)",
-        area: "Bewaldete Wege landeinwaerts Richtung Chemin du Bois-de-Vaux, 46.5210 N, 6.6058 E",
+        area: "",
         lat: 46.519,
         lng: 6.6035,
-        storyLead:
-          "Auf ruhigeren Wegen landeinwaerts sehen Sie feuchte Erde und schlammige Stellen am Boden.",
-        storyTheme:
-          "Mehlschwalben bauen geschlossene Lehmnester aus kleinen Schlammkugeln, gemischt mit Speichel.",
-        storyActivity:
-          "Count the Pellets Spiel: Schaetzen Sie, wie viele Schlammkugeln fuer ein Nest noetig sind (mehr als 1.000).",
-        storyDigital:
-          "Zeigen Sie einen Nestbau-Zeitraffer, um die Teamarbeit Kugel fuer Kugel sichtbar zu machen.",
+        story:
+          "Schauen Sie auf den Boden unter Ihren Füssen. In einem Park wie diesem finden Sie vor allem nach Regentagen Pfützen und feuchte Erdstellen. Dieser Schlamm ist für Mehlschwalben wie Gold. Sie bauen ihre kuppelförmigen Nester vollständig aus kleinen Kügelchen aus nassem Lehm und Ton, die sie mit dem Schnabel aufnehmen und Stück für Stück zusammenfügen. Um Energie zu sparen, müssen sie diesen Schlamm sehr nahe am Nistplatz finden, idealerweise im Umkreis von 200 Metern. Leider verschwinden offene Schlammstellen immer mehr, da Böden zunehmend versiegelt werden. Wenn wir natürliche Erdflächen in Parks erhalten, sichern wir diesen kleinen Architekten die nötigen Baustoffe.",
         mapHint: "Landeinwaertige Lehm-Sammelzone",
         videoUrl: "https://www.youtube.com/watch?v=xk_LBGByssY"
       },
       {
         id: "nest",
         title: "Das Geteilte Dach (Koexistenz und Kunstnester)",
-        area: "Ecole De Montoie, Avenue de Montoie 19, 46.5190 N, 6.6121 E",
+        area: "",
         lat: 46.5218,
         lng: 6.6095,
-        storyLead:
-          "An der Ecole De Montoie endet der Pfad mit Koexistenz: Menschen und Schwalben teilen gebaute Raeume.",
-        storyTheme:
-          "Schutz durch Architektur: Kunstnester helfen, wenn moderne Fassaden und wenig Lehm natuerliche Nester begrenzen.",
-        storyActivity:
-          "Spot the Difference Spiel: Zaehlen Sie Kunstnester und achten Sie auf aktive Nutzung durch Schwalben.",
-        storyDigital:
-          "Ergaenzen Sie einen Nest-Cam-Stream oder einen Futterclip mit Jungvoegeln aus der Naehe.",
+        story:
+          "Schauen Sie nach oben zu den Wänden und zum Dachvorsprung des Schulgebäudes. Sehen Sie die Nester, die sicher unter der Traufe sitzen? Seit Jahrhunderten leben Mehlschwalben direkt neben uns Menschen und nutzen unsere Bauwerke. Viele moderne Gebäude bestehen jedoch aus Materialien, die zu glatt sind, als dass natürliche Lehmnester daran haften könnten. Um den Vögeln zu helfen, können wir vorgefertigte Kunstnester anbringen. Damit Mensch und Vogel harmonisch zusammenleben, kann ein Kotbrett etwa 50 Zentimeter unter den Nestern montiert werden. Es fängt Verschmutzungen auf, hält die Fassade sauber und ermöglicht es den Schwalben, ihre Jungen sicher direkt über unseren Köpfen aufzuziehen.",
         mapHint: "Letzte Station an der Ecole De Montoie",
         videoUrl: "https://www.youtube.com/watch?v=rV5SaQk7_5I"
       }
@@ -342,12 +269,12 @@
       title: {
         en: "Long-Distance Return",
         fr: "Retour longue distance",
-        de: "Rueckkehr ueber weite Strecken"
+        de: "Rückkehr aus der Ferne"
       },
       caption: {
         en: "Swallows return each spring to familiar breeding areas and nesting sites.",
         fr: "Les hirondelles reviennent chaque printemps vers des zones de reproduction connues.",
-        de: "Schwalben kehren im Fruehling zu vertrauten Brutgebieten zurueck."
+        de: "Schwalben kehren jeden Frühling zu vertrauten Brutgebieten zurück."
       }
     },
     food: {
@@ -360,7 +287,7 @@
       caption: {
         en: "Healthy green and wet areas support the insects swallows catch in flight.",
         fr: "Les espaces verts et humides soutiennent les insectes captures en vol.",
-        de: "Gruene und feuchte Flaechen foerdern Insekten, die Schwalben im Flug fangen."
+        de: "Gesunde Grün- und Feuchtflächen fördern Insekten, die Schwalben im Flug fangen."
       }
     },
     materials: {
@@ -368,12 +295,12 @@
       title: {
         en: "Mud for Nest Building",
         fr: "Boue pour construire les nids",
-        de: "Lehm fuer den Nestbau"
+        de: "Lehm für den Nestbau"
       },
       caption: {
         en: "Clay-rich mud near colonies helps house martins build and repair nests.",
         fr: "Une boue argileuse proche des colonies aide a construire et reparer les nids.",
-        de: "Tonreicher Lehm nahe Kolonien hilft beim Bau und bei der Reparatur von Nestern."
+        de: "Tonreicher Lehm in der Nähe der Kolonien hilft beim Bau und der Reparatur von Nestern."
       }
     },
     nest: {
@@ -381,12 +308,12 @@
       title: {
         en: "Shared Buildings",
         fr: "Batiments partages",
-        de: "Geteilte Gebaeude"
+        de: "Gemeinsame Gebäude"
       },
       caption: {
         en: "Nests under roofs show why coexistence depends on building design and tolerance.",
         fr: "Les nids sous les toits montrent que la cohabitation depend du bati et de la tolerance.",
-        de: "Nester unter Daechern zeigen, wie sehr Koexistenz von Bauweise und Toleranz abhaengt."
+        de: "Nester unter Dächern zeigen, wie sehr Koexistenz von Bauweise und Toleranz abhängt."
       }
     }
   };
@@ -681,17 +608,13 @@
     }
   }
 
-  function appendStoryBlock(label, text) {
+  function appendStoryBlock(text) {
     if (!storyNode || !text) {
       return;
     }
 
     var block = document.createElement("section");
     block.className = "trail-story-block";
-
-    var heading = document.createElement("strong");
-    heading.textContent = label;
-    block.appendChild(heading);
 
     var body = document.createElement("p");
     body.textContent = text;
@@ -701,24 +624,10 @@
   }
 
   function renderStory(station) {
-    var storyLabels = labels.storyLabels || copy.en.storyLabels;
     clearNode(storyNode);
 
-    if (station.storyLead) {
-      appendStoryBlock(storyLabels.details, station.storyLead);
-    }
-    if (station.storyTheme) {
-      appendStoryBlock(storyLabels.stopTheme, station.storyTheme);
-    }
-    if (station.storyActivity) {
-      appendStoryBlock(storyLabels.activity, station.storyActivity);
-    }
-    if (station.storyDigital) {
-      appendStoryBlock(storyLabels.digital, station.storyDigital);
-    }
-
-    if (storyNode.childNodes.length === 0 && station.story) {
-      appendStoryBlock(storyLabels.details, station.story);
+    if (station.story) {
+      appendStoryBlock(station.story);
     }
   }
 
@@ -732,6 +641,7 @@
       stationImageArtNode.style.backgroundImage =
         'linear-gradient(180deg, rgba(12, 35, 24, 0.08), rgba(12, 35, 24, 0.28)), url("' + visual.src + '")';
       stationImageArtNode.style.backgroundSize = "cover";
+      stationImageArtNode.style.backgroundRepeat = "no-repeat";
       stationImageArtNode.style.backgroundPosition = "center";
     }
 
@@ -944,56 +854,50 @@
   function setNextDirections(station) {
     var nextStation = stations[station.order] || null;
     drawTrail(station, nextStation);
-
-    if (!nextStation) {
-      nextDirectionNode.textContent = labels.thisIsLast + " " + labels.noNextDirection;
+    if (nextDirectionNode) {
+      nextDirectionNode.textContent = "";
+      nextDirectionNode.setAttribute("hidden", "hidden");
+    }
+    if (nextLinkNode) {
       nextLinkNode.setAttribute("hidden", "hidden");
+    }
+  }
+
+  function setRadiusGameVisibility(station) {
+    if (!radiusGameNode) {
       return;
     }
-
-    var distance = distanceKm(station, nextStation);
-    var distanceText = distance < 1 ? Math.round(distance * 1000) + " m" : distance.toFixed(1) + " km";
-    var heading = headingText(station, nextStation);
-    var walkLink =
-      "https://www.google.com/maps/dir/?api=1&travelmode=walking&origin=" +
-      station.lat +
-      "," +
-      station.lng +
-      "&destination=" +
-      nextStation.lat +
-      "," +
-      nextStation.lng;
-
-    nextDirectionNode.textContent =
-      labels.nextWord +
-      ": " +
-      labels.directionIntro +
-      " " +
-      heading +
-      " " +
-      labels.towardsWord +
-      " " +
-      nextStation.title +
-      " (" +
-      distanceText +
-      ").";
-
-    nextLinkNode.textContent = labels.directionsLabel;
-    nextLinkNode.href = walkLink;
-    nextLinkNode.removeAttribute("hidden");
+    if (station.order === 1) {
+      radiusGameNode.removeAttribute("hidden");
+      if (radiusMap) {
+        window.setTimeout(function () {
+          radiusMap.invalidateSize();
+        }, 0);
+      }
+      return;
+    }
+    radiusGameNode.setAttribute("hidden", "hidden");
   }
 
   function renderStation(station) {
     var stationUrl = toAbsoluteStationUrl(station.id);
 
     titleNode.textContent = station.title;
-    areaNode.textContent = station.area;
-    statusNode.textContent = labels.progress + " " + station.order + " " + labels.of + " " + stations.length;
+    if (areaNode) {
+      areaNode.textContent = "";
+      areaNode.setAttribute("hidden", "hidden");
+    }
+    if (statusNode) {
+      statusNode.textContent = "";
+      statusNode.setAttribute("hidden", "hidden");
+    }
     renderStory(station);
     renderStationImage(station);
-    qrLinkNode.textContent = stationUrl;
-    qrLinkNode.href = stationUrl;
-    qrLinkNode.setAttribute("aria-label", labels.qrPrefix + " " + station.title);
+    if (qrLinkNode) {
+      qrLinkNode.textContent = stationUrl;
+      qrLinkNode.href = stationUrl;
+      qrLinkNode.setAttribute("aria-label", labels.qrPrefix + " " + station.title);
+    }
 
     var videoId = extractYouTubeId(station.videoUrl);
     if (station.videoUrl && videoId) {
@@ -1020,6 +924,7 @@
     }
 
     setNextDirections(station);
+    setRadiusGameVisibility(station);
   }
 
   function setActive(stationId, shouldFly) {
@@ -1070,16 +975,19 @@
     var marker = new window.maplibregl.Marker({
       element: markerElement,
       anchor: "center"
-    })
-      .setLngLat([station.lng, station.lat])
-      .setPopup(
+    }).setLngLat([station.lng, station.lat]);
+
+    if (ENABLE_STATION_POPUPS) {
+      marker.setPopup(
         new window.maplibregl.Popup({
           closeButton: false,
           closeOnClick: false,
           offset: 14
         }).setHTML(popupHtml(station))
-      )
-      .addTo(map);
+      );
+    }
+
+    marker.addTo(map);
 
     markerElement.addEventListener("click", function (event) {
       event.preventDefault();

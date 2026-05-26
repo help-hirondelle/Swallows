@@ -1064,7 +1064,8 @@ tr:last-child td {
 }
 
 .trail-image-art {
-  min-height: 160px;
+  min-height: 230px;
+  aspect-ratio: 16 / 9;
   background:
     radial-gradient(circle at 22% 25%, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 42%),
     linear-gradient(140deg, #83b99a 0%, #6ba583 38%, #4d7f63 100%);
