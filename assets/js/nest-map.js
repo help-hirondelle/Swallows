@@ -604,8 +604,8 @@
       type: "line",
       source: TRAIL_NEXT_SOURCE_ID,
       paint: {
-        "line-color": "#8bc2ba",
-        "line-width": 6,
+        "line-color": "#283833", //#8bc2ba for current segement highlighting 
+        "line-width": 5,
         "line-opacity": 0.8
       }
     });
