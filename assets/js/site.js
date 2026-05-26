@@ -11,7 +11,7 @@
 
   document.documentElement.classList.add("js-reveal");
 
-  var navItems = [
+  var pageItems = [
     { key: "information", path: "index.html" },
     { key: "fun-facts", path: "pages/fun-facts.html" },
     { key: "how-to-do-more", path: "pages/how-to-do-more.html" },
@@ -19,6 +19,9 @@
     { key: "game", path: "pages/game.html" },
     { key: "about", path: "pages/about.html" }
   ];
+  var navItems = pageItems.filter(function (item) {
+    return item.key !== "fun-facts" && item.key !== "how-to-do-more";
+  });
 
   var navLabels = {
     en: {
@@ -64,9 +67,9 @@
   }
 
   function currentBasePath() {
-    for (var i = 0; i < navItems.length; i += 1) {
-      if (navItems[i].key === activePage) {
-        return navItems[i].path;
+    for (var i = 0; i < pageItems.length; i += 1) {
+      if (pageItems[i].key === activePage) {
+        return pageItems[i].path;
       }
     }
 
