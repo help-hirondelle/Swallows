@@ -28,6 +28,8 @@ body {
   color: var(--ink);
   background: linear-gradient(180deg, #f2f7f4 0%, #f8fbf9 240px, var(--paper) 100%);
   line-height: 1.55;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {
@@ -191,6 +193,16 @@ button:focus-visible {
   background: rgba(8, 31, 21, 0.38);
   box-shadow: 0 12px 30px rgba(4, 18, 12, 0.12);
   backdrop-filter: blur(14px);
+}
+
+.landing-page main.container {
+  width: 100%;
+}
+
+.landing-page main.container > section:not(.home-banner) {
+  width: min(1120px, 92vw);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .landing-page .brand,
@@ -357,6 +369,8 @@ section h3 {
 }
 
 .landing-page .home-banner {
+  width: 100%;
+  margin-left: 0;
   min-height: 100vh;
   min-height: 100svh;
 }
@@ -525,6 +539,30 @@ section h3 {
   background: var(--mint-100);
 }
 
+.home-page-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.55rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffffd8;
+  box-shadow: var(--card-shadow);
+  padding: 0.32rem;
+}
+
+.home-page-tabs a {
+  border-radius: 999px;
+  color: var(--pine-900);
+  font-weight: 800;
+  padding: 0.62rem 1rem;
+  text-decoration: none;
+}
+
+.home-page-tabs a:hover {
+  background: var(--mint-100);
+}
+
 .home-plain-links {
   display: flex;
   flex-wrap: wrap;
@@ -536,6 +574,45 @@ section h3 {
 
 .home-plain-links a {
   color: var(--pine-900);
+}
+
+.home-education {
+  scroll-margin-top: 6.2rem;
+}
+
+.home-education > h2 {
+  margin-bottom: 0.45rem;
+}
+
+.home-section-intro {
+  max-width: 820px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  line-height: 1.7;
+}
+
+.home-subsection {
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.home-subsection > h2 {
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  margin-bottom: clamp(0.85rem, 1.8vw, 1.2rem);
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  border-radius: 999px;
+  background: var(--mint-200);
+  color: var(--pine-900);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 0.28rem 0.72rem;
+  text-transform: uppercase;
 }
 
 .hero-panel,
@@ -1311,6 +1388,16 @@ tr:last-child td {
   .home-banner-content {
     align-items: flex-end;
     padding-bottom: 2.2rem;
+  }
+
+  .home-page-tabs {
+    display: grid;
+    border-radius: 18px;
+    width: 100%;
+  }
+
+  .home-page-tabs a {
+    text-align: center;
   }
 
   .landing-page .site-nav {
