@@ -1,9 +1,7 @@
 (function () {
   var base = window.SITE_BASE || "";
   var activePage = window.ACTIVE_PAGE || "information";
-  var lastUpdated =
-    window.LAST_UPDATED ||
-    new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+  var lastUpdated = window.LAST_UPDATED || "May 27, 2026";
   var lang = window.SITE_LANG || "en";
   if (lang !== "fr" && lang !== "de" && lang !== "en") {
     lang = "en";
