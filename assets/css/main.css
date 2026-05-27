@@ -596,6 +596,15 @@ section h3 {
   margin-top: clamp(1.5rem, 3vw, 2.25rem);
 }
 
+#home-action > .section-kicker + .home-subsection {
+  margin-top: clamp(0.55rem, 1.4vw, 0.95rem);
+}
+
+#home-learn > .section-kicker + .home-subsection,
+#home-learn > h2 + .home-section-intro + .home-subsection {
+  margin-top: clamp(0.55rem, 1.4vw, 0.95rem);
+}
+
 .home-subsection > h2 {
   font-size: clamp(1.35rem, 2.2vw, 1.8rem);
   margin-bottom: clamp(0.85rem, 1.8vw, 1.2rem);
