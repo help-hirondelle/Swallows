@@ -326,10 +326,41 @@
     flap();
   }
 
+  function preventGameDoubleTapZoom() {
+    var lastTouchEndMs = 0;
+
+    root.addEventListener("dblclick", function (event) {
+      event.preventDefault();
+    });
+
+    root.addEventListener(
+      "touchend",
+      function (event) {
+        var now = Date.now();
+        if (now - lastTouchEndMs < 320) {
+          event.preventDefault();
+        }
+        lastTouchEndMs = now;
+      },
+      { passive: false }
+    );
+
+    root.addEventListener("gesturestart", function (event) {
+      event.preventDefault();
+    });
+    root.addEventListener("gesturechange", function (event) {
+      event.preventDefault();
+    });
+    root.addEventListener("gestureend", function (event) {
+      event.preventDefault();
+    });
+  }
+
   startButton.addEventListener("click", beginGame);
   restartButton.addEventListener("click", beginGame);
   canvas.addEventListener("pointerdown", onPointerInput);
   document.addEventListener("keydown", onKeyboardInput);
+  preventGameDoubleTapZoom();
 
   loadBestScore();
   updateHud();
