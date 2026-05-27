@@ -5,7 +5,7 @@
   }
   var hasLeaflet = !!window.L;
   // Toggle this to true to re-enable station popups.
-  var ENABLE_STATION_POPUPS = false;
+  var ENABLE_STATION_POPUPS = true;
 
   var lang = window.SITE_LANG || "en";
   if (lang !== "fr" && lang !== "de" && lang !== "en") {
@@ -143,7 +143,7 @@
         lat: 46.5152,
         lng: 6.5986,
         story:
-          "Take a moment to look around this park. The open green spaces, trees, and grass are filled with tiny flying insects that you might barely notice. For house martins, however, this park is the perfect buffet. These birds are strictly insectivores, meaning they hunt and eat insects entirely while flying at high speeds through the air. They act as a natural pest control system for our neighborhoods. To successfully raise just one family of chicks, a pair of swallows must catch up to 150,000 flying insects such as flies and mosquitoes, which equals about one full kilogram of food. Thanks to their non-stop hunting in spaces like this, they help keep our parks comfortable and insect-free.",
+          "Take a moment to look around this park. The open green spaces, trees, and grass are filled with tiny flying insects that you might barely notice. For house martins, however, this park is the perfect buffet. These birds are insectivores, meaning they hunt and eat insects only. They do it while flying at high speeds through the air. To successfully raise just one family of chicks, a pair of swallows must catch up to 150,000 flying insects such as flies and mosquitoes, which equals to about one full kilogram of food. Thanks to their non-stop hunting in spaces like this, they help keep insect population in check, acting as a natural pest control.",
         mapHint: "Shoreline feeding corridor",
         videoUrl: "https://www.youtube.com/watch?v=ku_rMIjIFfE"
       },
@@ -154,7 +154,7 @@
         lat: 46.519,
         lng: 6.6035,
         story:
-          "Look down at the ground beneath your feet. In a park like this, especially after a rainy day, you can find puddles and patches of damp earth. This mud is like gold to house martins. They build their dome-shaped homes entirely out of tiny pellets of wet mud and clay, which they scoop up in their beaks and stick together piece by piece. To save energy, they need to find this mud very close to their nesting site, ideally within 200 meters. Unfortunately, because modern towns are increasingly paved over with asphalt and concrete, open muddy areas are disappearing. By preserving natural patches of dirt in parks, we ensure these little architects have the building blocks they need.",
+          "Look down at the ground beneath your feet. In a park like this, especially after a rainy day, you can find puddles and patches of damp earth. This mud is exactly what house martins need. They build their dome-shaped homes entirely out of tiny pellets of wet mud and clay, which they scoop up in their beaks and stick together piece by piece. To save energy, they need to find these materials close to their nesting site, ideally within 200 meters. Unfortunately, because modern towns are increasingly paved over with asphalt and concrete, open muddy areas are disappearing. By preserving natural patches of dirt in parks, we ensure these little architects have the building blocks they need!",
         mapHint: "Inland mud-collection zone",
         videoUrl: "https://www.youtube.com/watch?v=xk_LBGByssY"
       },
@@ -165,7 +165,7 @@
         lat: 46.5218,
         lng: 6.6095,
         story:
-          "Look up at the walls and the roof overhang of the school building. Do you see the nests tucked safely beneath the eaves? For centuries, house martins have chosen to live right alongside humans, sharing our structures. However, many modern buildings are made with materials that are too smooth for natural mud nests to stick to. To help them, we can install pre-made artificial nests like the ones on this building. To ensure that humans and birds coexist happily, a simple wooden board can be placed about 50 centimeters below the nests. This board catches the birds' droppings, keeping the school walls and sidewalks perfectly clean while allowing the swallows to raise their families safely right above our heads.",
+          "Look up under the roof of the school. Do you see the nests tucked beneath the eaves? For centuries, house martins have lived right alongside humans, sharing our constructions. However, many modern buildings have walls that are too smooth for natural mud nests to stick to. To help them, artificial nests like the ones here can be installed. To ensure that humans and birds coexist happily, a simple wooden board can be placed below the nests. It catches the birds' droppings, keeping the walls and sidewalks clean while allowing the house martins to raise their families safely right above our heads.",
         mapHint: "Final stop at Ecole De Montoie",
         videoUrl: "https://www.youtube.com/watch?v=rV5SaQk7_5I"
       }
@@ -178,7 +178,7 @@
         lat: 46.5123,
         lng: 6.6111,
         story:
-          "En regardant l'eau, essayez d'imaginer l'incroyable voyage des hirondelles de fenetre. Chaque printemps, vers avril, ces petits oiseaux arrivent ici en Suisse apres avoir vole des milliers de kilometres depuis leurs quartiers d'hiver en Afrique. Les rives de lac comme celle-ci sont des zones de ressources vitales pour se reposer et recuperer apres ce long vol. Elles passent les mois d'ete ici pour construire leurs nids et elever leurs jeunes. Quand l'automne approche en septembre, vous pouvez les voir se rassembler en grand nombre juste au-dessus de l'eau, se preparant a repartir vers le sud a travers continents et oceans pour echapper au froid de l'hiver.",
+          "En regardant l'eau, essayez d'imaginer l'incroyable voyage des hirondelles de fenêtre. Chaque printemps, vers avril, ces petits oiseaux arrivent ici en Suisse après avoir volé des milliers de kilomètres depuis leurs quartiers d'hiver en Afrique. Les rives de lac comme celle-ci sont des zones de ressources vitales pour se reposer et récupérer après ce long vol. Elles passent les mois d'été ici pour construire leurs nids et élever leurs jeunes. Quand l'automne approche en septembre, vous pouvez les voir se rassembler en grand nombre juste au-dessus de l'eau, se préparant à repartir vers le sud à travers continents et océans pour échapper au froid de l'hiver.",
         mapHint: "Depart pres du Theatre Vidy-Lausanne",
         videoUrl: ""
       },
@@ -189,7 +189,7 @@
         lat: 46.5152,
         lng: 6.5986,
         story:
-          "Prenez un moment pour observer ce parc. Les espaces verts ouverts, les arbres et l'herbe sont remplis de minuscules insectes volants que vous remarquez a peine. Pour les hirondelles de fenetre, pourtant, ce parc est un buffet ideal. Ces oiseaux sont strictement insectivores, ce qui signifie qu'ils chassent et mangent les insectes uniquement en vol, a grande vitesse. Ils agissent comme un systeme naturel de controle des nuisibles dans nos quartiers. Pour elever une seule famille de poussins, un couple d'hirondelles doit attraper jusqu'a 150 000 insectes volants, comme les mouches et les moustiques, soit environ un kilogramme de nourriture. Grace a leur chasse continue dans des espaces comme celui-ci, elles aident a garder nos parcs agreables et pauvres en insectes.",
+          "Prenez un moment pour observer ce parc. Les espaces verts ouverts, les arbres et l'herbe regorgent de minuscules insectes volants que vous remarquez à peine. Pour les hirondelles de fenêtre, pourtant, ce parc est un buffet idéal. Ces oiseaux sont insectivores, ce qui signifie qu'ils chassent et mangent uniquement des insectes. Ils le font tout en volant à grande vitesse. Pour élever une seule nichée, un couple d'hirondelles doit attraper jusqu'à 150 000 insectes volants, comme des mouches et des moustiques, soit environ un kilogramme de nourriture. Grâce à leur chasse incessante dans des espaces comme celui-ci, elles aident à réguler la population d'insectes, agissant ainsi comme un contrôle naturel des nuisibles.",
         mapHint: "Couloir d'alimentation au bord du lac",
         videoUrl: "https://www.youtube.com/watch?v=ku_rMIjIFfE"
       },
@@ -200,7 +200,7 @@
         lat: 46.519,
         lng: 6.6035,
         story:
-          "Regardez le sol sous vos pieds. Dans un parc comme celui-ci, surtout apres la pluie, vous pouvez trouver des flaques et des zones de terre humide. Cette boue est de l'or pour les hirondelles de fenetre. Elles construisent leurs maisons en forme de dome entierement avec de petites boulettes de boue et d'argile humide, qu'elles prennent dans leur bec et collent une par une. Pour economiser leur energie, elles doivent trouver cette boue tres pres du site de nidification, idealement dans un rayon de 200 metres. Malheureusement, comme les villes modernes sont de plus en plus couvertes d'asphalte et de beton, les zones de boue ouverte disparaissent. En preservant des surfaces naturelles de terre dans les parcs, on garantit a ces petites architectes les materiaux dont elles ont besoin.",
+          "Regardez le sol sous vos pieds. Dans un parc comme celui-ci, surtout après la pluie, vous pouvez trouver des flaques et des zones de terre humide. Cette boue est exactement ce dont les hirondelles de fenêtre ont besoin. Elles construisent leurs nids en forme de dôme entièrement avec de petites boulettes de boue et d'argile humide, qu'elles récoltent avec leur bec et assemblent pièce par pièce. Pour économiser leur énergie, elles doivent trouver ces matériaux à proximité du site de nidification, idéalement dans un rayon de 200 mètres. Malheureusement, comme les villes modernes sont de plus en plus goudronnées, les zones de boue disparaissent. En préservant des surfaces naturelles de terre dans les parcs, nous garantissons à ces petites architectes les matériaux dont ils ont besoin !",
         mapHint: "Zone de collecte de boue dans les terres",
         videoUrl: "https://www.youtube.com/watch?v=xk_LBGByssY"
       },
@@ -211,7 +211,7 @@
         lat: 46.5218,
         lng: 6.6095,
         story:
-          "Levez les yeux vers les murs et l'avancee du toit de l'ecole. Voyez-vous les nids bien proteges sous les avant-toits? Depuis des siecles, les hirondelles de fenetre choisissent de vivre au plus pres des humains, en partageant nos constructions. Pourtant, de nombreux batiments modernes utilisent des materiaux trop lisses pour que les nids naturels en boue puissent y adherer. Pour les aider, on peut installer des nids artificiels pre-fabriques comme ceux de ce batiment. Pour assurer une coexistence harmonieuse entre humains et oiseaux, une simple planche de bois peut etre placee environ 50 centimetres sous les nids. Cette planche recueille les fientes, garde les murs de l'ecole et les trottoirs propres, et permet aux hirondelles d'elever leurs petits en securite juste au-dessus de nos tetes.",
+          "Levez les yeux sous le toit de l'école. Voyez-vous les nids blottis sous les avant-toits ? Depuis des siècles, les hirondelles de fenêtre vivent aux côtés des humains, partageant nos constructions. Cependant, de nombreux bâtiments modernes ont des murs trop lisses pour que les nids de boue puissent y adhérer. Pour les aider, des nids artificiels comme ceux-ci peuvent être installés. Pour assurer une cohabitation harmonieuse, une simple planche en bois peut être placée sous les nids. Elle recueille les fientes, gardant les murs et les trottoirs propres tout en permettant aux hirondelles d'élever leurs familles en toute sécurité juste au-dessus de nos têtes.",
         mapHint: "Arret final a l'Ecole De Montoie",
         videoUrl: "https://www.youtube.com/watch?v=rV5SaQk7_5I"
       }
@@ -235,7 +235,7 @@
         lat: 46.5152,
         lng: 6.5986,
         story:
-          "Nehmen Sie sich einen Moment Zeit und schauen Sie sich in diesem Park um. Die offenen Grünflächen, Bäume und Wiesen sind voller winziger Fluginsekten, die man kaum bemerkt. Für Mehlschwalben ist dieser Park jedoch das perfekte Buffet. Diese Vögel sind reine Insektenfresser; das heisst, sie jagen ihre Beute ausschliesslich im Flug. Damit wirken sie als natürliche Schädlingsbekämpfer in unseren Quartieren. Um nur eine einzige Brut erfolgreich aufzuziehen, muss ein Schwalbenpaar bis zu 150.000 Insekten wie Fliegen und Mücken fangen – das entspricht etwa einem Kilogramm Nahrung. Dank ihrer unermüdlichen Jagd helfen sie dabei, unsere Parks angenehm und insektenarm zu halten.",
+          "Nehmen Sie sich einen Moment Zeit und schauen Sie sich in diesem Park um. Die offenen Grünflächen, Bäume und Wiesen sind voller winziger Fluginsekten, die man kaum bemerkt. Für Mehlschwalben ist dieser Park jedoch das perfekte Buffet. Diese Vögel sind Insektenfresser, das heisst, sie jagen und fressen ausschliesslich Insekten. Dies tun sie im schnellen Flug. Um nur eine einzige Brut erfolgreich aufzuziehen, muss ein Schwalbenpaar bis zu 150.000 Fluginsekten wie Fliegen und Mücken fangen – das entspricht etwa einem Kilogramm Nahrung. Dank ihrer unermüdlichen Jagd in Gebieten wie diesem helfen sie dabei, die Insektenpopulation im Gleichgewicht zu halten, und wirken so als natürliche Schädlingsbekämpfer.",
         mapHint: "Futterkorridor am Ufer",
         videoUrl: "https://www.youtube.com/watch?v=ku_rMIjIFfE"
       },
@@ -246,7 +246,7 @@
         lat: 46.519,
         lng: 6.6035,
         story:
-          "Schauen Sie auf den Boden unter Ihren Füssen. In einem Park wie diesem finden Sie vor allem nach Regentagen Pfützen und feuchte Erdstellen. Dieser Schlamm ist für Mehlschwalben wie Gold. Sie bauen ihre kuppelförmigen Nester vollständig aus kleinen Kügelchen aus nassem Lehm und Ton, die sie mit dem Schnabel aufnehmen und Stück für Stück zusammenfügen. Um Energie zu sparen, müssen sie diesen Schlamm sehr nahe am Nistplatz finden, idealerweise im Umkreis von 200 Metern. Leider verschwinden offene Schlammstellen immer mehr, da Böden zunehmend versiegelt werden. Wenn wir natürliche Erdflächen in Parks erhalten, sichern wir diesen kleinen Architekten die nötigen Baustoffe.",
+          "Schauen Sie auf den Boden unter Ihren Füssen. In einem Park wie diesem finden Sie vor allem nach Regentagen Pfützen und feuchte Erdstellen. Dieser Schlamm ist genau das, was Mehlschwalben brauchen. Sie bauen ihre kuppelförmigen Nester vollständig aus kleinen Kügelchen aus nassem Lehm und Ton, die sie mit dem Schnabel aufnehmen und Stück für Stück zusammenfügen. Um Energie zu sparen, müssen sie diese Materialien ganz in der Nähe ihres Nistplatzes finden, idealerweise im Umkreis von 200 Metern. Da moderne Städte zunehmend versiegelt werden, verschwinden offene Schlammstellen leider immer mehr. Indem wir natürliche Erdflächen in Parks erhalten, stellen wir sicher, dass diese kleinen Architekten die nötigen Baustoffe haben!",
         mapHint: "Landeinwaertige Lehm-Sammelzone",
         videoUrl: "https://www.youtube.com/watch?v=xk_LBGByssY"
       },
@@ -257,7 +257,7 @@
         lat: 46.5218,
         lng: 6.6095,
         story:
-          "Schauen Sie nach oben zu den Wänden und zum Dachvorsprung des Schulgebäudes. Sehen Sie die Nester, die sicher unter der Traufe sitzen? Seit Jahrhunderten leben Mehlschwalben direkt neben uns Menschen und nutzen unsere Bauwerke. Viele moderne Gebäude bestehen jedoch aus Materialien, die zu glatt sind, als dass natürliche Lehmnester daran haften könnten. Um den Vögeln zu helfen, können wir vorgefertigte Kunstnester anbringen. Damit Mensch und Vogel harmonisch zusammenleben, kann ein Kotbrett etwa 50 Zentimeter unter den Nestern montiert werden. Es fängt Verschmutzungen auf, hält die Fassade sauber und ermöglicht es den Schwalben, ihre Jungen sicher direkt über unseren Köpfen aufzuziehen.",
+          "Schauen Sie nach oben unter das Dach der Schule. Sehen Sie die Nester, die unter der Traufe sitzen? Seit Jahrhunderten leben Mehlschwalben direkt neben uns Menschen und nutzen unsere Bauwerke. Viele moderne Gebäude haben jedoch Wände, die zu glatt sind, als dass natürliche Lehmnester daran haften könnten. Um ihnen zu helfen, können Kunstnester wie diese hier angebracht werden. Damit Mensch und Vogel harmonisch zusammenleben, kann ein einfaches Holzbrett unter den Nestern montiert werden. Es fängt den Vogelkot auf, hält Wände und Gehwege sauber und ermöglicht es den Mehlschwalben, ihre Jungen sicher direkt über unseren Köpfen aufzuziehen.",
         mapHint: "Letzte Station an der Ecole De Montoie",
         videoUrl: "https://www.youtube.com/watch?v=rV5SaQk7_5I"
       }
